@@ -5,8 +5,11 @@
     <url>/2020/03/01/test/</url>
     <content><![CDATA[<p>主要测试 插入图片</p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">public class HelloWorld &#123;</span><br><span class="line">	public static void <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2020/03/01/test/bg.png" class="" title="This is an example image">
 <a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p><img src="test.jpg" alt="alt"><br><img src="test.jpg" alt="alt"><br><img src="test.jpg" alt="alt"><br><img src="test.jpg" alt="alt"><br><img src="test.jpg" alt="alt"><br><img src="test.jpg" alt="alt"><br><img src="test.jpg" alt="alt"></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><img src="bg.png" width = "300" height = "200" alt="bg.png" align=center />
+
+
 <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
