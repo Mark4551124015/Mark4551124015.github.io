@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.mark455.cn/"/>
-  <updated>2020-03-02T01:37:28.297Z</updated>
+  <updated>2020-07-04T08:07:02.703Z</updated>
   <id>http://blog.mark455.cn/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【NAS】装机篇</title>
+    <link href="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87/"/>
+    <id>http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87/</id>
+    <published>2020-07-04T08:05:07.000Z</published>
+    <updated>2020-07-04T08:07:02.703Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;​        哪个男孩子不想拥有一台属于自己的NAS呢&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="NAS" scheme="http://blog.mark455.cn/tags/NAS/"/>
+    
+      <category term="装机" scheme="http://blog.mark455.cn/tags/%E8%A3%85%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第二篇博客测试</title>
     <link href="http://blog.mark455.cn/2020/03/01/test/"/>
     <id>http://blog.mark455.cn/2020/03/01/test/</id>
     <published>2020-03-01T13:21:00.000Z</published>
-    <updated>2020-03-02T01:37:28.297Z</updated>
+    <updated>2020-07-04T08:02:35.446Z</updated>
     
     <summary type="html">
     
@@ -40,7 +68,7 @@
     <link href="http://blog.mark455.cn/2020/02/29/hello-world/"/>
     <id>http://blog.mark455.cn/2020/02/29/hello-world/</id>
     <published>2020-02-28T19:49:08.952Z</published>
-    <updated>2020-03-01T04:50:31.861Z</updated>
+    <updated>2020-07-04T07:58:30.503Z</updated>
     
     <summary type="html">
     
