@@ -29,13 +29,14 @@
 <meta property="og:site_name" content="Mark455的博客">
 <meta property="og:description" content="哪个男孩子不想拥有一台属于自己的NAS呢">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/J3455-ITX(M1).png">
+<meta property="og:image" content="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/J3455-ITX(M1).png">
+<meta property="og:image" content="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/image-20200705172711979.png">
 <meta property="article:published_time" content="2020-07-04T08:05:07.000Z">
-<meta property="article:modified_time" content="2020-07-05T06:36:57.513Z">
+<meta property="article:modified_time" content="2020-07-05T09:28:22.431Z">
 <meta property="article:author" content="Mark455·Feng">
 <meta property="article:tag" content="-NAS -装机">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/J3455-ITX(M1).png">
+<meta name="twitter:image" content="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/J3455-ITX(M1).png">
 
 <link rel="canonical" href="http://blog.mark455.cn/2020/07/04/%E3%80%90NAS%E3%80%91%E8%A3%85%E6%9C%BA%E7%AF%87-20200704/">
 
@@ -213,7 +214,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-05 14:36:57" itemprop="dateModified" datetime="2020-07-05T14:36:57+08:00">2020-07-05</time>
+                <time title="修改时间：2020-07-05 17:28:22" itemprop="dateModified" datetime="2020-07-05T17:28:22+08:00">2020-07-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -268,11 +269,19 @@
 <p>​        <strong>稳</strong> 一台每周7*24h开机的设备，既然要持续运行，稳定也是最重要的。硬件稳定，电源稳定是基础，以及数据的备份与恢复，这都不能保证就别做NAS了，如果有奇特的钞能力，购入一台VPS简直香炸。</p>
 <p>​        省 全年无休止运作的机子，电费也是一大笔开支，对于硬件，低功耗也先于性能。tdp15-25W的CPU是博主能接受的极限（开一年是真的贵）</p>
 <p>​        <strong>切莫为了省去一点硬件费用直接改造破旧老主机，使用破旧老硬盘</strong>，为了省这一点钱，老主机动辄34nm的制程，60W+的TDP，一年几千的的电费也不是闹着玩的，况且旧主板使用的sata和pcie协议过于老旧，带宽无法满足需求以及后期的盘位，网卡，硬解码显卡的扩展，因此<strong>极其不建议改造老旧主机作为NAS服务器</strong></p>
-<h3 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h3><p>​        一般来讲TDP处于15-25的U是非常推荐的，Intel和AMD家的U也没什么大的差别（但是<strong>AMD YES！</strong>）个人的机子使用的是华擎J3455主板套装，低功耗的4C4T着实让人爱不释手，也是继J1900后的NAS常用U之一，拥有完美的黑群晖驱动（尽管我没用），板载4 sata3接口，1 pciex16，以及一个只能接Wi-Fi网卡的M.2，除了没有sata M.2 简直香炸，京东就有。</p>
-<img src="【NAS】装机篇-20200704/J3455-ITX(M1).png" width = "500" height = "400" alt="j3455" align=center />
+<h3 id="CPU主板"><a href="#CPU主板" class="headerlink" title="CPU主板"></a>CPU主板</h3><p>​        一般来讲TDP处于15-25的U是非常推荐的，Intel和AMD家的U也没什么大的差别（但是<strong>AMD YES！</strong>）个人的机子使用的是华擎J3455主板套装，低功耗的4C4T着实让人爱不释手，也是继J1900后的NAS常用U之一，拥有完美的黑群晖驱动（尽管我没用），板载4 sata3接口，1 pciex16，以及一个只能接Wi-Fi网卡的M.2，除了没有sata M.2 简直香炸，京东就有。</p>
+<img src="J3455-ITX(M1).png" width = "500" height = "400" alt="j3455" align=center />
 
+<h3 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h3><p>​        一般用作硬解码4k 甚至 8k视频，J3455自带核显可驱动桌面，如需性能更高的显卡，建议RX580矿卡足够</p>
+<h3 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a>机箱</h3><p>​        蜗牛星际机箱，4盘位12cm风扇，本人正在使用，加了乔思伯日食风扇，香的一批</p>
+<h3 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h3><p>​        这个得好好整，一不爆，二声音小，我用的台达220W，噪音太大自行更换了磁悬浮4cm风扇，稳定使用中</p>
+<h3 id="内存条"><a href="#内存条" class="headerlink" title="内存条"></a>内存条</h3><p>​        按需求购买即可，自动纠错能上就上，记得看好自己的主板支持笔记本还是台式机内存条</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>​        硬盘按需购买，网线建议CAT5E，后期有需要可以放弃显卡，扩展出万兆网口及更多sata口。个人是用了一块sata固态作为系统盘，60块不亏</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>来一张订单配置截图</p>
+<img src="image-20200705172711979.png" alt="image-20200705172711979" style="zoom: 25%;" />
 
-
+<p>有问题欢迎评论</p>
+<p>—–待续</p>
 
     </div>
 
@@ -357,7 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求"><span class="nav-number">2.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU"><span class="nav-number">2.2.</span> <span class="nav-text">CPU</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需求"><span class="nav-number">2.1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU主板"><span class="nav-number">2.2.</span> <span class="nav-text">CPU主板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显卡"><span class="nav-number">2.3.</span> <span class="nav-text">显卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机箱"><span class="nav-number">2.4.</span> <span class="nav-text">机箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电源"><span class="nav-number">2.5.</span> <span class="nav-text">电源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存条"><span class="nav-number">2.6.</span> <span class="nav-text">内存条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">2.7.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
