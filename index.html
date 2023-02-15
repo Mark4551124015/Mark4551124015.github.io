@@ -163,6 +163,149 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark455·Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mark455的博客">
+      <meta itemprop="description" content="有干货有杂货 还有生活">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Mark455的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/" class="post-title-link" itemprop="url">CS207 Chapter 7</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-15 08:05:07 / 修改时间：15:08:06" itemprop="dateCreated datePublished" datetime="2023-02-15T08:05:07+08:00">2023-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS207/" itemprop="url" rel="index"><span itemprop="name">CS207</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> <strong>Chapter 8</strong> 算术电路 Arithmetic Circuits</p>
+<h1 id="算术电路-Arithmetic-Circuits"><a href="#算术电路-Arithmetic-Circuits" class="headerlink" title="算术电路 Arithmetic Circuits"></a>算术电路 Arithmetic Circuits</h1><p>​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。</p>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p> 两个二进制数字的加法是最基本的算术运算</p>
+<h3 id="半加器"><a href="#半加器" class="headerlink" title="半加器"></a>半加器</h3><p>​		仅计算两bit的加法，不含进位计算</p>
+<ul>
+<li>结果 $S &#x3D; A ⊕ B$ </li>
+<li>进位 $C &#x3D; AB$</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png" alt="image-20230215111938370"></p>
+<h3 id="全加器"><a href="#全加器" class="headerlink" title="全加器"></a>全加器</h3><p>​		全加器电路可以进行三个bit的加法，包括两个bit和一个进位，然后产生结果和进位</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151128533.png" alt="截屏2023-02-15 11.28.38" style="zoom:50%;" />
+
+<ul>
+<li><p>$S &#x3D; X’A’B + X’AB’ +XA’B’+ XAB$</p>
+</li>
+<li><p>$C &#x3D; AB + BX + AX$</p>
+</li>
+</ul>
+<p>​		可以通过AND，OR门来实现，同时也可以通过两个半加器和一个or来实现</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151136588.png" alt="截屏2023-02-15 11.33.05"></p>
+<p>$S &#x3D; B ⊕ (X ⊕ A) &#x3D; B’(XA’+ X’A) + B(XA’+ X’A)’&#x3D; B’(XA’+ X’A) + B(XA + X’A’) &#x3D; XA’B’+ X’AB’+ XAB + X’A’B$</p>
+<p>$C &#x3D; B(XA’+ X’A) + XA &#x3D; XA’B + X’AB + XA$</p>
+<h3 id="二进制加法器"><a href="#二进制加法器" class="headerlink" title="二进制加法器"></a>二进制加法器</h3><p>​		二进制加法器是一种产生两个二进制数字的算术和的数字电路，n位数的加法需要一个由n个全加器组成的链条，或者由一个半加器和n-1个全加器组成的链条。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151142308.png" alt="截屏2023-02-15 11.42.27" style="zoom:67%;" />
+
+<h2 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h2><p>​		减法是数字计算机信息处理任务中算术运算的另一个基本功能</p>
+<h3 id="半减器"><a href="#半减器" class="headerlink" title="半减器"></a>半减器</h3><p>​		一个执行两个bit的减法的组合电路被称为半减法器</p>
+<p>$D&#x3D;X⊕Y$</p>
+<p>$B &#x3D; X’Y$</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151204446.png" alt="截屏2023-02-15 12.04.05"></p>
+<h3 id="全减器"><a href="#全减器" class="headerlink" title="全减器"></a>全减器</h3><p>​		全加器的组合电路执行三个比特的减法运算–由前一个有效数字的减法运算产生的减数、子数和借数Z，并产生输出差数和借数</p>
+<h3 id="二进制减法器"><a href="#二进制减法器" class="headerlink" title="二进制减法器"></a>二进制减法器</h3><p>​		无符号二进制数的减法可以通过补码的方式最方便地完成。</p>
+<ul>
+<li><p>A-B的减法可以通过取B的补码并将其加到A中来完成。</p>
+</li>
+<li><p>补码可以通过取反码并在最不重要的一对位上加1来获得。</p>
+</li>
+<li><p>反码可以用反相器实现，1可以通过输入进位加到总和上。</p>
+</li>
+</ul>
+<p>​		可以在加法器的Y输入位反相来获得补码，并且在初始位置加一，这样就可以获得减法结果（去掉进位&#x2F;取补码加负号）</p>
+<h3 id="二进制运算器"><a href="#二进制运算器" class="headerlink" title="二进制运算器"></a>二进制运算器</h3><p>​		在设置输入$M$，在$Y$输入变为$Y⊕M$，并且在最小位加法器位置输入$M$。这样就将加减法运算合并为共同一个运算器</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151254111.png" alt="截屏2023-02-15 12.54.27" style="zoom:67%;" />
+
+<h2 id="溢出"><a href="#溢出" class="headerlink" title="溢出"></a>溢出</h2><p>​		对两个二进制数字相加后的溢出的检测取决于这些数字被认为是有符号还是无符号</p>
+<ul>
+<li><p>当两个无符号的数字相加时，溢出的检测是从最重要的位置的末端进行的</p>
+</li>
+<li><p>当两个有符号的数字相加时，符号位被视为数字的一部分，末尾进位不表示溢出</p>
+</li>
+</ul>
+<p>如果两个数字都是正数或负数，可能会发生溢出。</p>
+<ul>
+<li>如果把符号位位置的进位作为结果的符号位，那么这样得到的9位答案将是正确的。但是由于答案不能被容纳在8位之内，我们说发生了溢出。</li>
+</ul>
+<p>​		溢出情况可以通过观察进入符号位的进位和从符号位的出位来检测。如果这两个进位不相等，则发生了溢出。</p>
+<p>​		如果这两个进位被应用于XOR门，当该门的输出等于1时，就可以检测到溢出。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151440010.png" alt="截屏2023-02-15 14.40.24"></p>
+<h3 id="十进制加法器"><a href="#十进制加法器" class="headerlink" title="十进制加法器"></a>十进制加法器</h3><p>​		我们使用BCD来代表十进制，四个bit的二进制加法器能计算BCD码的加法，但是BCD在9之后要加上0110来使其继续合法，需要注意，如下为BCD码合法转化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151447962.png" alt="截屏2023-02-15 14.47.16"></p>
+<p>$K$为进位</p>
+<p>合法位$C &#x3D;K +Z_8Z_4+Z_8Z_2$，不合法的时候可以多一个加法器来加上$0110$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151502990.png" alt="截屏2023-02-15 15.02.53" style="zoom:50%;" />
+
+<h3 id="二进制乘法器"><a href="#二进制乘法器" class="headerlink" title="二进制乘法器"></a>二进制乘法器</h3><p>略</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,7 +336,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 07:05:07 / 修改时间：10:50:01" itemprop="dateCreated datePublished" datetime="2023-02-15T07:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 07:05:07 / 修改时间：11:34:19" itemprop="dateCreated datePublished" datetime="2023-02-15T07:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -215,7 +358,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 7</strong></p>
+          <p> <strong>Chapter 7</strong> 同步时序逻辑 Synchronous Sequential Logic</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/#more" rel="contents">
@@ -279,7 +422,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 06:05:07 / 修改时间：10:49:56" itemprop="dateCreated datePublished" datetime="2023-02-15T06:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 06:05:07 / 修改时间：11:34:28" itemprop="dateCreated datePublished" datetime="2023-02-15T06:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -301,7 +444,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 6</strong></p>
+          <p> <strong>Chapter 6</strong> 锁存器和触发器 Latches and Flip-flops</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/#more" rel="contents">
@@ -365,7 +508,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 05:05:07 / 修改时间：10:49:51" itemprop="dateCreated datePublished" datetime="2023-02-15T05:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 05:05:07 / 修改时间：11:34:52" itemprop="dateCreated datePublished" datetime="2023-02-15T05:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -387,7 +530,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 5</strong></p>
+          <p> <strong>Chapter 5</strong> 组合逻辑电路 Combinational logic</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/#more" rel="contents">
@@ -451,7 +594,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 04:05:07 / 修改时间：10:49:46" itemprop="dateCreated datePublished" datetime="2023-02-15T04:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 04:05:07 / 修改时间：11:34:56" itemprop="dateCreated datePublished" datetime="2023-02-15T04:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -473,7 +616,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 4</strong></p>
+          <p> <strong>Chapter 4</strong> 两级实现 Two Level Implementation</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/#more" rel="contents">
@@ -537,7 +680,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 03:05:07 / 修改时间：10:49:42" itemprop="dateCreated datePublished" datetime="2023-02-15T03:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 03:05:07 / 修改时间：11:35:00" itemprop="dateCreated datePublished" datetime="2023-02-15T03:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -559,7 +702,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 3</strong></p>
+          <p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/#more" rel="contents">
@@ -623,7 +766,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 02:05:07 / 修改时间：10:49:37" itemprop="dateCreated datePublished" datetime="2023-02-15T02:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 02:05:07 / 修改时间：11:35:05" itemprop="dateCreated datePublished" datetime="2023-02-15T02:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -645,7 +788,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 2</strong></p>
+          <p> **Chapter 2 **布尔代数和逻辑门 Boolean Algebra and Logic Gates</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%202/#more" rel="contents">
@@ -709,7 +852,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 01:05:07 / 修改时间：10:49:33" itemprop="dateCreated datePublished" datetime="2023-02-15T01:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 01:05:07 / 修改时间：11:35:29" itemprop="dateCreated datePublished" datetime="2023-02-15T01:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -731,7 +874,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> <strong>Chapter 1</strong></p>
+          <p> **Chapter 1 **二进制数 Binary Numbers</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/#more" rel="contents">
@@ -740,81 +883,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/12/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mark455·Feng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mark455的博客">
-      <meta itemprop="description" content="有干货有杂货 还有生活">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Mark455的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/02/12/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-02-12 19:47:25" itemprop="dateCreated datePublished" datetime="2023-02-12T19:47:25+08:00">2023-02-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-02-15 10:50:05" itemprop="dateModified" datetime="2023-02-15T10:50:05+08:00">2023-02-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 
