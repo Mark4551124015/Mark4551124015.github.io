@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.mark455.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Chapter 8 算术电路 Arithmetic Circuits 算术电路 Arithmetic Circuits​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。 加法 两个二进制数字的加法是最基本的算术运算 半加器​		仅计算两bit的加法，不含进位计算  结果 $S &#x3D; A">
+    <meta name="description" content="Chapter 8 算术电路 Arithmetic Circuits">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS207 Chapter 8">
 <meta property="og:url" content="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/index.html">
 <meta property="og:site_name" content="Mark455的博客">
-<meta property="og:description" content="Chapter 8 算术电路 Arithmetic Circuits 算术电路 Arithmetic Circuits​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。 加法 两个二进制数字的加法是最基本的算术运算 半加器​		仅计算两bit的加法，不含进位计算  结果 $S &#x3D; A">
+<meta property="og:description" content="Chapter 8 算术电路 Arithmetic Circuits">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151128533.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151447962.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151502990.png">
 <meta property="article:published_time" content="2023-02-15T00:05:07.000Z">
-<meta property="article:modified_time" content="2023-02-15T07:28:07.363Z">
+<meta property="article:modified_time" content="2023-02-15T07:29:08.372Z">
 <meta property="article:author" content="Mark455·Feng">
 <meta property="article:tag" content="数字逻辑 - CS207 - 笔记">
 <meta name="twitter:card" content="summary">
@@ -208,7 +208,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-02-15 08:05:07 / 修改时间：15:28:07" itemprop="dateCreated datePublished" datetime="2023-02-15T08:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 08:05:07 / 修改时间：15:29:08" itemprop="dateCreated datePublished" datetime="2023-02-15T08:05:07+08:00">2023-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,6 +231,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <p> <strong>Chapter 8</strong> 算术电路 Arithmetic Circuits</p>
+<span id="more"></span>
+
 <h1 id="算术电路-Arithmetic-Circuits"><a href="#算术电路-Arithmetic-Circuits" class="headerlink" title="算术电路 Arithmetic Circuits"></a>算术电路 Arithmetic Circuits</h1><p>​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。</p>
 <h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p> 两个二进制数字的加法是最基本的算术运算</p>
 <h3 id="半加器"><a href="#半加器" class="headerlink" title="半加器"></a>半加器</h3><p>​		仅计算两bit的加法，不含进位计算</p>
