@@ -17,26 +17,105 @@
       </tags>
   </entry>
   <entry>
-    <title>CS207 Chapter 3</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
-    <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
+    <title>CS207 Chapter 1</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/</url>
+    <content><![CDATA[<p> <strong>Chapter 1</strong>二进制数 Binary Numbers</p>
 <span id="more"></span>
 
-<h1 id="门级化简-Gate-level-Minimization"><a href="#门级化简-Gate-level-Minimization" class="headerlink" title="门级化简 Gate-level Minimization"></a>门级化简 Gate-level Minimization</h1><ul>
-<li>实现布尔逻辑的数字门的复杂性与代数表达的复杂性直接相关，门级化简师寻找描述数字电路的布尔函数的最佳门级实现的设计任务</li>
-<li>对于超过几个输入来说，用手去算很难，所以这通常由计算机完成，需要了解基本原理</li>
+<h1 id="二进制数-Binary-Numbers"><a href="#二进制数-Binary-Numbers" class="headerlink" title="二进制数 Binary Numbers"></a>二进制数 Binary Numbers</h1><h2 id="数字系统-Digital-Systems"><a href="#数字系统-Digital-Systems" class="headerlink" title="数字系统 Digital Systems"></a>数字系统 Digital Systems</h2><ul>
+<li>所有的计算都有一个特殊用途的数字计算机嵌入，数字系统可以代表&#x2F;操纵离散的信息，例如10进制信号，26个字母。数字(Digit)&#x3D;&gt;数字信号(Digital)（计算机，系统 等）</li>
+<li>在数字系统中，输入是由开关进行的，通常含有以下两种离散值，高电位（HIGH），低电位（LOW），这种信号被称为数字信号，设备内的电路被称为数字电路。</li>
 </ul>
-<h2 id="卡诺图法"><a href="#卡诺图法" class="headerlink" title="卡诺图法"></a>卡诺图法</h2><ul>
-<li><p>绘制卡诺图，标出为1的项，合并相邻2 4 8 16的矩形块</p>
-<p>​	优先四角，先找大的，越大越好，删掉多的</p>
+<h2 id="进制-Number-System"><a href="#进制-Number-System" class="headerlink" title="进制 Number System"></a>进制 Number System</h2><ul>
+<li><p>有几种我们通常使用的进制。</p>
+<ul>
+<li><p>十进制：0，1，2，…，9。</p>
 </li>
-<li><p>例如</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/main/NoteImages/202302142043995.png" alt="截屏2023-02-12 14.51.18" style="zoom: 25%;" />
+<li><p>二进制：0，1。</p>
 </li>
-<li><p>更多的变量，如5个，可以采用增加深度的诺图，两张卡诺图一起使用</p>
+<li><p>八进制：0，1，2，…，7。</p>
 </li>
-<li><p>其中的X代表不关心Dont Care Condition，可以按需当作0或1</p>
+<li><p>十六进制：0，1，2，…，9，A，B，…，F。</p>
 </li>
+</ul>
+</li>
+<li><p>在十进制系统中，我们有10个不同的数字，但在二进制系统中只有两个。二进制数字系统更容易被处理。在数字世界中，我们用二进制思考问题，一盏灯要么关要么开。…而我们用两个数字来表达一切：0和1。一个十进制的$25_{10}$在二进制中变成$11001_{2}$。</p>
+</li>
+</ul>
+<h2 id="进制转换-Conversion-between-binary-and-hexadecimal"><a href="#进制转换-Conversion-between-binary-and-hexadecimal" class="headerlink" title="进制转换 Conversion between binary and hexadecimal"></a>进制转换 Conversion between binary and hexadecimal</h2><ul>
+<li><p>需要将m进制转换为n进制，则先将m进制转换为十进制，再转换为n进制，十进制是关键。</p>
+</li>
+<li><p>任何$X$进制的数字，小数点左边n个数字，右边m个数字可以被展开为十进制: </p>
+<p>$(a_na_{n-1}…a_2a_1b_1b_2…b_m)_X$</p>
+<p>$(a_nX^{n-1}+a_{n-1}X^{n-2}+…+a_1X^0+b_{1}X^{-1}+b_2X^{-2}+…+b_mX^{-m})$</p>
+</li>
+<li><p>十进制转别的进制：</p>
+<ul>
+<li>整数部分：除法，取余，重复</li>
+<li>小数部分：乘进制数，取整数位，重复</li>
+</ul>
+</li>
+<li><p>二进制转八进制：每三位分割转化为十进制数。</p>
+</li>
+<li><p>二进制转十六进制：每四位分割转化为十进制数。</p>
+</li>
+</ul>
+<h2 id="补码和反码-Complements"><a href="#补码和反码-Complements" class="headerlink" title="补码和反码 Complements"></a>补码和反码 Complements</h2><h3 id="反码-diminished-radix-complemen-r-1’s"><a href="#反码-diminished-radix-complemen-r-1’s" class="headerlink" title="反码 diminished radix complemen $r-1’s$"></a>反码 diminished radix complemen $r-1’s$</h3><ul>
+<li>对于r进制数字的补码，用r-1减去每一位，例如$12345_{10}$，反码为$99999 - 12345 &#x3D; 87654$</li>
+</ul>
+<h3 id="补码-radix-complement-r’s"><a href="#补码-radix-complement-r’s" class="headerlink" title="补码 radix complement $r’s$"></a>补码 radix complement $r’s$</h3><ul>
+<li>先计算反码，然后加1 ，例如$12345_{10}$，补码为$99999-12345+1 &#x3D; 87655$</li>
+</ul>
+<h2 id="二进制减法"><a href="#二进制减法" class="headerlink" title="二进制减法"></a>二进制减法</h2><ul>
+<li>三个方法：借位法，反码法，补码法</li>
+</ul>
+<h3 id="补码法"><a href="#补码法" class="headerlink" title="补码法"></a>补码法</h3><p>如要计算$M-N$：</p>
+<ul>
+<li>如果$M\geq N$：</li>
+</ul>
+<p>​		把N的补码加到M上然后去掉进位。例如$72532-3250$：</p>
+<p>​		$M&#x3D;72532, N_补&#x3D;96750, M+N_补&#x3D;169282, 减去进位169282-100000&#x3D;69282$</p>
+<ul>
+<li>如果$M&lt;N$：</li>
+</ul>
+<p>​		把N的补码加到M上然后取补码加负号。例如$3250-72532$：</p>
+<p>​		$M&#x3D;03250, N_补&#x3D;27468, M+N_补&#x3D;30718, 取补码69282, 加负号结果为-69282$</p>
+<h2 id="带符号的二进制数-Signed-binary-numbers"><a href="#带符号的二进制数-Signed-binary-numbers" class="headerlink" title="带符号的二进制数 Signed binary numbers"></a>带符号的二进制数 Signed binary numbers</h2><p>​		生活中有很多场景会用到正数负数，但数字系统用二进制去代表一切，所有有三种表示方法：符号表示、反码(1’s)表示，补码(2’s)表示</p>
+<h3 id="符号表示-Sign-magnitude-representation"><a href="#符号表示-Sign-magnitude-representation" class="headerlink" title="符号表示 Sign-magnitude representation"></a>符号表示 Sign-magnitude representation</h3><p>​	通常多一个bit叫做sign bit，简称MSB。</p>
+<ul>
+<li>通常来讲，0作为正号，1作为负号</li>
+<li>例如一个8-bit带符号二进制数字$01101001_2$代表一个正数$105_{10}$，$11101001_2$代表一个负数$-105_{10}$。</li>
+</ul>
+<h3 id="反码和补码表示-1’s-and-2’s-complement-representation"><a href="#反码和补码表示-1’s-and-2’s-complement-representation" class="headerlink" title="反码和补码表示 $1’s$ and $2’s$ complement representation"></a>反码和补码表示 $1’s$ and $2’s$ complement representation</h3><ul>
+<li>反码表示，两个数字都是彼此的反码例如$0111_2$代表$+7_{10}$，$1000_2$代表$-7_{10}$，正数MSB为0，负数MSB为1</li>
+<li>补码表示，1被加到反码表示法中$0111_2$代表$+7_{10}$，$1001_2$代表$-7_{10}$，正数MSB为0，负数MSB为1</li>
+</ul>
+<h2 id="二进制编码-Binary-codes"><a href="#二进制编码-Binary-codes" class="headerlink" title="二进制编码 Binary codes"></a>二进制编码 Binary codes</h2><p>​		只有在知道数据所用的编码时候，才有可能对数据进行解释。例如1000010在直二进制中表示66（十进制），在BCD中表示42（十进制），在ASCII代码中表示字母B。</p>
+<h3 id="二进制编码的十进制-8421-Binary-Coded-decimal-BCD"><a href="#二进制编码的十进制-8421-Binary-Coded-decimal-BCD" class="headerlink" title="二进制编码的十进制(8421) Binary-Coded decimal (BCD)"></a>二进制编码的十进制(8421) Binary-Coded decimal (BCD)</h3><p>​		简称BCD，用4bit来编码每个10进制数字，在数字系统中很方便使用。例如$35_{10}$使用$0011$ $0101$来表示，而不是$100011_2$。同时它也被称为8421编码，因为这是BCD编码中4个bit分别的权重。例如用BCD编码表示69.27: $ 69.27_{10}&#x3D;01101001.00100111_{BCD} $</p>
+<h3 id="BCD加减法-BCD-addition-amp-subtraction"><a href="#BCD加减法-BCD-addition-amp-subtraction" class="headerlink" title="BCD加减法 BCD addition &amp; subtraction"></a>BCD加减法 BCD addition &amp; subtraction</h3><ul>
+<li>先用一般法则将两数相加&#x2F;减，如果得出小于9则会产生一个合理的的BCD数字</li>
+<li>如果产生了大于9的数字则会产生进位，这是不合理的，此时在加上十进制的$6_{10}$或二进制下的$0110_{2}$来跳过6个不合理的数，然后把进位放到下一组4bit数中（可以是已经存在的，也可以是新的一组）</li>
+<li>例如：$0111_{BCD} + 1001_{BCD}$：$0111+1001&#x3D;10000,$ $10000+0110&#x3D;00010110_{BCD}$</li>
+</ul>
+<h3 id="格雷码-Gray-code"><a href="#格雷码-Gray-code" class="headerlink" title="格雷码 Gray code"></a>格雷码 Gray code</h3><ul>
+<li>两位数字之间只有一位发生了变化</li>
+</ul>
+<h2 id="检错码-Error-detction-codes"><a href="#检错码-Error-detction-codes" class="headerlink" title="检错码 Error-detction codes"></a>检错码 Error-detction codes</h2><ul>
+<li>二进制信息在介质中传导时会有所损失或噪音，检错码就是用于检验传输过程中的错误码。错误不可以被更正，它的目的是检测</li>
+<li>奇偶检验位：数据中1是奇数就是1，反之是0，使数据中的1的个数始终为奇数</li>
+</ul>
+<h3 id="检和-Checksum"><a href="#检和-Checksum" class="headerlink" title="检和 Checksum"></a>检和 Checksum</h3><ul>
+<li>奇偶检验会在双数错误时失效，因此我们使用Checksum。在传输一串数据A之后又传输了B，那么会有一个Check Sum为A与B的二进制数据相加，如果又传输了C，则加上C的二进制数据。在数据传输完成后传输Check Sum，在接收端完成同样的操作，如果接收端的Check Sum和发射端的最后一个Check Sum相同，则数据无错</li>
+</ul>
+<h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><p>​		许多计算机的应用程式不止需要处理数字，需要处理字符，因此需要了ASCII码（Aemrican Stantdard Code for Information Interchange）用7个bit来编码128个字符。</p>
+<h2 id="二进制存储和寄存器-Binary-storage-and-registers"><a href="#二进制存储和寄存器-Binary-storage-and-registers" class="headerlink" title="二进制存储和寄存器 Binary storage and registers"></a>二进制存储和寄存器 Binary storage and registers</h2><ul>
+<li>二进制信息必须以物理形式存在，一个单元(Cell)必须拥有两种稳定的状态来代表0和1，寄存器就是一组二进制单元。寄存器之间传输并储存二进制信息</li>
+</ul>
+<h3 id="二进制逻辑-Binary-logic"><a href="#二进制逻辑-Binary-logic" class="headerlink" title="二进制逻辑 Binary logic"></a>二进制逻辑 Binary logic</h3><ul>
+<li>二进制逻辑是用逻辑运算处理两个分离的值</li>
+<li>三种基础的逻辑运算：AND OR NOT</li>
+<li>逻辑门是一种处理一个或多个输入来产生输出的电路元件，多于两个的输入也是ok的</li>
+<li>电压操作，在一个范围内，但被解释为两个值中的任何一个。例如高电位位1，低电位为0。</li>
 </ul>
 ]]></content>
       <categories>
@@ -44,6 +123,28 @@
       </categories>
       <tags>
         <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>引言</title>
+    <url>/2022/07/12/%E5%BC%95%E8%A8%80/</url>
+    <content><![CDATA[<p> 一些关于过去的事</p>
+<span id="more"></span>
+
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>作为经典理工直男的通病，九年的课程，但凡跟考试无关的课程是一点都没听进去，我行我素一套自己的生活逻辑（什么路边的美景？生活中的浪漫？知识技能和山顶的风光才是人生的真谛！）除了学习就是打游戏，甚至放弃了很多个人爱好。这样的方式在中学确实很有效，毕竟高考是那个阶段唯一的目标。但这真的好吗？</p>
+<p>渐渐的，发觉自己仿佛丢失掉了做人的一些特点，没有同理心，不理解浪漫，不重视感情，甚至不会悲伤，绝对的极端的思想以及行为准则etc. 好在没有造成什么恶劣的影响，这归功于小到几乎没有的表达欲。最明显的，是发现开始不了解自己了，这是痛苦且致命的。经历的事件遇到的人，他们多少在影响并改变我。我已经向前走了，但“我”并没有动，还是站在原地。当别人问起我喜欢什么，要去做什么时，面对这个问题“我”犹豫了，不知道该说什么。一句Follow your heart也不知道该怎么做，我心向何处呢？也正是从那起，“我”也觉得该做出改变了。</p>
+<p>这一切始于2018的冬天，在Wisconsin的小镇上那个抱着一堆光碟的高一少年。初到美国，为了能和人正常交谈看了成吨成吨的无字幕电影，虽然最初的目的不是欣赏，但也是打开了一扇大门，世界如此美好！陆陆续续看了很多很多电影，对文学艺术也开始有了兴趣，但终究还是静不下心坐下来欣赏文字，</p>
+<p>2019年的疫情，因为无聊创建了这个网站，总共发了两篇博文（现在已经删掉了），一度不知道这个Blog是用来干什么的，只是觉得作为一个人拥有一个自己的博客是件很Cool的事情，更没有心情慢下来写东西。也正是在这年我认识了一个女孩，她教会了我如何生活，算是比较重要的人，虽然结局并不美好，但还是很感谢。</p>
+<p>2021-2022是复杂的两年，到了大学也可算有了点自己的思考，也到开始Who you are, What you want to be的时候了。终日而思，无果；与人交流，收获甚多，但那终不是自己走出的路；多看书吧，多看电影吧，多出去走走吧，认识这个世界才能更好的认识自己。</p>
+<p>书读了，路走了，思考的事情不记录下来，在脑海中闪过又消逝了。这是不利于认识“我”的，于是便决定写下来。qq变成了工作用途，朋友圈也不是每个人都想了解“我”，认识“我”，不是很好的平台。想了想还是重新开始维护这个Blog，有心的人会看，无心的人也找不到，更多是写给自己了。</p>
+<p>感悟感想以外还有学习CS的笔记，评论区暂时不开放了，想找我交流微信戳我就好。</p>
+<p>共勉！</p>
+]]></content>
+      <categories>
+        <category>引言</category>
+      </categories>
+      <tags>
+        <tag>引言</tag>
       </tags>
   </entry>
   <entry>
@@ -332,6 +433,97 @@
 <h3 id="通用门"><a href="#通用门" class="headerlink" title="通用门"></a>通用门</h3><ul>
 <li>NAND门和NOR门被称为通用门或通用构建块。任何类型的门或逻辑功能都可以通过这些门来实现。</li>
 <li>通用门更方便使用电子元件来制作，同时减少了门的品种</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 4</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/</url>
+    <content><![CDATA[<p> <strong>Chapter 4</strong> 两级实现 Two Level Implementation</p>
+<span id="more"></span>
+
+<h1 id="两级实现-Two-Level-Implementation"><a href="#两级实现-Two-Level-Implementation" class="headerlink" title="两级实现 Two Level Implementation"></a>两级实现 Two Level Implementation</h1><h2 id="NAND-和-NOR-实现"><a href="#NAND-和-NOR-实现" class="headerlink" title="NAND 和 NOR 实现"></a>NAND 和 NOR 实现</h2><p>​		现在的逻辑电路经常由NAND和NOR门来实现功能，因为他们简单易用，并且使用同样的门来制造电路成本低廉</p>
+<h2 id="多级NAND电路"><a href="#多级NAND电路" class="headerlink" title="多级NAND电路"></a>多级NAND电路</h2><ul>
+<li><p>简单确定如何使用NAND门 或 把方程转化为NAND门形式，例如：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142046462.png" style="zoom:50%;" />
+</li>
+<li><p>布尔函数用两级NAND门实现，具体步骤：</p>
+</li>
+</ul>
+<ol>
+<li>简化该函数并以乘积之和SOP的形式表达。</li>
+<li>为表达式中至少有两个字的每个乘积项画一个NAND门。每个NAND门的输入都是该组乘积的变量树。这个过程会产生一组第一级门。</li>
+<li>在第二层中使用AND-反转或反转-OR图形符号画一个单一的门，其输入来自第一层门的输出。</li>
+<li>一个只有一个字词的术语需要在第一层中使用反相器。然而，如果单字是补足的，它可以直接连接到第二层NAND门的一个输入</li>
+</ol>
+<ul>
+<li>使用混合符号将多级AND-OR图转换为全NAND图的一般程序如下:</li>
+</ul>
+<ol>
+<li>将所有的AND门转换为NAND门，并使用AND-反转图形符号。</li>
+<li>将所有的OR门转换为NAND门，并使用反转-OR图形符号。</li>
+<li>检查图中的所有气泡。对于每一个没有被补偿的气泡都要插入一个反相器(一个单输入的NAND门)或补充输入的文字。</li>
+</ol>
+<h2 id="多级NOR电路"><a href="#多级NOR电路" class="headerlink" title="多级NOR电路"></a>多级NOR电路</h2><ul>
+<li>NOR操作是NAND操作的对偶。</li>
+</ul>
+<ul>
+<li>所有NOR逻辑的程序和规则都是为NAND逻辑制定的相应程序和规则的对偶。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047124.png" style="zoom:50%;" />
+
+<ul>
+<li>一般步骤：</li>
+</ul>
+<ol>
+<li>用NOR门的两级实现需要将函数简化为和的乘积形式。</li>
+<li>将OR门改为带有OR-反转图形符号的NOR门，将AND门改为带有反转-AND图形符号的NOR门。</li>
+</ol>
+<h2 id="XOR函数-Exclusive-OR-function"><a href="#XOR函数-Exclusive-OR-function" class="headerlink" title="XOR函数 Exclusive-OR function"></a>XOR函数 Exclusive-OR function</h2><ul>
+<li>异或XOR：$x ⊕ y &#x3D; xy ′ + x ′ y$ ，	同或XNOR $(x ⊕ y) ′ &#x3D; x ⊙ y &#x3D; xy + x ′y ′$</li>
+</ul>
+<h3 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h3><p>XOR 很难直接实现，因此都是由其它门构造的，如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047211.png" style="zoom: 50%;" /><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047463.png" style="zoom:50%;" /></p>
+<p>只有少数的电路使用XOR来实现操作，特别是一些算数和查错纠错电路</p>
+<h3 id="奇函数-Odd-function"><a href="#奇函数-Odd-function" class="headerlink" title="奇函数 Odd function"></a>奇函数 Odd function</h3><p>​		有三个或更多变量的XOR操作可以通过用其等价的布尔表达式替换⊕来转换为普通的布尔函数。</p>
+<p>​	$A ⊕ B ⊕ C &#x3D; (AB’+ A’B)C’+ (AB + A’B’)C&#x3D; AB’C’+ A’BC’+ ABC + A’B’C&#x3D; ∑ (1, 2, 4, 7)$</p>
+<p>​		当且仅当输入变量有奇数个1时输出1，加反运算输出是否为偶数个1，在用作奇偶校验Checksum时很好用。<strong>Parity Checking</strong></p>
+<p>​	奇偶校验位p，奇数个1输出1，偶数个输出0，与Chapter 3中相同</p>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 3</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
+    <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
+<span id="more"></span>
+
+<h1 id="门级化简-Gate-level-Minimization"><a href="#门级化简-Gate-level-Minimization" class="headerlink" title="门级化简 Gate-level Minimization"></a>门级化简 Gate-level Minimization</h1><ul>
+<li>实现布尔逻辑的数字门的复杂性与代数表达的复杂性直接相关，门级化简师寻找描述数字电路的布尔函数的最佳门级实现的设计任务</li>
+<li>对于超过几个输入来说，用手去算很难，所以这通常由计算机完成，需要了解基本原理</li>
+</ul>
+<h2 id="卡诺图法"><a href="#卡诺图法" class="headerlink" title="卡诺图法"></a>卡诺图法</h2><ul>
+<li><p>绘制卡诺图，标出为1的项，合并相邻2 4 8 16的矩形块</p>
+<p>​	优先四角，先找大的，越大越好，删掉多的</p>
+</li>
+<li><p>例如</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/main/NoteImages/202302142043995.png" alt="截屏2023-02-12 14.51.18" style="zoom: 25%;" />
+</li>
+<li><p>更多的变量，如5个，可以采用增加深度的诺图，两张卡诺图一起使用</p>
+</li>
+<li><p>其中的X代表不关心Dont Care Condition，可以按需当作0或1</p>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -658,137 +850,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CS207 Chapter 1</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/</url>
-    <content><![CDATA[<p> <strong>Chapter 1</strong>二进制数 Binary Numbers</p>
-<span id="more"></span>
-
-<h1 id="二进制数-Binary-Numbers"><a href="#二进制数-Binary-Numbers" class="headerlink" title="二进制数 Binary Numbers"></a>二进制数 Binary Numbers</h1><h2 id="数字系统-Digital-Systems"><a href="#数字系统-Digital-Systems" class="headerlink" title="数字系统 Digital Systems"></a>数字系统 Digital Systems</h2><ul>
-<li>所有的计算都有一个特殊用途的数字计算机嵌入，数字系统可以代表&#x2F;操纵离散的信息，例如10进制信号，26个字母。数字(Digit)&#x3D;&gt;数字信号(Digital)（计算机，系统 等）</li>
-<li>在数字系统中，输入是由开关进行的，通常含有以下两种离散值，高电位（HIGH），低电位（LOW），这种信号被称为数字信号，设备内的电路被称为数字电路。</li>
-</ul>
-<h2 id="进制-Number-System"><a href="#进制-Number-System" class="headerlink" title="进制 Number System"></a>进制 Number System</h2><ul>
-<li><p>有几种我们通常使用的进制。</p>
-<ul>
-<li><p>十进制：0，1，2，…，9。</p>
-</li>
-<li><p>二进制：0，1。</p>
-</li>
-<li><p>八进制：0，1，2，…，7。</p>
-</li>
-<li><p>十六进制：0，1，2，…，9，A，B，…，F。</p>
-</li>
-</ul>
-</li>
-<li><p>在十进制系统中，我们有10个不同的数字，但在二进制系统中只有两个。二进制数字系统更容易被处理。在数字世界中，我们用二进制思考问题，一盏灯要么关要么开。…而我们用两个数字来表达一切：0和1。一个十进制的$25_{10}$在二进制中变成$11001_{2}$。</p>
-</li>
-</ul>
-<h2 id="进制转换-Conversion-between-binary-and-hexadecimal"><a href="#进制转换-Conversion-between-binary-and-hexadecimal" class="headerlink" title="进制转换 Conversion between binary and hexadecimal"></a>进制转换 Conversion between binary and hexadecimal</h2><ul>
-<li><p>需要将m进制转换为n进制，则先将m进制转换为十进制，再转换为n进制，十进制是关键。</p>
-</li>
-<li><p>任何$X$进制的数字，小数点左边n个数字，右边m个数字可以被展开为十进制: </p>
-<p>$(a_na_{n-1}…a_2a_1b_1b_2…b_m)_X$</p>
-<p>$(a_nX^{n-1}+a_{n-1}X^{n-2}+…+a_1X^0+b_{1}X^{-1}+b_2X^{-2}+…+b_mX^{-m})$</p>
-</li>
-<li><p>十进制转别的进制：</p>
-<ul>
-<li>整数部分：除法，取余，重复</li>
-<li>小数部分：乘进制数，取整数位，重复</li>
-</ul>
-</li>
-<li><p>二进制转八进制：每三位分割转化为十进制数。</p>
-</li>
-<li><p>二进制转十六进制：每四位分割转化为十进制数。</p>
-</li>
-</ul>
-<h2 id="补码和反码-Complements"><a href="#补码和反码-Complements" class="headerlink" title="补码和反码 Complements"></a>补码和反码 Complements</h2><h3 id="反码-diminished-radix-complemen-r-1’s"><a href="#反码-diminished-radix-complemen-r-1’s" class="headerlink" title="反码 diminished radix complemen $r-1’s$"></a>反码 diminished radix complemen $r-1’s$</h3><ul>
-<li>对于r进制数字的补码，用r-1减去每一位，例如$12345_{10}$，反码为$99999 - 12345 &#x3D; 87654$</li>
-</ul>
-<h3 id="补码-radix-complement-r’s"><a href="#补码-radix-complement-r’s" class="headerlink" title="补码 radix complement $r’s$"></a>补码 radix complement $r’s$</h3><ul>
-<li>先计算反码，然后加1 ，例如$12345_{10}$，补码为$99999-12345+1 &#x3D; 87655$</li>
-</ul>
-<h2 id="二进制减法"><a href="#二进制减法" class="headerlink" title="二进制减法"></a>二进制减法</h2><ul>
-<li>三个方法：借位法，反码法，补码法</li>
-</ul>
-<h3 id="补码法"><a href="#补码法" class="headerlink" title="补码法"></a>补码法</h3><p>如要计算$M-N$：</p>
-<ul>
-<li>如果$M\geq N$：</li>
-</ul>
-<p>​		把N的补码加到M上然后去掉进位。例如$72532-3250$：</p>
-<p>​		$M&#x3D;72532, N_补&#x3D;96750, M+N_补&#x3D;169282, 减去进位169282-100000&#x3D;69282$</p>
-<ul>
-<li>如果$M&lt;N$：</li>
-</ul>
-<p>​		把N的补码加到M上然后取补码加负号。例如$3250-72532$：</p>
-<p>​		$M&#x3D;03250, N_补&#x3D;27468, M+N_补&#x3D;30718, 取补码69282, 加负号结果为-69282$</p>
-<h2 id="带符号的二进制数-Signed-binary-numbers"><a href="#带符号的二进制数-Signed-binary-numbers" class="headerlink" title="带符号的二进制数 Signed binary numbers"></a>带符号的二进制数 Signed binary numbers</h2><p>​		生活中有很多场景会用到正数负数，但数字系统用二进制去代表一切，所有有三种表示方法：符号表示、反码(1’s)表示，补码(2’s)表示</p>
-<h3 id="符号表示-Sign-magnitude-representation"><a href="#符号表示-Sign-magnitude-representation" class="headerlink" title="符号表示 Sign-magnitude representation"></a>符号表示 Sign-magnitude representation</h3><p>​	通常多一个bit叫做sign bit，简称MSB。</p>
-<ul>
-<li>通常来讲，0作为正号，1作为负号</li>
-<li>例如一个8-bit带符号二进制数字$01101001_2$代表一个正数$105_{10}$，$11101001_2$代表一个负数$-105_{10}$。</li>
-</ul>
-<h3 id="反码和补码表示-1’s-and-2’s-complement-representation"><a href="#反码和补码表示-1’s-and-2’s-complement-representation" class="headerlink" title="反码和补码表示 $1’s$ and $2’s$ complement representation"></a>反码和补码表示 $1’s$ and $2’s$ complement representation</h3><ul>
-<li>反码表示，两个数字都是彼此的反码例如$0111_2$代表$+7_{10}$，$1000_2$代表$-7_{10}$，正数MSB为0，负数MSB为1</li>
-<li>补码表示，1被加到反码表示法中$0111_2$代表$+7_{10}$，$1001_2$代表$-7_{10}$，正数MSB为0，负数MSB为1</li>
-</ul>
-<h2 id="二进制编码-Binary-codes"><a href="#二进制编码-Binary-codes" class="headerlink" title="二进制编码 Binary codes"></a>二进制编码 Binary codes</h2><p>​		只有在知道数据所用的编码时候，才有可能对数据进行解释。例如1000010在直二进制中表示66（十进制），在BCD中表示42（十进制），在ASCII代码中表示字母B。</p>
-<h3 id="二进制编码的十进制-8421-Binary-Coded-decimal-BCD"><a href="#二进制编码的十进制-8421-Binary-Coded-decimal-BCD" class="headerlink" title="二进制编码的十进制(8421) Binary-Coded decimal (BCD)"></a>二进制编码的十进制(8421) Binary-Coded decimal (BCD)</h3><p>​		简称BCD，用4bit来编码每个10进制数字，在数字系统中很方便使用。例如$35_{10}$使用$0011$ $0101$来表示，而不是$100011_2$。同时它也被称为8421编码，因为这是BCD编码中4个bit分别的权重。例如用BCD编码表示69.27: $ 69.27_{10}&#x3D;01101001.00100111_{BCD} $</p>
-<h3 id="BCD加减法-BCD-addition-amp-subtraction"><a href="#BCD加减法-BCD-addition-amp-subtraction" class="headerlink" title="BCD加减法 BCD addition &amp; subtraction"></a>BCD加减法 BCD addition &amp; subtraction</h3><ul>
-<li>先用一般法则将两数相加&#x2F;减，如果得出小于9则会产生一个合理的的BCD数字</li>
-<li>如果产生了大于9的数字则会产生进位，这是不合理的，此时在加上十进制的$6_{10}$或二进制下的$0110_{2}$来跳过6个不合理的数，然后把进位放到下一组4bit数中（可以是已经存在的，也可以是新的一组）</li>
-<li>例如：$0111_{BCD} + 1001_{BCD}$：$0111+1001&#x3D;10000,$ $10000+0110&#x3D;00010110_{BCD}$</li>
-</ul>
-<h3 id="格雷码-Gray-code"><a href="#格雷码-Gray-code" class="headerlink" title="格雷码 Gray code"></a>格雷码 Gray code</h3><ul>
-<li>两位数字之间只有一位发生了变化</li>
-</ul>
-<h2 id="检错码-Error-detction-codes"><a href="#检错码-Error-detction-codes" class="headerlink" title="检错码 Error-detction codes"></a>检错码 Error-detction codes</h2><ul>
-<li>二进制信息在介质中传导时会有所损失或噪音，检错码就是用于检验传输过程中的错误码。错误不可以被更正，它的目的是检测</li>
-<li>奇偶检验位：数据中1是奇数就是1，反之是0，使数据中的1的个数始终为奇数</li>
-</ul>
-<h3 id="检和-Checksum"><a href="#检和-Checksum" class="headerlink" title="检和 Checksum"></a>检和 Checksum</h3><ul>
-<li>奇偶检验会在双数错误时失效，因此我们使用Checksum。在传输一串数据A之后又传输了B，那么会有一个Check Sum为A与B的二进制数据相加，如果又传输了C，则加上C的二进制数据。在数据传输完成后传输Check Sum，在接收端完成同样的操作，如果接收端的Check Sum和发射端的最后一个Check Sum相同，则数据无错</li>
-</ul>
-<h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><p>​		许多计算机的应用程式不止需要处理数字，需要处理字符，因此需要了ASCII码（Aemrican Stantdard Code for Information Interchange）用7个bit来编码128个字符。</p>
-<h2 id="二进制存储和寄存器-Binary-storage-and-registers"><a href="#二进制存储和寄存器-Binary-storage-and-registers" class="headerlink" title="二进制存储和寄存器 Binary storage and registers"></a>二进制存储和寄存器 Binary storage and registers</h2><ul>
-<li>二进制信息必须以物理形式存在，一个单元(Cell)必须拥有两种稳定的状态来代表0和1，寄存器就是一组二进制单元。寄存器之间传输并储存二进制信息</li>
-</ul>
-<h3 id="二进制逻辑-Binary-logic"><a href="#二进制逻辑-Binary-logic" class="headerlink" title="二进制逻辑 Binary logic"></a>二进制逻辑 Binary logic</h3><ul>
-<li>二进制逻辑是用逻辑运算处理两个分离的值</li>
-<li>三种基础的逻辑运算：AND OR NOT</li>
-<li>逻辑门是一种处理一个或多个输入来产生输出的电路元件，多于两个的输入也是ok的</li>
-<li>电压操作，在一个范围内，但被解释为两个值中的任何一个。例如高电位位1，低电位为0。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>引言</title>
-    <url>/2022/07/12/%E5%BC%95%E8%A8%80/</url>
-    <content><![CDATA[<p> 一些关于过去的事</p>
-<span id="more"></span>
-
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>作为经典理工直男的通病，九年的课程，但凡跟考试无关的课程是一点都没听进去，我行我素一套自己的生活逻辑（什么路边的美景？生活中的浪漫？知识技能和山顶的风光才是人生的真谛！）除了学习就是打游戏，甚至放弃了很多个人爱好。这样的方式在中学确实很有效，毕竟高考是那个阶段唯一的目标。但这真的好吗？</p>
-<p>渐渐的，发觉自己仿佛丢失掉了做人的一些特点，没有同理心，不理解浪漫，不重视感情，甚至不会悲伤，绝对的极端的思想以及行为准则etc. 好在没有造成什么恶劣的影响，这归功于小到几乎没有的表达欲。最明显的，是发现开始不了解自己了，这是痛苦且致命的。经历的事件遇到的人，他们多少在影响并改变我。我已经向前走了，但“我”并没有动，还是站在原地。当别人问起我喜欢什么，要去做什么时，面对这个问题“我”犹豫了，不知道该说什么。一句Follow your heart也不知道该怎么做，我心向何处呢？也正是从那起，“我”也觉得该做出改变了。</p>
-<p>这一切始于2018的冬天，在Wisconsin的小镇上那个抱着一堆光碟的高一少年。初到美国，为了能和人正常交谈看了成吨成吨的无字幕电影，虽然最初的目的不是欣赏，但也是打开了一扇大门，世界如此美好！陆陆续续看了很多很多电影，对文学艺术也开始有了兴趣，但终究还是静不下心坐下来欣赏文字，</p>
-<p>2019年的疫情，因为无聊创建了这个网站，总共发了两篇博文（现在已经删掉了），一度不知道这个Blog是用来干什么的，只是觉得作为一个人拥有一个自己的博客是件很Cool的事情，更没有心情慢下来写东西。也正是在这年我认识了一个女孩，她教会了我如何生活，算是比较重要的人，虽然结局并不美好，但还是很感谢。</p>
-<p>2021-2022是复杂的两年，到了大学也可算有了点自己的思考，也到开始Who you are, What you want to be的时候了。终日而思，无果；与人交流，收获甚多，但那终不是自己走出的路；多看书吧，多看电影吧，多出去走走吧，认识这个世界才能更好的认识自己。</p>
-<p>书读了，路走了，思考的事情不记录下来，在脑海中闪过又消逝了。这是不利于认识“我”的，于是便决定写下来。qq变成了工作用途，朋友圈也不是每个人都想了解“我”，认识“我”，不是很好的平台。想了想还是重新开始维护这个Blog，有心的人会看，无心的人也找不到，更多是写给自己了。</p>
-<p>感悟感想以外还有学习CS的笔记，评论区暂时不开放了，想找我交流微信戳我就好。</p>
-<p>共勉！</p>
-]]></content>
-      <categories>
-        <category>引言</category>
-      </categories>
-      <tags>
-        <tag>引言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CS207 Chapter 8</title>
     <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/</url>
     <content><![CDATA[<p> <strong>Chapter 8</strong> 算术电路 Arithmetic Circuits</p>
@@ -1014,67 +1075,6 @@
 <img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302152231464.png" alt="截屏2023-02-15 22.31.02" style="zoom: 33%;" />
 
 <p>​		这时候使用D触发器替换JK触发器，电路就会和上面的加法器一样</p>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 4</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/</url>
-    <content><![CDATA[<p> <strong>Chapter 4</strong> 两级实现 Two Level Implementation</p>
-<span id="more"></span>
-
-<h1 id="两级实现-Two-Level-Implementation"><a href="#两级实现-Two-Level-Implementation" class="headerlink" title="两级实现 Two Level Implementation"></a>两级实现 Two Level Implementation</h1><h2 id="NAND-和-NOR-实现"><a href="#NAND-和-NOR-实现" class="headerlink" title="NAND 和 NOR 实现"></a>NAND 和 NOR 实现</h2><p>​		现在的逻辑电路经常由NAND和NOR门来实现功能，因为他们简单易用，并且使用同样的门来制造电路成本低廉</p>
-<h2 id="多级NAND电路"><a href="#多级NAND电路" class="headerlink" title="多级NAND电路"></a>多级NAND电路</h2><ul>
-<li><p>简单确定如何使用NAND门 或 把方程转化为NAND门形式，例如：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142046462.png" style="zoom:50%;" />
-</li>
-<li><p>布尔函数用两级NAND门实现，具体步骤：</p>
-</li>
-</ul>
-<ol>
-<li>简化该函数并以乘积之和SOP的形式表达。</li>
-<li>为表达式中至少有两个字的每个乘积项画一个NAND门。每个NAND门的输入都是该组乘积的变量树。这个过程会产生一组第一级门。</li>
-<li>在第二层中使用AND-反转或反转-OR图形符号画一个单一的门，其输入来自第一层门的输出。</li>
-<li>一个只有一个字词的术语需要在第一层中使用反相器。然而，如果单字是补足的，它可以直接连接到第二层NAND门的一个输入</li>
-</ol>
-<ul>
-<li>使用混合符号将多级AND-OR图转换为全NAND图的一般程序如下:</li>
-</ul>
-<ol>
-<li>将所有的AND门转换为NAND门，并使用AND-反转图形符号。</li>
-<li>将所有的OR门转换为NAND门，并使用反转-OR图形符号。</li>
-<li>检查图中的所有气泡。对于每一个没有被补偿的气泡都要插入一个反相器(一个单输入的NAND门)或补充输入的文字。</li>
-</ol>
-<h2 id="多级NOR电路"><a href="#多级NOR电路" class="headerlink" title="多级NOR电路"></a>多级NOR电路</h2><ul>
-<li>NOR操作是NAND操作的对偶。</li>
-</ul>
-<ul>
-<li>所有NOR逻辑的程序和规则都是为NAND逻辑制定的相应程序和规则的对偶。</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047124.png" style="zoom:50%;" />
-
-<ul>
-<li>一般步骤：</li>
-</ul>
-<ol>
-<li>用NOR门的两级实现需要将函数简化为和的乘积形式。</li>
-<li>将OR门改为带有OR-反转图形符号的NOR门，将AND门改为带有反转-AND图形符号的NOR门。</li>
-</ol>
-<h2 id="XOR函数-Exclusive-OR-function"><a href="#XOR函数-Exclusive-OR-function" class="headerlink" title="XOR函数 Exclusive-OR function"></a>XOR函数 Exclusive-OR function</h2><ul>
-<li>异或XOR：$x ⊕ y &#x3D; xy ′ + x ′ y$ ，	同或XNOR $(x ⊕ y) ′ &#x3D; x ⊙ y &#x3D; xy + x ′y ′$</li>
-</ul>
-<h3 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h3><p>XOR 很难直接实现，因此都是由其它门构造的，如下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047211.png" style="zoom: 50%;" /><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047463.png" style="zoom:50%;" /></p>
-<p>只有少数的电路使用XOR来实现操作，特别是一些算数和查错纠错电路</p>
-<h3 id="奇函数-Odd-function"><a href="#奇函数-Odd-function" class="headerlink" title="奇函数 Odd function"></a>奇函数 Odd function</h3><p>​		有三个或更多变量的XOR操作可以通过用其等价的布尔表达式替换⊕来转换为普通的布尔函数。</p>
-<p>​	$A ⊕ B ⊕ C &#x3D; (AB’+ A’B)C’+ (AB + A’B’)C&#x3D; AB’C’+ A’BC’+ ABC + A’B’C&#x3D; ∑ (1, 2, 4, 7)$</p>
-<p>​		当且仅当输入变量有奇数个1时输出1，加反运算输出是否为偶数个1，在用作奇偶校验Checksum时很好用。<strong>Parity Checking</strong></p>
-<p>​	奇偶校验位p，奇数个1输出1，偶数个输出0，与Chapter 3中相同</p>
 ]]></content>
       <categories>
         <category>CS207</category>
