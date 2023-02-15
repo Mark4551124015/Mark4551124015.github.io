@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.mark455.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Chapter 5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS207 Chapter 5">
+<meta property="og:url" content="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/index.html">
+<meta property="og:site_name" content="Mark455的博客">
+<meta property="og:description" content="Chapter 5">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105256.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047977.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105770.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047475.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047292.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047317.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047329.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047573.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048891.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048326.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048593.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048828.png">
+<meta property="article:published_time" content="2023-02-14T21:05:07.000Z">
+<meta property="article:modified_time" content="2023-02-15T02:49:51.305Z">
+<meta property="article:author" content="Mark455·Feng">
+<meta property="article:tag" content="数字逻辑 - CS207 - 笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png">
+
+
+<link rel="canonical" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/","path":"2023/02/15/笔记/数字逻辑 CS207/Chapter 5/","title":"CS207 Chapter 5"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CS207 Chapter 5 | Mark455的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Mark455的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">随便写写</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">组合逻辑电路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Multiplexer%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text">Multiplexer	多路复用器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BD%9C%E7%94%9F%E6%88%90%E5%B8%83%E5%B0%94%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.1.</span> <span class="nav-text">用作生成布尔函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Decoder-%E8%A7%A3%E7%A0%81%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">Decoder 解码器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%A0%81%E5%99%A8%E7%BD%91%E7%BB%9C"><span class="nav-number">1.2.1.</span> <span class="nav-text">解码器网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Encoder-%E7%BC%96%E7%A0%81%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">Encoder 编码器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Digital-Comparator-%E6%AF%94%E8%BE%83%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">Digital Comparator 比较器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF"><span class="nav-number">1.5.</span> <span class="nav-text">迭代组合电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%A8%E5%BB%B6%E8%BF%9F"><span class="nav-number">1.6.</span> <span class="nav-text">门延迟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%88%E9%99%A4%E6%97%B6%E5%BA%8F%E5%8D%B1%E9%99%A9"><span class="nav-number">1.7.</span> <span class="nav-text">消除时序危险</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mark455·Feng</p>
+  <div class="site-description" itemprop="description">有干货有杂货 还有生活</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Mark4551124015" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Mark4551124015" rel="noopener me" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark455·Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mark455的博客">
+      <meta itemprop="description" content="有干货有杂货 还有生活">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CS207 Chapter 5 | Mark455的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CS207 Chapter 5
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-15 05:05:07 / 修改时间：10:49:51" itemprop="dateCreated datePublished" datetime="2023-02-15T05:05:07+08:00">2023-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS207/" itemprop="url" rel="index"><span itemprop="name">CS207</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> <strong>Chapter 5</strong></p>
+<span id="more"></span>
+
+<h1 id="组合逻辑电路"><a href="#组合逻辑电路" class="headerlink" title="组合逻辑电路"></a>组合逻辑电路</h1><p>​		逻辑电路分为<strong>组合逻辑</strong>和<strong>时序逻辑</strong>，组合逻辑电路的输出取决于输入的组合，可以实现一个布尔函数的运算，对输入变量的值和组合敏感并且输出一组值。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png" style="zoom:50%;" />
+
+<p>​		输入共有$2^n$个组合，可以用真值表表示，m个输出根据输入来决定</p>
+<h2 id="Multiplexer多路复用器"><a href="#Multiplexer多路复用器" class="headerlink" title="Multiplexer	多路复用器"></a>Multiplexer	多路复用器</h2><p>​			多路复用器通过n个输入（通常为2,4,8,16）以及一个开关E以及选择输入来决定输出哪一个输入。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105256.png" alt="截屏2023-02-12 16.48.19" style="zoom:50%;" />
+
+<ul>
+<li><p>数字系统内的数据通常以并行形式处理，以提高运行速度。</p>
+</li>
+<li><p>如果系统的输出必须在一个相对较长的距离内传输，那么将进行并行到串行的转换。</p>
+</li>
+<li><p>例如一个8位字在数据输入端以并行方式呈现</p>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047977.png" alt="截屏2023-02-12 16.51.10" style="zoom:50%;" />
+
+<h3 id="用作生成布尔函数"><a href="#用作生成布尔函数" class="headerlink" title="用作生成布尔函数"></a>用作生成布尔函数</h3><p>对于一个4对1的MUX，其特征方程为 $f &#x3D; A’B’d_0 + A’Bd_1 + AB’d_2 + ABd_3 $</p>
+<ul>
+<li>A和B是布尔变量，应用在选择输入端，可以从任何n个变量的布尔函数中分解出来。</li>
+<li>剩下的n-2个变量，被称为残差变量，可以形成残差函数，然后可以应用于数据输入。</li>
+<li>例如：$f(A，B，C)&#x3D;∑(0，1，3，4，7)$</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105770.png" alt="截屏2023-02-12 17.02.12" style="zoom:67%;" />
+
+<h2 id="Decoder-解码器"><a href="#Decoder-解码器" class="headerlink" title="Decoder 解码器"></a>Decoder 解码器</h2><ul>
+<li>可以看出，解码器的逻辑图与解复用器的逻辑图是相同的，只要数据线被用来启用解码器。</li>
+<li>解码器也可以被看作是一个SOP发生器。每个输出都产生一个minterm。</li>
+</ul>
+<p>​		如下为$f(A, B, C, D) &#x3D; ∑ (0, 1, 5, 8, 10, 12, 13, 15)$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047475.png" alt="截屏2023-02-12 17.03.17" style="zoom:50%;" />
+
+<h3 id="解码器网络"><a href="#解码器网络" class="headerlink" title="解码器网络"></a>解码器网络</h3><ul>
+<li>当需要一个大型的解码网络时，它不能在一个MSI封装中实现。</li>
+<li>主要是由于需要大量的引脚。</li>
+<li>解码范围可以通过解码器芯片的互连来扩展。两种方案。</li>
+</ul>
+<p>​			树状解码 Tree decoding</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047292.png" alt="截屏2023-02-12 18.27.15" style="zoom:50%;" />
+
+<p>​			巧合解码 Coincident decoding</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047317.png" alt="截屏2023-02-12 18.27.36" style="zoom:50%;" />
+
+<h2 id="Encoder-编码器"><a href="#Encoder-编码器" class="headerlink" title="Encoder 编码器"></a>Encoder 编码器</h2><p>​		编码器就是解码器的反向操作，一般用于CPU master flag，将输入的独热玛转换为二进制数字</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047329.png" alt="截屏2023-02-12 18.45.24" style="zoom:50%;" />
+
+<ul>
+<li>编码器被设计为在任何给定的瞬间识别一个，而且只有一个外围设备。</li>
+<li>在实践中，没有什么可以阻止两个或更多的外设同时请求服务。</li>
+<li>为了处理这种情况，可以给外设标志附加一个优先级系统。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047573.png" style="zoom: 50%;" />
+
+<h2 id="Digital-Comparator-比较器"><a href="#Digital-Comparator-比较器" class="headerlink" title="Digital Comparator 比较器"></a>Digital Comparator 比较器</h2><p>• 比较器的通常问题是两个多位数字的比较</p>
+<p>​	such as $A &#x3D; A_2A_1A_0 $and $B &#x3D; B_2 B_1 B_0$</p>
+<p>• 从最有意义的位（最大）开始到最小的位</p>
+<p>​		A &#x3D; B 如果所有的位数都相等: $A_i &#x3D; B_i$</p>
+<p>​		$x_i &#x3D;A_i B_i +A_i’B_i’$</p>
+<p>​		A &#x3D; B if $x_2 x_1 x_0 &#x3D; 1$</p>
+<p>​		A &gt; B if $A_2 B_2’+ x_2 A_1 B_1’+ x_2 x_1 A_0 B_0’&#x3D; 1$</p>
+<p>​		A &lt; B if $A_2’B_2 + x_2 A_1’B_1 + x_2 x_1 A_0’B_0 &#x3D; 1$</p>
+<p>单bit比较器:</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048891.png" style="zoom:50%;" />
+
+<p>3 bit比较器：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048326.png" alt="comp" style="zoom:50%;" />
+
+<h2 id="迭代组合电路"><a href="#迭代组合电路" class="headerlink" title="迭代组合电路"></a>迭代组合电路</h2><ul>
+<li>一般结构：相同功能的n个相同的模块，对于可以通过迭代算法解决的问题。</li>
+<li>将$C_0$设为其初始值，并将i设为0。</li>
+<li>当i&lt;n时，重复。<ul>
+<li>用$C_i$和$D_i$来确定$O_i$和$C_{i+1}$的值。</li>
+<li>增加i</li>
+</ul>
+</li>
+<li>初级输入&#x2F;输出和级联输入&#x2F;输出。</li>
+</ul>
+<p>​	例如，使用迭代组合电路比大小，模块为1bit比较器:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048593.png" alt="截屏2023-02-12 19.19.29"></p>
+<h2 id="门延迟"><a href="#门延迟" class="headerlink" title="门延迟"></a>门延迟</h2><p>​	在电位变化过程中有延迟，中间部分不会被定义为高&#x2F;低电位</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048828.png" alt="门延迟" style="zoom:50%;" />
+
+<ul>
+<li>忽略延迟的组合电路的分析只能预测其<strong>稳态行为</strong>。<ul>
+<li>假设相对于电路中的电子元件的延迟而言，输入已经稳定了很长时间，则预测电路的输出为其输入的函数。</li>
+</ul>
+</li>
+<li>由于电路的延迟，组合逻辑电路的<strong>瞬态行为</strong>可能与稳态分析的预测不同。</li>
+<li><strong>时序危险</strong>：当稳态分析预测输出不应改变时，电路的输出可能产生一个短脉冲（<strong>突波glitch</strong>）</li>
+<li>一个门有可测量的响应时间$t_{pLH}$和$t_{pHL}$。每个门大约10ns。</li>
+<li>通过传输门的延迟可以累加起来，并引入时间危险。</li>
+<li>$t_{pLH}$&#x3D; 低到高，$t_{pHL}$&#x3D; 高到低的传播时间</li>
+<li>static-1危险是一个短暂的0突变，当输入改变时，我们期望（根据逻辑定理）输出保持恒定的1</li>
+<li>static-0危险是一个短暂的1突变，当我们期望输出保持恒定的0</li>
+</ul>
+<h2 id="消除时序危险"><a href="#消除时序危险" class="headerlink" title="消除时序危险"></a>消除时序危险</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91-CS207-%E7%AC%94%E8%AE%B0/" rel="tag"># 数字逻辑 - CS207 - 笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/" rel="prev" title="CS207 Chapter 4">
+                  <i class="fa fa-chevron-left"></i> CS207 Chapter 4
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/" rel="next" title="CS207 Chapter 6">
+                  CS207 Chapter 6 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark455·Feng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

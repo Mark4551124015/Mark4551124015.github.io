@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.mark455.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Chapter 6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS207 Chapter 6">
+<meta property="og:url" content="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/index.html">
+<meta property="og:site_name" content="Mark455的博客">
+<meta property="og:description" content="Chapter 6">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048923.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048207.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048167.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048823.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048293.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048517.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048086.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105951.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048874.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048531.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048122.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048289.png">
+<meta property="article:published_time" content="2023-02-14T22:05:07.000Z">
+<meta property="article:modified_time" content="2023-02-15T02:49:56.447Z">
+<meta property="article:author" content="Mark455·Feng">
+<meta property="article:tag" content="数字逻辑 - CS207 - 笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048923.png">
+
+
+<link rel="canonical" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/","path":"2023/02/15/笔记/数字逻辑 CS207/Chapter 6/","title":"CS207 Chapter 6"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CS207 Chapter 6 | Mark455的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Mark455的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">随便写写</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%81%E5%AD%98%E5%99%A8%E5%92%8C%E8%A7%A6%E5%8F%91%E5%99%A8-Latches-and-Flip-flops"><span class="nav-number">1.</span> <span class="nav-text">锁存器和触发器 Latches and Flip-flops</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91%E5%99%A8Flip-Flop"><span class="nav-number">1.1.</span> <span class="nav-text">触发器Flip-Flop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%81%E5%AD%98%E5%99%A8-Latches"><span class="nav-number">1.2.</span> <span class="nav-text">锁存器 Latches</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SR-Latches"><span class="nav-number">1.2.1.</span> <span class="nav-text">SR Latches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controlled-SR-Latches"><span class="nav-number">1.2.2.</span> <span class="nav-text">Controlled SR Latches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controlled-D-Latch"><span class="nav-number">1.2.3.</span> <span class="nav-text">Controlled D Latch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JK-%E8%A7%A6%E5%8F%91%E5%99%A8-JK-flip-flop"><span class="nav-number">1.2.4.</span> <span class="nav-text">JK 触发器 JK flip-flop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB-%E4%BB%8EJK-FF"><span class="nav-number">1.2.5.</span> <span class="nav-text">主-从JK FF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-flip-flop"><span class="nav-number">1.2.6.</span> <span class="nav-text">D flip-flop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T-flip-flop"><span class="nav-number">1.2.7.</span> <span class="nav-text">T flip-flop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FF%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.2.8.</span> <span class="nav-text">FF间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%80%A7%E8%A1%A8-Characteristic-table"><span class="nav-number">1.2.9.</span> <span class="nav-text">特性表 Characteristic table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%80%A7%E6%96%B9%E7%A8%8B-Characteristic-equation"><span class="nav-number">1.2.10.</span> <span class="nav-text">特性方程 Characteristic equation</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mark455·Feng</p>
+  <div class="site-description" itemprop="description">有干货有杂货 还有生活</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Mark4551124015" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Mark4551124015" rel="noopener me" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark455·Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mark455的博客">
+      <meta itemprop="description" content="有干货有杂货 还有生活">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CS207 Chapter 6 | Mark455的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CS207 Chapter 6
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-15 06:05:07 / 修改时间：10:49:56" itemprop="dateCreated datePublished" datetime="2023-02-15T06:05:07+08:00">2023-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS207/" itemprop="url" rel="index"><span itemprop="name">CS207</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> <strong>Chapter 6</strong></p>
+<span id="more"></span>
+
+<h1 id="锁存器和触发器-Latches-and-Flip-flops"><a href="#锁存器和触发器-Latches-and-Flip-flops" class="headerlink" title="锁存器和触发器 Latches and Flip-flops"></a>锁存器和触发器 Latches and Flip-flops</h1><p>​	其在任何瞬间的输出都取决于现在的输入和过去的输出的逻辑电路被称为顺序电路。</p>
+<ul>
+<li>一个组合电路，但有<ul>
+<li>记忆元素连接在反馈路径中。</li>
+<li>输出不仅是输入的二进制函数，也是电路的当前状态。</li>
+<li>记忆元件是一种媒介，其中的一位信息（0或1）可以被存储或保留到必要时，此后其内容可以被一个新的值所取代。</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048923.png" alt="截屏2023-02-12 19.50.29" style="zoom:50%;" />
+
+<p>​		顺序电路大致分为两大类，称为同步或有时钟的顺序电路，以及异步或无时钟的顺序电路，取决于其信号的时间。一个序列电路的行为可以通过对其信号在离散时间段的了解来定义，被称为<strong>同步序列电路</strong>，一个序列电路的行为取决于输入信号的变化顺序，被称为<strong>异步序列电路</strong>。</p>
+<h2 id="触发器Flip-Flop"><a href="#触发器Flip-Flop" class="headerlink" title="触发器Flip-Flop"></a>触发器Flip-Flop</h2><p>​		Flip-Flop是一种记忆原件，仅存储1bit的数据，只在一个时钟脉冲内有电位变化，时钟不激活不变化</p>
+<p>它只能有两个状态，要么是1状态，要么是0状态。</p>
+<ul>
+<li>触发器的一般框图表示如下，它有一个或多个输入和两个输出，这两个输出是相互补充的。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048207.png" alt="截屏2023-02-12 19.57.21" style="zoom:50%;" />
+
+<ul>
+<li>通常，Q的状态被称为触发器的状态，而Q′的状态被称为触发器的互补状态。</li>
+</ul>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>对于锁存器和触发器这两个术语的使用，一直存在着相当大的混淆。</p>
+<ul>
+<li>触发器是一种在时钟信号发生变化时改变其状态的设备。</li>
+<li>异步锁存器持续监测输入信号，在输入信号发生变化时改变其状态。</li>
+<li>同步锁存器持续监测输入信号，但只有在控制信号激活时才能改变其状态。</li>
+</ul>
+<h2 id="锁存器-Latches"><a href="#锁存器-Latches" class="headerlink" title="锁存器 Latches"></a>锁存器 Latches</h2><h3 id="SR-Latches"><a href="#SR-Latches" class="headerlink" title="SR Latches"></a>SR Latches</h3><ul>
+<li><p>通过交叉耦合一对NOR门，我们有了第一个锁存器。SR锁存器</p>
+<ul>
+<li>设置和复位的输入端分别被标为S和R，SR锁存器的状态表如下所示</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048167.png" alt="截屏2023-02-12 20.00.43" style="zoom:50%;"/>
+
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048823.png" style="zoom:50%;" />
+
+<ul>
+<li>在k-map中$Q_{t+1}&#x3D;S+R’Q$</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048293.png" alt="截屏2023-02-12 20.04.00" style="zoom:67%;" />
+
+<h3 id="Controlled-SR-Latches"><a href="#Controlled-SR-Latches" class="headerlink" title="Controlled SR Latches"></a>Controlled SR Latches</h3><ul>
+<li>SR锁存器的可控性可以由一个额外的信号G控制。<ul>
+<li><p>如果G&#x3D;0，第一级NAND门的输出总是1，禁用第二级门的任何变化。</p>
+</li>
+<li><p>如果G从0过渡到1，第一级NAND门被启用，使锁存器处于激活状态。</p>
+</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048517.png" alt="截屏2023-02-12 20.08.22" style="zoom:50%;" />
+
+<ul>
+<li>但是SR锁存器若S和R都是1时输出不可预知</li>
+</ul>
+<h3 id="Controlled-D-Latch"><a href="#Controlled-D-Latch" class="headerlink" title="Controlled D Latch"></a>Controlled D Latch</h3><ul>
+<li>D锁存器被设计用来处理这个问题，D锁存器也叫透明锁存器，D代表数据，确保前面的S和R永远不会同时等于1</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048086.png" alt="截屏2023-02-12 20.14.18" style="zoom:50%;" />
+
+<ul>
+<li>受控D型锁存器的优点是只需要一个数据输入，没有必须要避免的输入条件<ul>
+<li>当enable被断言时，数据输入被转移到Q输出。输出跟随输入</li>
+<li>当使能被解除时，信息被储存</li>
+</ul>
+</li>
+</ul>
+<h3 id="JK-触发器-JK-flip-flop"><a href="#JK-触发器-JK-flip-flop" class="headerlink" title="JK 触发器 JK flip-flop"></a>JK 触发器 JK flip-flop</h3><p>​		锁存器电路由于其透明性而不适合在同步顺序电路中运行。触发器被用作基本的存储元件，它只对clk输入激活时的变化作出反应，一个典型的例子被称为JK触发器（JKFF）1 0 置1， 0 1置0， 1 1 反转， 00不变 </p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105951.png" alt="test" style="zoom: 67%;" />
+
+<h3 id="主-从JK-FF"><a href="#主-从JK-FF" class="headerlink" title="主-从JK FF"></a>主-从JK FF</h3><p>​		主控器的时钟是正常的，而从属器的时钟是反转的。当时钟变为0时，从机被激活以反映来自主机的数据。主站的数据到输出。但是，主锁存器被禁用：输入的进一步变化将不会被反映出来。可以继续添加控制Clear和Preset来覆盖JK输入，Cl Pr 1 0时 清除主从的Q为0，0 1 时 Q预设为1。同时激活时存储器锁住不再变化，0 0 时对外界可做出相应 </p>
+<h3 id="D-flip-flop"><a href="#D-flip-flop" class="headerlink" title="D flip-flop"></a>D flip-flop</h3><p>​		如latch一样，将K输入为J的逆。</p>
+<h3 id="T-flip-flop"><a href="#T-flip-flop" class="headerlink" title="T flip-flop"></a>T flip-flop</h3><p>​		最后，当输入T&#x3D;1的时钟信号时，一个T触发器会切换状态，构造下面有</p>
+<h3 id="FF间的转换"><a href="#FF间的转换" class="headerlink" title="FF间的转换"></a>FF间的转换</h3><ul>
+<li>JKFF &#x3D;&gt; DFF：链接K为J的反向</li>
+<li>DFF  &#x3D;&gt; JKFF：如图</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048874.png" alt="image-20230213233538201" style="zoom:67%;" />
+
+<ul>
+<li>JKFF &amp; DFF &#x3D;&gt; TFF：</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048531.png" alt="image-20230213233839090" style="zoom:67%;" />
+
+<h3 id="特性表-Characteristic-table"><a href="#特性表-Characteristic-table" class="headerlink" title="特性表 Characteristic table"></a>特性表 Characteristic table</h3><ul>
+<li>特性表通过描述一个触发器的逻辑属性以表格的形式描述其操作。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048122.png" alt="image-20230213234035920" style="zoom:67%;" />
+
+<h3 id="特性方程-Characteristic-equation"><a href="#特性方程-Characteristic-equation" class="headerlink" title="特性方程 Characteristic equation"></a>特性方程 Characteristic equation</h3><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048289.png" alt="image-20230213234110839" style="zoom:67%;" />
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91-CS207-%E7%AC%94%E8%AE%B0/" rel="tag"># 数字逻辑 - CS207 - 笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/" rel="prev" title="CS207 Chapter 5">
+                  <i class="fa fa-chevron-left"></i> CS207 Chapter 5
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/" rel="next" title="CS207 Chapter 7">
+                  CS207 Chapter 7 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark455·Feng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

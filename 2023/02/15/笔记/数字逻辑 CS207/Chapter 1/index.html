@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.mark455.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Chapter 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS207 Chapter 1">
+<meta property="og:url" content="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/index.html">
+<meta property="og:site_name" content="Mark455的博客">
+<meta property="og:description" content="Chapter 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-14T17:05:07.000Z">
+<meta property="article:modified_time" content="2023-02-15T02:49:33.199Z">
+<meta property="article:author" content="Mark455·Feng">
+<meta property="article:tag" content="数字逻辑 - CS207 - 笔记">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/","path":"2023/02/15/笔记/数字逻辑 CS207/Chapter 1/","title":"CS207 Chapter 1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CS207 Chapter 1 | Mark455的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Mark455的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">随便写写</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-Binary-Numbers"><span class="nav-number">1.</span> <span class="nav-text">二进制数 Binary Numbers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E7%B3%BB%E7%BB%9F-Digital-Systems"><span class="nav-number">1.1.</span> <span class="nav-text">数字系统 Digital Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6-Number-System"><span class="nav-number">1.2.</span> <span class="nav-text">进制 Number System</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2-Conversion-between-binary-and-hexadecimal"><span class="nav-number">1.3.</span> <span class="nav-text">进制转换 Conversion between binary and hexadecimal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E5%92%8C%E5%8F%8D%E7%A0%81-Complements"><span class="nav-number">1.4.</span> <span class="nav-text">补码和反码 Complements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E7%A0%81-diminished-radix-complemen-r-1%E2%80%99s"><span class="nav-number">1.4.1.</span> <span class="nav-text">反码 diminished radix complemen $r-1’s$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81-radix-complement-r%E2%80%99s"><span class="nav-number">1.4.2.</span> <span class="nav-text">补码 radix complement $r’s$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%87%8F%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">二进制减法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E6%B3%95"><span class="nav-number">1.5.1.</span> <span class="nav-text">补码法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%A6%E7%AC%A6%E5%8F%B7%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0-Signed-binary-numbers"><span class="nav-number">1.6.</span> <span class="nav-text">带符号的二进制数 Signed binary numbers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E8%A1%A8%E7%A4%BA-Sign-magnitude-representation"><span class="nav-number">1.6.1.</span> <span class="nav-text">符号表示 Sign-magnitude representation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E7%A0%81%E5%92%8C%E8%A1%A5%E7%A0%81%E8%A1%A8%E7%A4%BA-1%E2%80%99s-and-2%E2%80%99s-complement-representation"><span class="nav-number">1.6.2.</span> <span class="nav-text">反码和补码表示 $1’s$ and $2’s$ complement representation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81-Binary-codes"><span class="nav-number">1.7.</span> <span class="nav-text">二进制编码 Binary codes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6-8421-Binary-Coded-decimal-BCD"><span class="nav-number">1.7.1.</span> <span class="nav-text">二进制编码的十进制(8421) Binary-Coded decimal (BCD)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BCD%E5%8A%A0%E5%87%8F%E6%B3%95-BCD-addition-amp-subtraction"><span class="nav-number">1.7.2.</span> <span class="nav-text">BCD加减法 BCD addition &amp; subtraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E9%9B%B7%E7%A0%81-Gray-code"><span class="nav-number">1.7.3.</span> <span class="nav-text">格雷码 Gray code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E9%94%99%E7%A0%81-Error-detction-codes"><span class="nav-number">1.8.</span> <span class="nav-text">检错码 Error-detction codes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E5%92%8C-Checksum"><span class="nav-number">1.8.1.</span> <span class="nav-text">检和 Checksum</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ASCII"><span class="nav-number">1.8.2.</span> <span class="nav-text">ASCII</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AD%98%E5%82%A8%E5%92%8C%E5%AF%84%E5%AD%98%E5%99%A8-Binary-storage-and-registers"><span class="nav-number">1.9.</span> <span class="nav-text">二进制存储和寄存器 Binary storage and registers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%80%BB%E8%BE%91-Binary-logic"><span class="nav-number">1.9.1.</span> <span class="nav-text">二进制逻辑 Binary logic</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mark455·Feng</p>
+  <div class="site-description" itemprop="description">有干货有杂货 还有生活</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Mark4551124015" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Mark4551124015" rel="noopener me" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark455·Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mark455的博客">
+      <meta itemprop="description" content="有干货有杂货 还有生活">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CS207 Chapter 1 | Mark455的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CS207 Chapter 1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-15 01:05:07 / 修改时间：10:49:33" itemprop="dateCreated datePublished" datetime="2023-02-15T01:05:07+08:00">2023-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS207/" itemprop="url" rel="index"><span itemprop="name">CS207</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> <strong>Chapter 1</strong></p>
+<span id="more"></span>
+
+<h1 id="二进制数-Binary-Numbers"><a href="#二进制数-Binary-Numbers" class="headerlink" title="二进制数 Binary Numbers"></a>二进制数 Binary Numbers</h1><h2 id="数字系统-Digital-Systems"><a href="#数字系统-Digital-Systems" class="headerlink" title="数字系统 Digital Systems"></a>数字系统 Digital Systems</h2><ul>
+<li>所有的计算都有一个特殊用途的数字计算机嵌入，数字系统可以代表&#x2F;操纵离散的信息，例如10进制信号，26个字母。数字(Digit)&#x3D;&gt;数字信号(Digital)（计算机，系统 等）</li>
+<li>在数字系统中，输入是由开关进行的，通常含有以下两种离散值，高电位（HIGH），低电位（LOW），这种信号被称为数字信号，设备内的电路被称为数字电路。</li>
+</ul>
+<h2 id="进制-Number-System"><a href="#进制-Number-System" class="headerlink" title="进制 Number System"></a>进制 Number System</h2><ul>
+<li><p>有几种我们通常使用的进制。</p>
+<ul>
+<li><p>十进制：0，1，2，…，9。</p>
+</li>
+<li><p>二进制：0，1。</p>
+</li>
+<li><p>八进制：0，1，2，…，7。</p>
+</li>
+<li><p>十六进制：0，1，2，…，9，A，B，…，F。</p>
+</li>
+</ul>
+</li>
+<li><p>在十进制系统中，我们有10个不同的数字，但在二进制系统中只有两个。二进制数字系统更容易被处理。在数字世界中，我们用二进制思考问题，一盏灯要么关要么开。…而我们用两个数字来表达一切：0和1。一个十进制的$25_{10}$在二进制中变成$11001_{2}$。</p>
+</li>
+</ul>
+<h2 id="进制转换-Conversion-between-binary-and-hexadecimal"><a href="#进制转换-Conversion-between-binary-and-hexadecimal" class="headerlink" title="进制转换 Conversion between binary and hexadecimal"></a>进制转换 Conversion between binary and hexadecimal</h2><ul>
+<li><p>需要将m进制转换为n进制，则先将m进制转换为十进制，再转换为n进制，十进制是关键。</p>
+</li>
+<li><p>任何$X$进制的数字，小数点左边n个数字，右边m个数字可以被展开为十进制: </p>
+<p>$(a_na_{n-1}…a_2a_1b_1b_2…b_m)_X$</p>
+<p>$(a_nX^{n-1}+a_{n-1}X^{n-2}+…+a_1X^0+b_{1}X^{-1}+b_2X^{-2}+…+b_mX^{-m})$</p>
+</li>
+<li><p>十进制转别的进制：</p>
+<ul>
+<li>整数部分：除法，取余，重复</li>
+<li>小数部分：乘进制数，取整数位，重复</li>
+</ul>
+</li>
+<li><p>二进制转八进制：每三位分割转化为十进制数。</p>
+</li>
+<li><p>二进制转十六进制：每四位分割转化为十进制数。</p>
+</li>
+</ul>
+<h2 id="补码和反码-Complements"><a href="#补码和反码-Complements" class="headerlink" title="补码和反码 Complements"></a>补码和反码 Complements</h2><h3 id="反码-diminished-radix-complemen-r-1’s"><a href="#反码-diminished-radix-complemen-r-1’s" class="headerlink" title="反码 diminished radix complemen $r-1’s$"></a>反码 diminished radix complemen $r-1’s$</h3><ul>
+<li>对于r进制数字的补码，用r-1减去每一位，例如$12345_{10}$，反码为$99999 - 12345 &#x3D; 87654$</li>
+</ul>
+<h3 id="补码-radix-complement-r’s"><a href="#补码-radix-complement-r’s" class="headerlink" title="补码 radix complement $r’s$"></a>补码 radix complement $r’s$</h3><ul>
+<li>先计算反码，然后加1 ，例如$12345_{10}$，补码为$99999-12345+1 &#x3D; 87655$</li>
+</ul>
+<h2 id="二进制减法"><a href="#二进制减法" class="headerlink" title="二进制减法"></a>二进制减法</h2><ul>
+<li>三个方法：借位法，反码法，补码法</li>
+</ul>
+<h3 id="补码法"><a href="#补码法" class="headerlink" title="补码法"></a>补码法</h3><p>如要计算$M-N$：</p>
+<ul>
+<li>如果$M\geq N$：</li>
+</ul>
+<p>​		把N的补码加到M上然后去掉进位。例如$72532-3250$：</p>
+<p>​		$M&#x3D;72532, N_补&#x3D;96750, M+N_补&#x3D;169282, 减去进位169282-100000&#x3D;69282$</p>
+<ul>
+<li>如果$M&lt;N$：</li>
+</ul>
+<p>​		把N的补码加到M上然后取补码加负号。例如$3250-72532$：</p>
+<p>​		$M&#x3D;03250, N_补&#x3D;27468, M+N_补&#x3D;30718, 取补码69282, 加负号结果为-69282$</p>
+<h2 id="带符号的二进制数-Signed-binary-numbers"><a href="#带符号的二进制数-Signed-binary-numbers" class="headerlink" title="带符号的二进制数 Signed binary numbers"></a>带符号的二进制数 Signed binary numbers</h2><p>​		生活中有很多场景会用到正数负数，但数字系统用二进制去代表一切，所有有三种表示方法：符号表示、反码(1’s)表示，补码(2’s)表示</p>
+<h3 id="符号表示-Sign-magnitude-representation"><a href="#符号表示-Sign-magnitude-representation" class="headerlink" title="符号表示 Sign-magnitude representation"></a>符号表示 Sign-magnitude representation</h3><p>​	通常多一个bit叫做sign bit，简称MSB。</p>
+<ul>
+<li>通常来讲，0作为正号，1作为负号</li>
+<li>例如一个8-bit带符号二进制数字$01101001_2$代表一个正数$105_{10}$，$11101001_2$代表一个负数$-105_{10}$。</li>
+</ul>
+<h3 id="反码和补码表示-1’s-and-2’s-complement-representation"><a href="#反码和补码表示-1’s-and-2’s-complement-representation" class="headerlink" title="反码和补码表示 $1’s$ and $2’s$ complement representation"></a>反码和补码表示 $1’s$ and $2’s$ complement representation</h3><ul>
+<li>反码表示，两个数字都是彼此的反码例如$0111_2$代表$+7_{10}$，$1000_2$代表$-7_{10}$，正数MSB为0，负数MSB为1</li>
+<li>补码表示，1被加到反码表示法中$0111_2$代表$+7_{10}$，$1001_2$代表$-7_{10}$，正数MSB为0，负数MSB为1</li>
+</ul>
+<h2 id="二进制编码-Binary-codes"><a href="#二进制编码-Binary-codes" class="headerlink" title="二进制编码 Binary codes"></a>二进制编码 Binary codes</h2><p>​		只有在知道数据所用的编码时候，才有可能对数据进行解释。例如1000010在直二进制中表示66（十进制），在BCD中表示42（十进制），在ASCII代码中表示字母B。</p>
+<h3 id="二进制编码的十进制-8421-Binary-Coded-decimal-BCD"><a href="#二进制编码的十进制-8421-Binary-Coded-decimal-BCD" class="headerlink" title="二进制编码的十进制(8421) Binary-Coded decimal (BCD)"></a>二进制编码的十进制(8421) Binary-Coded decimal (BCD)</h3><p>​		简称BCD，用4bit来编码每个10进制数字，在数字系统中很方便使用。例如$35_{10}$使用$0011$ $0101$来表示，而不是$100011_2$。同时它也被称为8421编码，因为这是BCD编码中4个bit分别的权重。例如用BCD编码表示69.27: $ 69.27_{10}&#x3D;01101001.00100111_{BCD} $</p>
+<h3 id="BCD加减法-BCD-addition-amp-subtraction"><a href="#BCD加减法-BCD-addition-amp-subtraction" class="headerlink" title="BCD加减法 BCD addition &amp; subtraction"></a>BCD加减法 BCD addition &amp; subtraction</h3><ul>
+<li>先用一般法则将两数相加&#x2F;减，如果得出小于9则会产生一个合理的的BCD数字</li>
+<li>如果产生了大于9的数字则会产生进位，这是不合理的，此时在加上十进制的$6_{10}$或二进制下的$0110_{2}$来跳过6个不合理的数，然后把进位放到下一组4bit数中（可以是已经存在的，也可以是新的一组）</li>
+<li>例如：$0111_{BCD} + 1001_{BCD}$：$0111+1001&#x3D;10000,$ $10000+0110&#x3D;00010110_{BCD}$</li>
+</ul>
+<h3 id="格雷码-Gray-code"><a href="#格雷码-Gray-code" class="headerlink" title="格雷码 Gray code"></a>格雷码 Gray code</h3><ul>
+<li>两位数字之间只有一位发生了变化</li>
+</ul>
+<h2 id="检错码-Error-detction-codes"><a href="#检错码-Error-detction-codes" class="headerlink" title="检错码 Error-detction codes"></a>检错码 Error-detction codes</h2><ul>
+<li>二进制信息在介质中传导时会有所损失或噪音，检错码就是用于检验传输过程中的错误码。错误不可以被更正，它的目的是检测</li>
+<li>奇偶检验位：数据中1是奇数就是1，反之是0，使数据中的1的个数始终为奇数</li>
+</ul>
+<h3 id="检和-Checksum"><a href="#检和-Checksum" class="headerlink" title="检和 Checksum"></a>检和 Checksum</h3><ul>
+<li>奇偶检验会在双数错误时失效，因此我们使用Checksum。在传输一串数据A之后又传输了B，那么会有一个Check Sum为A与B的二进制数据相加，如果又传输了C，则加上C的二进制数据。在数据传输完成后传输Check Sum，在接收端完成同样的操作，如果接收端的Check Sum和发射端的最后一个Check Sum相同，则数据无错</li>
+</ul>
+<h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><p>​		许多计算机的应用程式不止需要处理数字，需要处理字符，因此需要了ASCII码（Aemrican Stantdard Code for Information Interchange）用7个bit来编码128个字符。</p>
+<h2 id="二进制存储和寄存器-Binary-storage-and-registers"><a href="#二进制存储和寄存器-Binary-storage-and-registers" class="headerlink" title="二进制存储和寄存器 Binary storage and registers"></a>二进制存储和寄存器 Binary storage and registers</h2><ul>
+<li>二进制信息必须以物理形式存在，一个单元(Cell)必须拥有两种稳定的状态来代表0和1，寄存器就是一组二进制单元。寄存器之间传输并储存二进制信息</li>
+</ul>
+<h3 id="二进制逻辑-Binary-logic"><a href="#二进制逻辑-Binary-logic" class="headerlink" title="二进制逻辑 Binary logic"></a>二进制逻辑 Binary logic</h3><ul>
+<li>二进制逻辑是用逻辑运算处理两个分离的值</li>
+<li>三种基础的逻辑运算：AND OR NOT</li>
+<li>逻辑门是一种处理一个或多个输入来产生输出的电路元件，多于两个的输入也是ok的</li>
+<li>电压操作，在一个范围内，但被解释为两个值中的任何一个。例如高电位位1，低电位为0。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91-CS207-%E7%AC%94%E8%AE%B0/" rel="tag"># 数字逻辑 - CS207 - 笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/12/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/" rel="prev" title="">
+                  <i class="fa fa-chevron-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%202/" rel="next" title="CS207 Chapter 2">
+                  CS207 Chapter 2 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark455·Feng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

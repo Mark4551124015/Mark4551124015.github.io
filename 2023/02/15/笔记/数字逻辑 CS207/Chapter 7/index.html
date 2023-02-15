@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cat.net/css?family=Lato:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CRoboto+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.mark455.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Chapter 7">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS207 Chapter 7">
+<meta property="og:url" content="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/index.html">
+<meta property="og:site_name" content="Mark455的博客">
+<meta property="og:description" content="Chapter 7">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106205.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106720.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106085.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106301.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107655.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107634.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107782.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107085.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142109518.png">
+<meta property="article:published_time" content="2023-02-14T23:05:07.000Z">
+<meta property="article:modified_time" content="2023-02-15T02:50:01.890Z">
+<meta property="article:author" content="Mark455·Feng">
+<meta property="article:tag" content="数字逻辑 - CS207 - 笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png">
+
+
+<link rel="canonical" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/","path":"2023/02/15/笔记/数字逻辑 CS207/Chapter 7/","title":"CS207 Chapter 7"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CS207 Chapter 7 | Mark455的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Mark455的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">随便写写</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%97%B6%E5%BA%8F%E9%80%BB%E8%BE%91-Synchronous-Sequential-Logic"><span class="nav-number">1.</span> <span class="nav-text">同步时序逻辑 Synchronous Sequential Logic</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">分析时序电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.1.</span> <span class="nav-text">一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">1.1.2.</span> <span class="nav-text">有限状态机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%9C%BA%E5%8C%96%E7%AE%80"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">状态机化简</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">1.1.3.</span> <span class="nav-text">设计状态机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">一些注意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E6%88%90FF"><span class="nav-number">1.1.4.</span> <span class="nav-text">合成FF</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8D%E8%A7%A6%E5%8F%91%E5%99%A8%E5%90%88%E6%88%90-Synthesis-using-D-flip-flops"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">用D触发器合成 Synthesis using D flip-flops</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BF%80%E5%8A%B1%E8%A1%A8"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">激励表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8JK%E8%A7%A6%E5%8F%91%E5%99%A8%E5%90%88%E6%88%90-Synthesis-using-JK-flip-flops"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">用JK触发器合成 Synthesis using JK flip-flops</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8T%E8%A7%A6%E5%8F%91%E5%99%A8%E5%90%88%E6%88%90-Synthesis-using-T-flip-flops"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">用T触发器合成 Synthesis using T flip-flops</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mark455·Feng</p>
+  <div class="site-description" itemprop="description">有干货有杂货 还有生活</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Mark4551124015" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Mark4551124015" rel="noopener me" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mark455·Feng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mark455的博客">
+      <meta itemprop="description" content="有干货有杂货 还有生活">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CS207 Chapter 7 | Mark455的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CS207 Chapter 7
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-15 07:05:07 / 修改时间：10:50:01" itemprop="dateCreated datePublished" datetime="2023-02-15T07:05:07+08:00">2023-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CS207/" itemprop="url" rel="index"><span itemprop="name">CS207</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> <strong>Chapter 7</strong></p>
+<span id="more"></span>
+
+<h1 id="同步时序逻辑-Synchronous-Sequential-Logic"><a href="#同步时序逻辑-Synchronous-Sequential-Logic" class="headerlink" title="同步时序逻辑 Synchronous Sequential Logic"></a>同步时序逻辑 Synchronous Sequential Logic</h1><h2 id="分析时序电路"><a href="#分析时序电路" class="headerlink" title="分析时序电路"></a>分析时序电路</h2><ul>
+<li>$A(t + 1) &#x3D; A(t)x(t) + B(t)x(t)$</li>
+<li>$B(t+1)&#x3D;A’(t)x(t)$</li>
+</ul>
+<p>​		现在状态t，下一个状态是t+1。然后绘制真值表</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png" alt="截屏2023-02-14 18.20.57" style="zoom:50%;" />
+
+<p>这种真值表很长，可以把x换成两列，接着可以画状态图：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106205.png" alt="截屏2023-02-14 18.22.51" style="zoom:50%;" />
+
+<ul>
+<li>电路图→方程式→状态表→状态图<ul>
+<li>状态表更容易从电路图和状态方程中导出</li>
+<li>状态图给出了状态转换的图解</li>
+</ul>
+</li>
+<li>顺序电路的逻辑图由触发器和门组成</li>
+<li>门之间的互连构成了一个组合电路，可以用布尔表达式进行代数描述</li>
+<li>组合电路中产生外部输出的部分是由一组称为输出方程的布尔函数代数描述的</li>
+<li>产生触发器输入的电路部分由一组布尔函数代数描述，称为触发器输入方程（或有时称为激励方程）</li>
+</ul>
+<h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><ol>
+<li>写出FF输入端函数</li>
+<li>写出FF的函数</li>
+<li>代入，并将现有输入转化为FF输入卸载真值表中</li>
+<li>画出函数图</li>
+</ol>
+<p>e.g.：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106720.png" alt="截屏2023-02-14 18.34.27" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106085.png" alt="截屏2023-02-14 18.34.42" style="zoom:50%;" />
+
+<h3 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h3><p>两种模型</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106301.png" alt="截屏2023-02-14 18.38.08"></p>
+<h4 id="状态机化简"><a href="#状态机化简" class="headerlink" title="状态机化简"></a>状态机化简</h4><p>举例，输入$01010110100$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107655.png" alt="截屏2023-02-14 18.41.05" style="zoom:50%;" />
+
+<ol>
+<li>首先我们画出状态表</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107634.png" alt="截屏2023-02-14 19.12.44" style="zoom:50%;" />
+
+<ol start="2">
+<li>然后我们画出目标状态和输出相同组，在上图中e和g是等效的，其中一个可以被另一个替换</li>
+<li>重复上述过程，f可以被d替换</li>
+<li>最终我们的到化简后的状态机</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107782.png" alt="截屏2023-02-14 19.15.08" style="zoom:50%;" />
+
+<h3 id="设计状态机"><a href="#设计状态机" class="headerlink" title="设计状态机"></a>设计状态机</h3><h4 id="一些注意"><a href="#一些注意" class="headerlink" title="一些注意"></a>一些注意</h4><ul>
+<li>为了设计一个带有物理元件的顺序电路，有必要为各状态分配唯一的编码二进制值。</li>
+<li>对于一个有m个状态的电路，编码必须包含n位，其中2 n≥m。</li>
+<li>在状态还原之前，我们必须为七个状态分配二进制值；剩下的状态是未使用的。如果使用还原后的状态表，只有五个状态需要二进制赋值，而我们还剩下三个未使用的状态。</li>
+<li>在设计过程中，未使用的状态被当作不关心的条件。由于不关心的条件通常有助于获得更简单的电路，所以有五个状态的电路比有七个状态的电路需要更少的组合门，这是比较有可能的，但并不确定。</li>
+<li>可以用二进制，格雷码，独热码来设计状态。独热码有更简单的decode</li>
+</ul>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
+<li><p>从字的描述和所需操作的规格，推导出电路的状态图。</p>
+</li>
+<li><p>如有必要，减少状态的数量。</p>
+</li>
+<li><p>给状态分配二进制值。</p>
+</li>
+<li><p>获得二进制编码的状态表。</p>
+</li>
+<li><p>选择要使用的触发器的类型。</p>
+</li>
+<li><p>推导出简化的触发器输入方程和输出方程。</p>
+</li>
+<li><p>绘制逻辑图。</p>
+</li>
+</ol>
+<h3 id="合成FF"><a href="#合成FF" class="headerlink" title="合成FF"></a>合成FF</h3><h4 id="用D触发器合成-Synthesis-using-D-flip-flops"><a href="#用D触发器合成-Synthesis-using-D-flip-flops" class="headerlink" title="用D触发器合成 Synthesis using D flip-flops"></a>用D触发器合成 Synthesis using D flip-flops</h4><p>​		用D触发器很简单，目标状态是什么，输入D就是什么，画出真值表然后卡诺图化简即可</p>
+<h4 id="激励表"><a href="#激励表" class="headerlink" title="激励表"></a>激励表</h4><ul>
+<li>使用D型以外的触发器的顺序电路的设计很复杂，因为电路的输入方程必须间接地从状态表中得到。当采用D型触发器时，输入方程可以直接从下一个状态中获得。</li>
+<li>而JK和T型触发器则不然。为了确定这些触发器的输入方程，有必要推导出状态表和输入方程之间的函数关系。</li>
+<li>在设计过程中，我们通常知道从当前状态到下一个状态的转换，并希望找到能引起所需转换的触发器输入条件。</li>
+<li>出于这个原因，我们需要一个表格，列出特定状态变化所需的输入：激励表</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107085.png" alt="截屏2023-02-14 20.27.28" style="zoom:50%;" />
+
+<h4 id="用JK触发器合成-Synthesis-using-JK-flip-flops"><a href="#用JK触发器合成-Synthesis-using-JK-flip-flops" class="headerlink" title="用JK触发器合成 Synthesis using JK flip-flops"></a>用JK触发器合成 Synthesis using JK flip-flops</h4><p>这时候根据A，B的变化找到对应的输入J K</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142109518.png" alt="截屏2023-02-14 21.09.27" style="zoom: 50%;" />
+
+<p>再用真值表化简出$J_AK_AJ_BK_B$的函数，再绘制电路图即可</p>
+<h4 id="用T触发器合成-Synthesis-using-T-flip-flops"><a href="#用T触发器合成-Synthesis-using-T-flip-flops" class="headerlink" title="用T触发器合成 Synthesis using T flip-flops"></a>用T触发器合成 Synthesis using T flip-flops</h4><p>​		TFF的合成就简单很多，只要下一个状态有变化，T就是1，没有变化就是0，再用卡诺图化简即可</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91-CS207-%E7%AC%94%E8%AE%B0/" rel="tag"># 数字逻辑 - CS207 - 笔记</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/" rel="prev" title="CS207 Chapter 6">
+                  <i class="fa fa-chevron-left"></i> CS207 Chapter 6
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark455·Feng</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
