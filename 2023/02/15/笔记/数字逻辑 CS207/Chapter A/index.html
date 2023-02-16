@@ -19,38 +19,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.mark455.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Chapter 8 算术电路 Arithmetic Circuits">
+    <meta name="description" content="Chapter A 计数器 Counter">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CS207 Chapter 8">
-<meta property="og:url" content="https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/index.html">
+<meta property="og:title" content="CS207 Chapter A">
+<meta property="og:url" content="https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%20A/index.html">
 <meta property="og:site_name" content="Mark455的博客">
-<meta property="og:description" content="Chapter 8 算术电路 Arithmetic Circuits">
+<meta property="og:description" content="Chapter A 计数器 Counter">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151128533.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151136588.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151142308.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151204446.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151254111.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151440010.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151447962.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151502990.png">
-<meta property="article:published_time" content="2023-02-15T00:05:07.000Z">
-<meta property="article:modified_time" content="2023-02-15T08:46:56.189Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161159877.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161344968.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161351739.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161353251.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161358826.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161359994.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161404569.png">
+<meta property="article:published_time" content="2023-02-15T02:05:07.000Z">
+<meta property="article:modified_time" content="2023-02-16T06:08:32.224Z">
 <meta property="article:author" content="Mark455·Feng">
 <meta property="article:tag" content="数字逻辑 - CS207 - 笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161159877.png">
 
 
-<link rel="canonical" href="https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/">
+<link rel="canonical" href="https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%20A/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/","path":"2023/02/15/笔记/数字逻辑 CS207/Chapter 8/","title":"CS207 Chapter 8"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%20A/","path":"2023/02/15/笔记/数字逻辑 CS207/Chapter A/","title":"CS207 Chapter A"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>CS207 Chapter 8 | Mark455的博客</title>
+<title>CS207 Chapter A | Mark455的博客</title>
   
 
 
@@ -150,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E7%94%B5%E8%B7%AF-Arithmetic-Circuits"><span class="nav-number">1.</span> <span class="nav-text">算术电路 Arithmetic Circuits</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">加法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8A%E5%8A%A0%E5%99%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">半加器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%8A%A0%E5%99%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">全加器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">二进制加法器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%8F%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">减法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8A%E5%87%8F%E5%99%A8"><span class="nav-number">1.2.1.</span> <span class="nav-text">半减器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%87%8F%E5%99%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">全减器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%87%8F%E6%B3%95%E5%99%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">二进制减法器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BF%90%E7%AE%97%E5%99%A8"><span class="nav-number">1.2.4.</span> <span class="nav-text">二进制运算器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%A2%E5%87%BA"><span class="nav-number">1.3.</span> <span class="nav-text">溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">十进制加法器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B9%98%E6%B3%95%E5%99%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">二进制乘法器</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E5%99%A8-Counter"><span class="nav-number">1.</span> <span class="nav-text">计数器 Counter</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E8%AE%A1%E6%95%B0%E5%99%A8-Aynschronous-counters"><span class="nav-number">1.1.</span> <span class="nav-text">异步计数器 Aynschronous counters</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%A2%91%E5%99%A8-Frequency-divider"><span class="nav-number">1.1.1.</span> <span class="nav-text">分频器 Frequency divider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E4%B8%8B%E8%A1%8C%E8%AE%A1%E6%95%B0%E5%99%A8-Asynchronous-up-down-counter"><span class="nav-number">1.1.2.</span> <span class="nav-text">异步下行计数器 Asynchronous up-down counter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E5%A4%9A%E6%A8%A1%E8%AE%A1%E6%95%B0%E5%99%A8-Asynchronous-Multimode-counter"><span class="nav-number">1.1.3.</span> <span class="nav-text">异步多模计数器 Asynchronous Multimode counter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E8%AE%A1%E6%95%B0%E5%99%A8-Synchronous-counters"><span class="nav-number">1.2.</span> <span class="nav-text">同步计数器 Synchronous counters</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E4%B8%8B%E8%A1%8C%E8%AE%A1%E6%95%B0%E5%99%A8-Synchronous-down-counter"><span class="nav-number">1.2.1.</span> <span class="nav-text">同步下行计数器 Synchronous down-counter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E5%A4%9A%E6%A8%A1%E8%AE%A1%E6%95%B0%E5%99%A8-Synchronous-Multimode-counter"><span class="nav-number">1.2.2.</span> <span class="nav-text">同步多模计数器 Synchronous Multimode counter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E5%90%8C%E6%AD%A5%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">1.2.3.</span> <span class="nav-text">设计一个同步计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%81%E5%AE%9A-Lock-out"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">锁定 Lock out</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -210,7 +208,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/">
+    <link itemprop="mainEntityOfPage" href="https://blog.mark455.cn/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%20A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://sdn.geekzu.org/avatar/050934fd8a14f81b40f79f174f16afd3?s=80">
@@ -223,12 +221,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="CS207 Chapter 8 | Mark455的博客">
+      <meta itemprop="name" content="CS207 Chapter A | Mark455的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CS207 Chapter 8
+          CS207 Chapter A
         </h1>
 
         <div class="post-meta-container">
@@ -238,9 +236,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-02-15 08:05:07 / 修改时间：16:46:56" itemprop="dateCreated datePublished" datetime="2023-02-15T08:05:07+08:00">2023-02-15</time>
+      <time title="创建时间：2023-02-15 10:05:07" itemprop="dateCreated datePublished" datetime="2023-02-15T10:05:07+08:00">2023-02-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-02-16 14:08:32" itemprop="dateModified" datetime="2023-02-16T14:08:32+08:00">2023-02-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,7 +263,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -277,79 +281,79 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p> <strong>Chapter 8</strong> 算术电路 Arithmetic Circuits</p>
+        <p> <strong>Chapter A</strong> 计数器 Counter</p>
 <span id="more"></span>
 
-<h1 id="算术电路-Arithmetic-Circuits"><a href="#算术电路-Arithmetic-Circuits" class="headerlink" title="算术电路 Arithmetic Circuits"></a>算术电路 Arithmetic Circuits</h1><p>​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。</p>
-<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p> 两个二进制数字的加法是最基本的算术运算</p>
-<h3 id="半加器"><a href="#半加器" class="headerlink" title="半加器"></a>半加器</h3><p>​		仅计算两bit的加法，不含进位计算</p>
+<h1 id="计数器-Counter"><a href="#计数器-Counter" class="headerlink" title="计数器 Counter"></a>计数器 Counter</h1><p>​		计数器是最简单的顺序网络类型之一。一个计数器通常由一个或多个触发器构成，这些触发器在收到输入脉冲时按规定的顺序改变状态。</p>
+<p>​		由于时钟脉冲是以已知的时间间隔发生的，所以计数器可以用作测量时间的仪器，从而测量频率的周期。</p>
 <ul>
-<li>结果 $S &#x3D; A ⊕ B$ </li>
-<li>进位 $C &#x3D; AB$</li>
+<li>异步和同步计数器。</li>
+<li>单模和多模计数器。</li>
+<li>模数计数器。</li>
 </ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png" alt="image-20230215111938370" style="zoom:50%;" />
-
-<h3 id="全加器"><a href="#全加器" class="headerlink" title="全加器"></a>全加器</h3><p>​		全加器电路可以进行三个bit的加法，包括两个bit和一个进位，然后产生结果和进位</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151128533.png" alt="截屏2023-02-15 11.28.38" style="zoom:50%;" />
+<h2 id="异步计数器-Aynschronous-counters"><a href="#异步计数器-Aynschronous-counters" class="headerlink" title="异步计数器 Aynschronous counters"></a>异步计数器 Aynschronous counters</h2><p>​		三个触发器的时钟输入以级联方式连接。每个触发器的T输入端连接到一个常数1，这意味着触发器的状态将在其时钟的每个负边沿切换（反向）。</p>
+<p>​		我们假设这个电路的目的是计算主输入CLK（时钟）上出现的脉冲数。因此，第一个触发器的时钟输入被连接到CLK线。</p>
+<p>​		该计数器有8种不同的状态。它是一个MOD-8异步计数器。计数器的模数（或MOD数）是指它在每个完整周期中经过的独特状态的总数。该计数器可以计算的最大二进制数是2 n -1。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161159877.png" alt="截屏2023-02-16 11.59.51" style="zoom:50%;" />
 
 <ul>
-<li><p>$S &#x3D; X’A’B + X’AB’ +XA’B’+ XAB$</p>
+<li><p>输入由一串频率为f的脉冲组成。只有当时钟从1过渡到0时，$Q_0$才会改变。两个输入脉冲将导致$Q_0$的一个脉冲。</p>
 </li>
-<li><p>$C &#x3D; AB + BX + AX$</p>
-</li>
-</ul>
-<p>​		可以通过AND，OR门来实现，同时也可以通过两个半加器和一个or来实现</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151136588.png" alt="截屏2023-02-15 11.33.05" style="zoom:50%;" />
-
-<p>$S &#x3D; B ⊕ (X ⊕ A) &#x3D; B’(XA’+ X’A) + B(XA’+ X’A)’$</p>
-<p>$&#x3D; B’(XA’+ X’A) + B(XA + X’A’) &#x3D; XA’B’+ X’AB’+ XAB + X’A’B$</p>
-<p>$C &#x3D; B(XA’+ X’A) + XA &#x3D; XA’B + X’AB + XA$</p>
-<h3 id="二进制加法器"><a href="#二进制加法器" class="headerlink" title="二进制加法器"></a>二进制加法器</h3><p>​		二进制加法器是一种产生两个二进制数字的算术和的数字电路，n位数的加法需要一个由n个全加器组成的链条，或者由一个半加器和n-1个全加器组成的链条。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151142308.png" alt="截屏2023-02-15 11.42.27" style="zoom:67%;" />
-
-<h2 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h2><p>​		减法是数字计算机信息处理任务中算术运算的另一个基本功能</p>
-<h3 id="半减器"><a href="#半减器" class="headerlink" title="半减器"></a>半减器</h3><p>​		一个执行两个bit的减法的组合电路被称为半减法器</p>
-<p>$D&#x3D;X⊕Y$</p>
-<p>$B &#x3D; X’Y$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151204446.png" alt="截屏2023-02-15 12.04.05" style="zoom:50%;" />
-
-<h3 id="全减器"><a href="#全减器" class="headerlink" title="全减器"></a>全减器</h3><p>​		全加器的组合电路执行三个比特的减法运算–由前一个有效数字的减法运算产生的减数、子数和借数Z，并产生输出差数和借数</p>
-<h3 id="二进制减法器"><a href="#二进制减法器" class="headerlink" title="二进制减法器"></a>二进制减法器</h3><p>​		无符号二进制数的减法可以通过补码的方式最方便地完成。</p>
-<ul>
-<li><p>A-B的减法可以通过取B的补码并将其加到A中来完成。</p>
-</li>
-<li><p>补码可以通过取反码并在最不重要的一对位上加1来获得。</p>
-</li>
-<li><p>反码可以用反相器实现，1可以通过输入进位加到总和上。</p>
+<li><p>$Q_0$的频率为$f&#x2F;2$，同样地，$Q_1$信号的频率将是$Q_0$信号的一半，即$f&#x2F;4$，$Q_2$信号的频率$Q_1$信号的一半，即$f&#x2F;8$。</p>
 </li>
 </ul>
-<p>​		可以在加法器的Y输入位反相来获得补码，并且在初始位置加一，这样就可以获得减法结果（去掉进位&#x2F;取补码加负号）</p>
-<h3 id="二进制运算器"><a href="#二进制运算器" class="headerlink" title="二进制运算器"></a>二进制运算器</h3><p>​		在设置输入$M$，在$Y$输入变为$Y⊕M$，并且在最小位加法器位置输入$M$。这样就将加减法运算合并为共同一个运算器</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151254111.png" alt="截屏2023-02-15 12.54.27" style="zoom:67%;" />
+<h3 id="分频器-Frequency-divider"><a href="#分频器-Frequency-divider" class="headerlink" title="分频器 Frequency divider"></a>分频器 Frequency divider</h3><p>​		如果电路中使用了n个触发器，那么频率将被$2^n$划分而在实际使用中，我们会经常需要小于$2^n$的频率，这时候就可以跳过一部分频率（识别到特定序列后清零等操作），如下图就是一个MOD-6 计数器，在识别到110后清零三个计数器</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161344968.png" alt="截屏2023-02-16 13.44.03" style="zoom: 50%;" />
 
-<h2 id="溢出"><a href="#溢出" class="headerlink" title="溢出"></a>溢出</h2><p>​		对两个二进制数字相加后的溢出的检测取决于这些数字被认为是有符号还是无符号</p>
 <ul>
-<li><p>当两个无符号的数字相加时，溢出的检测是从最重要的位置的末端进行的</p>
-</li>
-<li><p>当两个有符号的数字相加时，符号位被视为数字的一部分，末尾进位不表示溢出</p>
+<li>要构建任何MOD-N计数器，需要遵循以下一般步骤。<ul>
+<li>使用公式$2^n-1&lt;N&lt;2^n$，找出所需MOD-N数字的触发器数量$n$。</li>
+<li>然后将所有的$n$个触发器连接成一个纹波计数器。</li>
+<li>找到$N$的二进制数。</li>
+<li>将所有的触发器输出（当计数为$N$时，$Q&#x3D;1$，以及$Q′&#x3D;1$）作为NAND门的输入。</li>
+<li>将NAND门的输出连接到每个触发器的清零输入。</li>
+<li>当计数器达到第$N$个状态时，NAND门的输出为低电平，将所有触发器复位为0。</li>
+</ul>
 </li>
 </ul>
-<p>如果两个数字都是正数或负数，可能会发生溢出。</p>
-<ul>
-<li>如果把符号位位置的进位作为结果的符号位，那么这样得到的9位答案将是正确的。但是由于答案不能被容纳在8位之内，我们说发生了溢出。</li>
+<h3 id="异步下行计数器-Asynchronous-up-down-counter"><a href="#异步下行计数器-Asynchronous-up-down-counter" class="headerlink" title="异步下行计数器 Asynchronous up-down counter"></a>异步下行计数器 Asynchronous up-down counter</h3><ul>
+<li><p>一个使用$n$个触发器的下位计数器从$2^n -1$的最大计数开始向下计数到零。</p>
+</li>
+<li><p>这样的下位机可以用以下三种不同的方式设计。</p>
+</li>
 </ul>
-<p>​		溢出情况可以通过观察进入符号位的进位和从符号位的出位来检测。如果这两个进位不相等，则发生了溢出。</p>
-<p>​		如果这两个进位被应用于XOR门，当该门的输出等于1时，就可以检测到溢出。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151440010.png" alt="截屏2023-02-15 14.40.24" style="zoom:50%;" />
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161351739.png" alt="image-20230216135146700"></p>
+<h3 id="异步多模计数器-Asynchronous-Multimode-counter"><a href="#异步多模计数器-Asynchronous-Multimode-counter" class="headerlink" title="异步多模计数器 Asynchronous Multimode counter"></a>异步多模计数器 Asynchronous Multimode counter</h3><p>​		我们已经分别考虑了上算器和下算器，但这两个单元可以结合在一个单一的上-下计数器中。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161353251.png" alt="截屏2023-02-16 13.53.38" style="zoom:50%;" />
 
-<h3 id="十进制加法器"><a href="#十进制加法器" class="headerlink" title="十进制加法器"></a>十进制加法器</h3><p>​		我们使用BCD来代表十进制，四个bit的二进制加法器能计算BCD码的加法，但是BCD在9之后要加上0110来使其继续合法，需要注意，如下为BCD码合法转化</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151447962.png" alt="截屏2023-02-15 14.47.16" style="zoom:50%;" />
+<h2 id="同步计数器-Synchronous-counters"><a href="#同步计数器-Synchronous-counters" class="headerlink" title="同步计数器 Synchronous counters"></a>同步计数器 Synchronous counters</h2><p>​		所有的触发器都是同步时钟， 随着级数的增加，AND门的数量也在增加，同时每个AND门的输入数也在增加</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161358826.png" alt="截屏2023-02-16 13.58.05" style="zoom:33%;" />
 
-<p>$K$为进位</p>
-<p>合法位$C &#x3D;K +Z_8Z_4+Z_8Z_2$，不合法的时候可以多一个加法器来加上$0110$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151502990.png" alt="截屏2023-02-15 15.02.53" style="zoom:50%;" />
+<h3 id="同步下行计数器-Synchronous-down-counter"><a href="#同步下行计数器-Synchronous-down-counter" class="headerlink" title="同步下行计数器 Synchronous down-counter"></a>同步下行计数器 Synchronous down-counter</h3><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161359994.png" alt="截屏2023-02-16 13.59.33" style="zoom:50%;" />
 
-<h3 id="二进制乘法器"><a href="#二进制乘法器" class="headerlink" title="二进制乘法器"></a>二进制乘法器</h3><p>略</p>
+<h3 id="同步多模计数器-Synchronous-Multimode-counter"><a href="#同步多模计数器-Synchronous-Multimode-counter" class="headerlink" title="同步多模计数器 Synchronous Multimode counter"></a>同步多模计数器 Synchronous Multimode counter</h3><p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302161404569.png" alt="截屏2023-02-16 14.04.34"></p>
+<h3 id="设计一个同步计数器"><a href="#设计一个同步计数器" class="headerlink" title="设计一个同步计数器"></a>设计一个同步计数器</h3><p>按照某些一般步骤，可以设计出任何给定计数序列和模数的同步计数器。这些步骤列举如下</p>
+<ul>
+<li><p>根据给定的问题文字描述，画出描述计数器操作的状态图</p>
+</li>
+<li><p>从状态图中，以表格的形式写出计数序列</p>
+</li>
+<li><p>找出所需的触发器的数量</p>
+</li>
+<li><p>决定用于计数器设计的触发器的类型。然后利用触发器的激励表确定从当前状态到所需的下一个状态必须存在的触发器输入</p>
+</li>
+<li><p>为每个触发器的输入准备K图，以触发器的输出作为输入变量。简化K图，得到最小化的表达式</p>
+</li>
+<li><p>使用与最小化表达式相对应的触发器和其他门来连接电路</p>
+</li>
+</ul>
+<h4 id="锁定-Lock-out"><a href="#锁定-Lock-out" class="headerlink" title="锁定 Lock out"></a>锁定 Lock out</h4><ul>
+<li>在模数小于$2^n$的计数器中，可能会发生计数器偶然发现自己处于任何一个未使用的状态中</li>
+<li>如果计数器偶然进入这些未使用的状态中的任何一个，它的下一个状态将不为人所知，可能的情况是，计数器从一个未使用的状态到另一个未使用的状态，永远不会到达一个使用的状态。</li>
+</ul>
+<ul>
+<li>为了防止锁死的发生，<strong>我们将每个未使用状态的下一个状态设置为使用的初始状态</strong></li>
+</ul>
 
     </div>
 
@@ -366,13 +370,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/" rel="prev" title="CS207 Chapter 7">
-                  <i class="fa fa-chevron-left"></i> CS207 Chapter 7
+                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%209/" rel="prev" title="CS207 Chapter 9">
+                  <i class="fa fa-chevron-left"></i> CS207 Chapter 9
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%209/" rel="next" title="CS207 Chapter 9">
-                  CS207 Chapter 9 <i class="fa fa-chevron-right"></i>
+                <a href="/2023/02/16/iMed/Untitled/" rel="next" title="">
+                   <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -456,7 +460,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Mark4551124015","repo":"Mark4551124015.github.io","client_id":"53af1060f594fc68782a","client_secret":"31e89d3056c4751c85b93da08f66446b756f8602","admin_user":"Mark4551124015","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"3c3b643ae5f5534788bfcca6e3025fe5"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Mark4551124015","repo":"Mark4551124015.github.io","client_id":"53af1060f594fc68782a","client_secret":"31e89d3056c4751c85b93da08f66446b756f8602","admin_user":"Mark4551124015","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"b3f5b68219bcf3962899f0e59ab63293"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
