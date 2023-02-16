@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Airmouse 空气鼠标</title>
-    <url>/2022/08/01/Projects/AirMouse%20%E7%A9%BA%E6%B0%94%E9%BC%A0%E6%A0%87/</url>
-    <content><![CDATA[<p>一个可以通过摄像头操作鼠标的项目</p>
-<span id="more"></span>
-
-<h1 id="Airmouse-空气鼠标"><a href="#Airmouse-空气鼠标" class="headerlink" title="Airmouse 空气鼠标"></a>Airmouse 空气鼠标</h1>]]></content>
-      <categories>
-        <category>一些项目</category>
-      </categories>
-      <tags>
-        <tag>Mediapipe</tag>
-        <tag>Python</tag>
-        <tag>Airmouse</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>引言</title>
     <url>/2022/07/12/%E5%BC%95%E8%A8%80/</url>
     <content><![CDATA[<p> 一些关于过去的事</p>
@@ -443,6 +427,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Airmouse 空气鼠标</title>
+    <url>/2022/08/01/Projects/AirMouse%20%E7%A9%BA%E6%B0%94%E9%BC%A0%E6%A0%87/</url>
+    <content><![CDATA[<p>一个可以通过摄像头操作鼠标的项目</p>
+<span id="more"></span>
+
+<h1 id="Airmouse-空气鼠标"><a href="#Airmouse-空气鼠标" class="headerlink" title="Airmouse 空气鼠标"></a>Airmouse 空气鼠标</h1>]]></content>
+      <categories>
+        <category>一些项目</category>
+      </categories>
+      <tags>
+        <tag>Mediapipe</tag>
+        <tag>Python</tag>
+        <tag>Airmouse</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CS207 Chapter 3</title>
     <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
     <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
@@ -632,106 +632,6 @@
 <img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048122.png" alt="image-20230213234035920" style="zoom: 50%;" />
 
 <h3 id="特性方程-Characteristic-equation"><a href="#特性方程-Characteristic-equation" class="headerlink" title="特性方程 Characteristic equation"></a>特性方程 Characteristic equation</h3><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048289.png" alt="image-20230213234110839" style="zoom:67%;" />
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 7</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/</url>
-    <content><![CDATA[<p> <strong>Chapter 7</strong> 同步时序逻辑 Synchronous Sequential Logic</p>
-<span id="more"></span>
-
-<h1 id="同步时序逻辑-Synchronous-Sequential-Logic"><a href="#同步时序逻辑-Synchronous-Sequential-Logic" class="headerlink" title="同步时序逻辑 Synchronous Sequential Logic"></a>同步时序逻辑 Synchronous Sequential Logic</h1><h2 id="分析时序电路"><a href="#分析时序电路" class="headerlink" title="分析时序电路"></a>分析时序电路</h2><ul>
-<li>$A(t + 1) &#x3D; A(t)x(t) + B(t)x(t)$</li>
-<li>$B(t+1)&#x3D;A’(t)x(t)$</li>
-</ul>
-<p>​		现在状态t，下一个状态是t+1。然后绘制真值表</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png" alt="截屏2023-02-14 18.20.57" style="zoom:50%;" />
-
-<p>这种真值表很长，可以把x换成两列，接着可以画状态图：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106205.png" alt="截屏2023-02-14 18.22.51" style="zoom:50%;" />
-
-<ul>
-<li>电路图→方程式→状态表→状态图<ul>
-<li>状态表更容易从电路图和状态方程中导出</li>
-<li>状态图给出了状态转换的图解</li>
-</ul>
-</li>
-<li>顺序电路的逻辑图由触发器和门组成</li>
-<li>门之间的互连构成了一个组合电路，可以用布尔表达式进行代数描述</li>
-<li>组合电路中产生外部输出的部分是由一组称为输出方程的布尔函数代数描述的</li>
-<li>产生触发器输入的电路部分由一组布尔函数代数描述，称为触发器输入方程（或有时称为激励方程）</li>
-</ul>
-<h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><ol>
-<li>写出FF输入端函数</li>
-<li>写出FF的函数</li>
-<li>代入，并将现有输入转化为FF输入卸载真值表中</li>
-<li>画出函数图</li>
-</ol>
-<p>e.g.：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106720.png" alt="截屏2023-02-14 18.34.27" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106085.png" alt="截屏2023-02-14 18.34.42" style="zoom:50%;" />
-
-<h3 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h3><p>两种模型</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106301.png" alt="截屏2023-02-14 18.38.08"></p>
-<h4 id="状态机化简"><a href="#状态机化简" class="headerlink" title="状态机化简"></a>状态机化简</h4><p>举例，输入$01010110100$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107655.png" alt="截屏2023-02-14 18.41.05" style="zoom:50%;" />
-
-<ol>
-<li>首先我们画出状态表</li>
-</ol>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107634.png" alt="截屏2023-02-14 19.12.44" style="zoom:50%;" />
-
-<ol start="2">
-<li>然后我们画出目标状态和输出相同组，在上图中e和g是等效的，其中一个可以被另一个替换</li>
-<li>重复上述过程，f可以被d替换</li>
-<li>最终我们的到化简后的状态机</li>
-</ol>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107782.png" alt="截屏2023-02-14 19.15.08" style="zoom:50%;" />
-
-<h3 id="设计状态机"><a href="#设计状态机" class="headerlink" title="设计状态机"></a>设计状态机</h3><h4 id="一些注意"><a href="#一些注意" class="headerlink" title="一些注意"></a>一些注意</h4><ul>
-<li>为了设计一个带有物理元件的顺序电路，有必要为各状态分配唯一的编码二进制值。</li>
-<li>对于一个有m个状态的电路，编码必须包含n位，其中2 n≥m。</li>
-<li>在状态还原之前，我们必须为七个状态分配二进制值；剩下的状态是未使用的。如果使用还原后的状态表，只有五个状态需要二进制赋值，而我们还剩下三个未使用的状态。</li>
-<li>在设计过程中，未使用的状态被当作不关心的条件。由于不关心的条件通常有助于获得更简单的电路，所以有五个状态的电路比有七个状态的电路需要更少的组合门，这是比较有可能的，但并不确定。</li>
-<li>可以用二进制，格雷码，独热码来设计状态。独热码有更简单的decode</li>
-</ul>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
-<li><p>从字的描述和所需操作的规格，推导出电路的状态图。</p>
-</li>
-<li><p>如有必要，减少状态的数量。</p>
-</li>
-<li><p>给状态分配二进制值。</p>
-</li>
-<li><p>获得二进制编码的状态表。</p>
-</li>
-<li><p>选择要使用的触发器的类型。</p>
-</li>
-<li><p>推导出简化的触发器输入方程和输出方程。</p>
-</li>
-<li><p>绘制逻辑图。</p>
-</li>
-</ol>
-<h3 id="合成FF"><a href="#合成FF" class="headerlink" title="合成FF"></a>合成FF</h3><h4 id="用D触发器合成-Synthesis-using-D-flip-flops"><a href="#用D触发器合成-Synthesis-using-D-flip-flops" class="headerlink" title="用D触发器合成 Synthesis using D flip-flops"></a>用D触发器合成 Synthesis using D flip-flops</h4><p>​		用D触发器很简单，目标状态是什么，输入D就是什么，画出真值表然后卡诺图化简即可</p>
-<h4 id="激励表"><a href="#激励表" class="headerlink" title="激励表"></a>激励表</h4><ul>
-<li>使用D型以外的触发器的顺序电路的设计很复杂，因为电路的输入方程必须间接地从状态表中得到。当采用D型触发器时，输入方程可以直接从下一个状态中获得。</li>
-<li>而JK和T型触发器则不然。为了确定这些触发器的输入方程，有必要推导出状态表和输入方程之间的函数关系。</li>
-<li>在设计过程中，我们通常知道从当前状态到下一个状态的转换，并希望找到能引起所需转换的触发器输入条件。</li>
-<li>出于这个原因，我们需要一个表格，列出特定状态变化所需的输入：激励表</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107085.png" alt="截屏2023-02-14 20.27.28" style="zoom:50%;" />
-
-<h4 id="用JK触发器合成-Synthesis-using-JK-flip-flops"><a href="#用JK触发器合成-Synthesis-using-JK-flip-flops" class="headerlink" title="用JK触发器合成 Synthesis using JK flip-flops"></a>用JK触发器合成 Synthesis using JK flip-flops</h4><p>这时候根据A，B的变化找到对应的输入J K</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142109518.png" alt="截屏2023-02-14 21.09.27" style="zoom: 50%;" />
-
-<p>再用真值表化简出$J_AK_AJ_BK_B$的函数，再绘制电路图即可</p>
-<h4 id="用T触发器合成-Synthesis-using-T-flip-flops"><a href="#用T触发器合成-Synthesis-using-T-flip-flops" class="headerlink" title="用T触发器合成 Synthesis using T flip-flops"></a>用T触发器合成 Synthesis using T flip-flops</h4><p>​		TFF的合成就简单很多，只要下一个状态有变化，T就是1，没有变化就是0，再用卡诺图化简即可</p>
 ]]></content>
       <categories>
         <category>CS207</category>
@@ -1087,5 +987,105 @@
     <title></title>
     <url>/2023/02/12/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%20A/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 7</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/</url>
+    <content><![CDATA[<p> <strong>Chapter 7</strong> 同步时序逻辑 Synchronous Sequential Logic</p>
+<span id="more"></span>
+
+<h1 id="同步时序逻辑-Synchronous-Sequential-Logic"><a href="#同步时序逻辑-Synchronous-Sequential-Logic" class="headerlink" title="同步时序逻辑 Synchronous Sequential Logic"></a>同步时序逻辑 Synchronous Sequential Logic</h1><h2 id="分析时序电路"><a href="#分析时序电路" class="headerlink" title="分析时序电路"></a>分析时序电路</h2><ul>
+<li>$A(t + 1) &#x3D; A(t)x(t) + B(t)x(t)$</li>
+<li>$B(t+1)&#x3D;A’(t)x(t)$</li>
+</ul>
+<p>​		现在状态t，下一个状态是t+1。然后绘制真值表</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png" alt="截屏2023-02-14 18.20.57" style="zoom:50%;" />
+
+<p>这种真值表很长，可以把x换成两列，接着可以画状态图：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106205.png" alt="截屏2023-02-14 18.22.51" style="zoom:50%;" />
+
+<ul>
+<li>电路图→方程式→状态表→状态图<ul>
+<li>状态表更容易从电路图和状态方程中导出</li>
+<li>状态图给出了状态转换的图解</li>
+</ul>
+</li>
+<li>顺序电路的逻辑图由触发器和门组成</li>
+<li>门之间的互连构成了一个组合电路，可以用布尔表达式进行代数描述</li>
+<li>组合电路中产生外部输出的部分是由一组称为输出方程的布尔函数代数描述的</li>
+<li>产生触发器输入的电路部分由一组布尔函数代数描述，称为触发器输入方程（或有时称为激励方程）</li>
+</ul>
+<h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><ol>
+<li>写出FF输入端函数</li>
+<li>写出FF的函数</li>
+<li>代入，并将现有输入转化为FF输入卸载真值表中</li>
+<li>画出函数图</li>
+</ol>
+<p>e.g.：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106720.png" alt="截屏2023-02-14 18.34.27" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106085.png" alt="截屏2023-02-14 18.34.42" style="zoom:50%;" />
+
+<h3 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h3><p>两种模型</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106301.png" alt="截屏2023-02-14 18.38.08"></p>
+<h4 id="状态机化简"><a href="#状态机化简" class="headerlink" title="状态机化简"></a>状态机化简</h4><p>举例，输入$01010110100$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107655.png" alt="截屏2023-02-14 18.41.05" style="zoom:50%;" />
+
+<ol>
+<li>首先我们画出状态表</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107634.png" alt="截屏2023-02-14 19.12.44" style="zoom:50%;" />
+
+<ol start="2">
+<li>然后我们画出目标状态和输出相同组，在上图中e和g是等效的，其中一个可以被另一个替换</li>
+<li>重复上述过程，f可以被d替换</li>
+<li>最终我们的到化简后的状态机</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107782.png" alt="截屏2023-02-14 19.15.08" style="zoom:50%;" />
+
+<h3 id="设计状态机"><a href="#设计状态机" class="headerlink" title="设计状态机"></a>设计状态机</h3><h4 id="一些注意"><a href="#一些注意" class="headerlink" title="一些注意"></a>一些注意</h4><ul>
+<li>为了设计一个带有物理元件的顺序电路，有必要为各状态分配唯一的编码二进制值。</li>
+<li>对于一个有m个状态的电路，编码必须包含n位，其中2 n≥m。</li>
+<li>在状态还原之前，我们必须为七个状态分配二进制值；剩下的状态是未使用的。如果使用还原后的状态表，只有五个状态需要二进制赋值，而我们还剩下三个未使用的状态。</li>
+<li>在设计过程中，未使用的状态被当作不关心的条件。由于不关心的条件通常有助于获得更简单的电路，所以有五个状态的电路比有七个状态的电路需要更少的组合门，这是比较有可能的，但并不确定。</li>
+<li>可以用二进制，格雷码，独热码来设计状态。独热码有更简单的decode</li>
+</ul>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
+<li><p>从字的描述和所需操作的规格，推导出电路的状态图。</p>
+</li>
+<li><p>如有必要，减少状态的数量。</p>
+</li>
+<li><p>给状态分配二进制值。</p>
+</li>
+<li><p>获得二进制编码的状态表。</p>
+</li>
+<li><p>选择要使用的触发器的类型。</p>
+</li>
+<li><p>推导出简化的触发器输入方程和输出方程。</p>
+</li>
+<li><p>绘制逻辑图。</p>
+</li>
+</ol>
+<h3 id="合成FF"><a href="#合成FF" class="headerlink" title="合成FF"></a>合成FF</h3><h4 id="用D触发器合成-Synthesis-using-D-flip-flops"><a href="#用D触发器合成-Synthesis-using-D-flip-flops" class="headerlink" title="用D触发器合成 Synthesis using D flip-flops"></a>用D触发器合成 Synthesis using D flip-flops</h4><p>​		用D触发器很简单，目标状态是什么，输入D就是什么，画出真值表然后卡诺图化简即可</p>
+<h4 id="激励表"><a href="#激励表" class="headerlink" title="激励表"></a>激励表</h4><ul>
+<li>使用D型以外的触发器的顺序电路的设计很复杂，因为电路的输入方程必须间接地从状态表中得到。当采用D型触发器时，输入方程可以直接从下一个状态中获得。</li>
+<li>而JK和T型触发器则不然。为了确定这些触发器的输入方程，有必要推导出状态表和输入方程之间的函数关系。</li>
+<li>在设计过程中，我们通常知道从当前状态到下一个状态的转换，并希望找到能引起所需转换的触发器输入条件。</li>
+<li>出于这个原因，我们需要一个表格，列出特定状态变化所需的输入：激励表</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107085.png" alt="截屏2023-02-14 20.27.28" style="zoom:50%;" />
+
+<h4 id="用JK触发器合成-Synthesis-using-JK-flip-flops"><a href="#用JK触发器合成-Synthesis-using-JK-flip-flops" class="headerlink" title="用JK触发器合成 Synthesis using JK flip-flops"></a>用JK触发器合成 Synthesis using JK flip-flops</h4><p>这时候根据A，B的变化找到对应的输入J K</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142109518.png" alt="截屏2023-02-14 21.09.27" style="zoom: 50%;" />
+
+<p>再用真值表化简出$J_AK_AJ_BK_B$的函数，再绘制电路图即可</p>
+<h4 id="用T触发器合成-Synthesis-using-T-flip-flops"><a href="#用T触发器合成-Synthesis-using-T-flip-flops" class="headerlink" title="用T触发器合成 Synthesis using T flip-flops"></a>用T触发器合成 Synthesis using T flip-flops</h4><p>​		TFF的合成就简单很多，只要下一个状态有变化，T就是1，没有变化就是0，再用卡诺图化简即可</p>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
   </entry>
 </search>
