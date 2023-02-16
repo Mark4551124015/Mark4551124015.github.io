@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Airmouse 空气鼠标</title>
+    <url>/2022/08/01/Projects/AirMouse%20%E7%A9%BA%E6%B0%94%E9%BC%A0%E6%A0%87/</url>
+    <content><![CDATA[<p>一个可以通过摄像头操作鼠标的项目</p>
+<span id="more"></span>
+
+<h1 id="Airmouse-空气鼠标"><a href="#Airmouse-空气鼠标" class="headerlink" title="Airmouse 空气鼠标"></a>Airmouse 空气鼠标</h1>]]></content>
+      <categories>
+        <category>一些项目</category>
+      </categories>
+      <tags>
+        <tag>Mediapipe</tag>
+        <tag>Python</tag>
+        <tag>Airmouse</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>引言</title>
     <url>/2022/07/12/%E5%BC%95%E8%A8%80/</url>
     <content><![CDATA[<p> 一些关于过去的事</p>
@@ -123,6 +139,497 @@
 <li>逻辑门是一种处理一个或多个输入来产生输出的电路元件，多于两个的输入也是ok的</li>
 <li>电压操作，在一个范围内，但被解释为两个值中的任何一个。例如高电位位1，低电位为0。</li>
 </ul>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 4</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/</url>
+    <content><![CDATA[<p> <strong>Chapter 4</strong> 两级实现 Two Level Implementation</p>
+<span id="more"></span>
+
+<h1 id="两级实现-Two-Level-Implementation"><a href="#两级实现-Two-Level-Implementation" class="headerlink" title="两级实现 Two Level Implementation"></a>两级实现 Two Level Implementation</h1><h2 id="NAND-和-NOR-实现"><a href="#NAND-和-NOR-实现" class="headerlink" title="NAND 和 NOR 实现"></a>NAND 和 NOR 实现</h2><p>​		现在的逻辑电路经常由NAND和NOR门来实现功能，因为他们简单易用，并且使用同样的门来制造电路成本低廉</p>
+<h2 id="多级NAND电路"><a href="#多级NAND电路" class="headerlink" title="多级NAND电路"></a>多级NAND电路</h2><ul>
+<li><p>简单确定如何使用NAND门 或 把方程转化为NAND门形式，例如：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142046462.png" style="zoom:50%;" />
+</li>
+<li><p>布尔函数用两级NAND门实现，具体步骤：</p>
+</li>
+</ul>
+<ol>
+<li>简化该函数并以乘积之和SOP的形式表达。</li>
+<li>为表达式中至少有两个字的每个乘积项画一个NAND门。每个NAND门的输入都是该组乘积的变量树。这个过程会产生一组第一级门。</li>
+<li>在第二层中使用AND-反转或反转-OR图形符号画一个单一的门，其输入来自第一层门的输出。</li>
+<li>一个只有一个字词的术语需要在第一层中使用反相器。然而，如果单字是补足的，它可以直接连接到第二层NAND门的一个输入</li>
+</ol>
+<ul>
+<li>使用混合符号将多级AND-OR图转换为全NAND图的一般程序如下:</li>
+</ul>
+<ol>
+<li>将所有的AND门转换为NAND门，并使用AND-反转图形符号。</li>
+<li>将所有的OR门转换为NAND门，并使用反转-OR图形符号。</li>
+<li>检查图中的所有气泡。对于每一个没有被补偿的气泡都要插入一个反相器(一个单输入的NAND门)或补充输入的文字。</li>
+</ol>
+<h2 id="多级NOR电路"><a href="#多级NOR电路" class="headerlink" title="多级NOR电路"></a>多级NOR电路</h2><ul>
+<li>NOR操作是NAND操作的对偶。</li>
+</ul>
+<ul>
+<li>所有NOR逻辑的程序和规则都是为NAND逻辑制定的相应程序和规则的对偶。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047124.png" style="zoom:50%;" />
+
+<ul>
+<li>一般步骤：</li>
+</ul>
+<ol>
+<li>用NOR门的两级实现需要将函数简化为和的乘积形式。</li>
+<li>将OR门改为带有OR-反转图形符号的NOR门，将AND门改为带有反转-AND图形符号的NOR门。</li>
+</ol>
+<h2 id="XOR函数-Exclusive-OR-function"><a href="#XOR函数-Exclusive-OR-function" class="headerlink" title="XOR函数 Exclusive-OR function"></a>XOR函数 Exclusive-OR function</h2><ul>
+<li>异或XOR：$x ⊕ y &#x3D; xy ′ + x ′ y$ ，	同或XNOR $(x ⊕ y) ′ &#x3D; x ⊙ y &#x3D; xy + x ′y ′$</li>
+</ul>
+<h3 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h3><p>XOR 很难直接实现，因此都是由其它门构造的，如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047211.png" style="zoom: 50%;" /><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047463.png" style="zoom:50%;" /></p>
+<p>只有少数的电路使用XOR来实现操作，特别是一些算数和查错纠错电路</p>
+<h3 id="奇函数-Odd-function"><a href="#奇函数-Odd-function" class="headerlink" title="奇函数 Odd function"></a>奇函数 Odd function</h3><p>​		有三个或更多变量的XOR操作可以通过用其等价的布尔表达式替换⊕来转换为普通的布尔函数。</p>
+<p>​	$A ⊕ B ⊕ C &#x3D; (AB’+ A’B)C’+ (AB + A’B’)C&#x3D; AB’C’+ A’BC’+ ABC + A’B’C&#x3D; ∑ (1, 2, 4, 7)$</p>
+<p>​		当且仅当输入变量有奇数个1时输出1，加反运算输出是否为偶数个1，在用作奇偶校验Checksum时很好用。<strong>Parity Checking</strong></p>
+<p>​	奇偶校验位p，奇数个1输出1，偶数个输出0，与Chapter 3中相同</p>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 5</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/</url>
+    <content><![CDATA[<p> <strong>Chapter 5</strong> 组合逻辑电路 Combinational logic</p>
+<span id="more"></span>
+
+<h1 id="组合逻辑电路-Combinational-logic"><a href="#组合逻辑电路-Combinational-logic" class="headerlink" title="组合逻辑电路 Combinational logic"></a>组合逻辑电路 Combinational logic</h1><p>​		逻辑电路分为<strong>组合逻辑</strong>和<strong>时序逻辑</strong>，组合逻辑电路的输出取决于输入的组合，可以实现一个布尔函数的运算，对输入变量的值和组合敏感并且输出一组值。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png" style="zoom:50%;" />
+
+<p>​		输入共有$2^n$个组合，可以用真值表表示，m个输出根据输入来决定</p>
+<h2 id="Multiplexer多路复用器"><a href="#Multiplexer多路复用器" class="headerlink" title="Multiplexer	多路复用器"></a>Multiplexer	多路复用器</h2><p>​			多路复用器通过n个输入（通常为2,4,8,16）以及一个开关E以及选择输入来决定输出哪一个输入。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105256.png" alt="截屏2023-02-12 16.48.19" style="zoom:50%;" />
+
+<ul>
+<li><p>数字系统内的数据通常以并行形式处理，以提高运行速度。</p>
+</li>
+<li><p>如果系统的输出必须在一个相对较长的距离内传输，那么将进行并行到串行的转换。</p>
+</li>
+<li><p>例如一个8位字在数据输入端以并行方式呈现</p>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047977.png" alt="截屏2023-02-12 16.51.10" style="zoom:50%;" />
+
+<h3 id="用作生成布尔函数"><a href="#用作生成布尔函数" class="headerlink" title="用作生成布尔函数"></a>用作生成布尔函数</h3><p>对于一个4对1的MUX，其特征方程为 $f &#x3D; A’B’d_0 + A’Bd_1 + AB’d_2 + ABd_3 $</p>
+<ul>
+<li>A和B是布尔变量，应用在选择输入端，可以从任何n个变量的布尔函数中分解出来。</li>
+<li>剩下的n-2个变量，被称为残差变量，可以形成残差函数，然后可以应用于数据输入。</li>
+<li>例如：$f(A，B，C)&#x3D;∑(0，1，3，4，7)$</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105770.png" alt="截屏2023-02-12 17.02.12" style="zoom:67%;" />
+
+<h2 id="Decoder-解码器"><a href="#Decoder-解码器" class="headerlink" title="Decoder 解码器"></a>Decoder 解码器</h2><ul>
+<li>可以看出，解码器的逻辑图与解复用器的逻辑图是相同的，只要数据线被用来启用解码器。</li>
+<li>解码器也可以被看作是一个SOP发生器。每个输出都产生一个minterm。</li>
+</ul>
+<p>​		如下为$f(A, B, C, D) &#x3D; ∑ (0, 1, 5, 8, 10, 12, 13, 15)$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047475.png" alt="截屏2023-02-12 17.03.17" style="zoom:50%;" />
+
+<h3 id="解码器网络"><a href="#解码器网络" class="headerlink" title="解码器网络"></a>解码器网络</h3><ul>
+<li>当需要一个大型的解码网络时，它不能在一个MSI封装中实现。</li>
+<li>主要是由于需要大量的引脚。</li>
+<li>解码范围可以通过解码器芯片的互连来扩展。两种方案。</li>
+</ul>
+<p>​			树状解码 Tree decoding</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047292.png" alt="截屏2023-02-12 18.27.15" style="zoom:50%;" />
+
+<p>​			巧合解码 Coincident decoding</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047317.png" alt="截屏2023-02-12 18.27.36" style="zoom:50%;" />
+
+<h2 id="Encoder-编码器"><a href="#Encoder-编码器" class="headerlink" title="Encoder 编码器"></a>Encoder 编码器</h2><p>​		编码器就是解码器的反向操作，一般用于CPU master flag，将输入的独热玛转换为二进制数字</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047329.png" alt="截屏2023-02-12 18.45.24" style="zoom:50%;" />
+
+<ul>
+<li>编码器被设计为在任何给定的瞬间识别一个，而且只有一个外围设备。</li>
+<li>在实践中，没有什么可以阻止两个或更多的外设同时请求服务。</li>
+<li>为了处理这种情况，可以给外设标志附加一个优先级系统。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047573.png" style="zoom: 50%;" />
+
+<h2 id="Digital-Comparator-比较器"><a href="#Digital-Comparator-比较器" class="headerlink" title="Digital Comparator 比较器"></a>Digital Comparator 比较器</h2><p>• 比较器的通常问题是两个多位数字的比较</p>
+<p>​	such as $A &#x3D; A_2A_1A_0 $and $B &#x3D; B_2 B_1 B_0$</p>
+<p>• 从最有意义的位（最大）开始到最小的位</p>
+<p>​		A &#x3D; B 如果所有的位数都相等: $A_i &#x3D; B_i$</p>
+<p>​		$x_i &#x3D;A_i B_i +A_i’B_i’$</p>
+<p>​		A &#x3D; B if $x_2 x_1 x_0 &#x3D; 1$</p>
+<p>​		A &gt; B if $A_2 B_2’+ x_2 A_1 B_1’+ x_2 x_1 A_0 B_0’&#x3D; 1$</p>
+<p>​		A &lt; B if $A_2’B_2 + x_2 A_1’B_1 + x_2 x_1 A_0’B_0 &#x3D; 1$</p>
+<p>单bit比较器:</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048891.png" style="zoom:50%;" />
+
+<p>3 bit比较器：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048326.png" alt="comp" style="zoom:50%;" />
+
+<h2 id="迭代组合电路"><a href="#迭代组合电路" class="headerlink" title="迭代组合电路"></a>迭代组合电路</h2><ul>
+<li>一般结构：相同功能的n个相同的模块，对于可以通过迭代算法解决的问题。</li>
+<li>将$C_0$设为其初始值，并将i设为0。</li>
+<li>当i&lt;n时，重复。<ul>
+<li>用$C_i$和$D_i$来确定$O_i$和$C_{i+1}$的值。</li>
+<li>增加i</li>
+</ul>
+</li>
+<li>初级输入&#x2F;输出和级联输入&#x2F;输出。</li>
+</ul>
+<p>​	例如，使用迭代组合电路比大小，模块为1bit比较器:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048593.png" alt="截屏2023-02-12 19.19.29"></p>
+<h2 id="门延迟"><a href="#门延迟" class="headerlink" title="门延迟"></a>门延迟</h2><p>​	在电位变化过程中有延迟，中间部分不会被定义为高&#x2F;低电位</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048828.png" alt="门延迟" style="zoom:50%;" />
+
+<ul>
+<li>忽略延迟的组合电路的分析只能预测其<strong>稳态行为</strong>。<ul>
+<li>假设相对于电路中的电子元件的延迟而言，输入已经稳定了很长时间，则预测电路的输出为其输入的函数。</li>
+</ul>
+</li>
+<li>由于电路的延迟，组合逻辑电路的<strong>瞬态行为</strong>可能与稳态分析的预测不同。</li>
+<li><strong>时序危险</strong>：当稳态分析预测输出不应改变时，电路的输出可能产生一个短脉冲（<strong>突波glitch</strong>）</li>
+<li>一个门有可测量的响应时间$t_{pLH}$和$t_{pHL}$。每个门大约10ns。</li>
+<li>通过传输门的延迟可以累加起来，并引入时间危险。</li>
+<li>$t_{pLH}$&#x3D; 低到高，$t_{pHL}$&#x3D; 高到低的传播时间</li>
+<li>static-1危险是一个短暂的0突变，当输入改变时，我们期望（根据逻辑定理）输出保持恒定的1</li>
+<li>static-0危险是一个短暂的1突变，当我们期望输出保持恒定的0</li>
+</ul>
+<h2 id="消除时序危险"><a href="#消除时序危险" class="headerlink" title="消除时序危险"></a>消除时序危险</h2>]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 6</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/</url>
+    <content><![CDATA[<p> <strong>Chapter 6</strong> 锁存器和触发器 Latches and Flip-flops</p>
+<span id="more"></span>
+
+<h1 id="锁存器和触发器-Latches-and-Flip-flops"><a href="#锁存器和触发器-Latches-and-Flip-flops" class="headerlink" title="锁存器和触发器 Latches and Flip-flops"></a>锁存器和触发器 Latches and Flip-flops</h1><p>​	其在任何瞬间的输出都取决于现在的输入和过去的输出的逻辑电路被称为顺序电路。</p>
+<ul>
+<li>一个组合电路，但有<ul>
+<li>记忆元素连接在反馈路径中。</li>
+<li>输出不仅是输入的二进制函数，也是电路的当前状态。</li>
+<li>记忆元件是一种媒介，其中的一位信息（0或1）可以被存储或保留到必要时，此后其内容可以被一个新的值所取代。</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048923.png" alt="截屏2023-02-12 19.50.29" style="zoom:50%;" />
+
+<p>​		顺序电路大致分为两大类，称为同步或有时钟的顺序电路，以及异步或无时钟的顺序电路，取决于其信号的时间。一个序列电路的行为可以通过对其信号在离散时间段的了解来定义，被称为<strong>同步序列电路</strong>，一个序列电路的行为取决于输入信号的变化顺序，被称为<strong>异步序列电路</strong>。</p>
+<h2 id="触发器Flip-Flop"><a href="#触发器Flip-Flop" class="headerlink" title="触发器Flip-Flop"></a>触发器Flip-Flop</h2><p>​		Flip-Flop是一种记忆原件，仅存储1bit的数据，只在一个时钟脉冲内有电位变化，时钟不激活不变化</p>
+<p>它只能有两个状态，要么是1状态，要么是0状态。</p>
+<ul>
+<li>触发器的一般框图表示如下，它有一个或多个输入和两个输出，这两个输出是相互补充的。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048207.png" alt="截屏2023-02-12 19.57.21" style="zoom:50%;" />
+
+<ul>
+<li>通常，Q的状态被称为触发器的状态，而Q′的状态被称为触发器的互补状态。</li>
+</ul>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>对于锁存器和触发器这两个术语的使用，一直存在着相当大的混淆。</p>
+<ul>
+<li>触发器是一种在时钟信号发生变化时改变其状态的设备。</li>
+<li>异步锁存器持续监测输入信号，在输入信号发生变化时改变其状态。</li>
+<li>同步锁存器持续监测输入信号，但只有在控制信号激活时才能改变其状态。</li>
+</ul>
+<h2 id="锁存器-Latches"><a href="#锁存器-Latches" class="headerlink" title="锁存器 Latches"></a>锁存器 Latches</h2><h3 id="SR-Latches"><a href="#SR-Latches" class="headerlink" title="SR Latches"></a>SR Latches</h3><ul>
+<li><p>通过交叉耦合一对NOR门，我们有了第一个锁存器。SR锁存器</p>
+<ul>
+<li>设置和复位的输入端分别被标为S和R，SR锁存器的状态表如下所示</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048167.png" alt="截屏2023-02-12 20.00.43" style="zoom:50%;"/>
+
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048823.png" style="zoom:50%;" />
+
+<ul>
+<li>在k-map中$Q_{t+1}&#x3D;S+R’Q$</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048293.png" alt="截屏2023-02-12 20.04.00" style="zoom:67%;" />
+
+<h3 id="Controlled-SR-Latches"><a href="#Controlled-SR-Latches" class="headerlink" title="Controlled SR Latches"></a>Controlled SR Latches</h3><ul>
+<li>SR锁存器的可控性可以由一个额外的信号G控制。<ul>
+<li><p>如果G&#x3D;0，第一级NAND门的输出总是1，禁用第二级门的任何变化。</p>
+</li>
+<li><p>如果G从0过渡到1，第一级NAND门被启用，使锁存器处于激活状态。</p>
+</li>
+</ul>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048517.png" alt="截屏2023-02-12 20.08.22" style="zoom:50%;" />
+
+<ul>
+<li>但是SR锁存器若S和R都是1时输出不可预知</li>
+</ul>
+<h3 id="Controlled-D-Latch"><a href="#Controlled-D-Latch" class="headerlink" title="Controlled D Latch"></a>Controlled D Latch</h3><ul>
+<li>D锁存器被设计用来处理这个问题，D锁存器也叫透明锁存器，D代表数据，确保前面的S和R永远不会同时等于1</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048086.png" alt="截屏2023-02-12 20.14.18" style="zoom:50%;" />
+
+<ul>
+<li>受控D型锁存器的优点是只需要一个数据输入，没有必须要避免的输入条件<ul>
+<li>当enable被断言时，数据输入被转移到Q输出。输出跟随输入</li>
+<li>当使能被解除时，信息被储存</li>
+</ul>
+</li>
+</ul>
+<h3 id="JK-触发器-JK-flip-flop"><a href="#JK-触发器-JK-flip-flop" class="headerlink" title="JK 触发器 JK flip-flop"></a>JK 触发器 JK flip-flop</h3><p>​		锁存器电路由于其透明性而不适合在同步顺序电路中运行。触发器被用作基本的存储元件，它只对clk输入激活时的变化作出反应，一个典型的例子被称为JK触发器（JKFF）1 0 置1， 0 1置0， 1 1 反转， 00不变 </p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105951.png" alt="test" style="zoom: 67%;" />
+
+<h3 id="主-从JK-FF"><a href="#主-从JK-FF" class="headerlink" title="主-从JK FF"></a>主-从JK FF</h3><p>​		主控器的时钟是正常的，而从属器的时钟是反转的。当时钟变为0时，从机被激活以反映来自主机的数据。主站的数据到输出。但是，主锁存器被禁用：输入的进一步变化将不会被反映出来。可以继续添加控制Clear和Preset来覆盖JK输入，Cl Pr 1 0时 清除主从的Q为0，0 1 时 Q预设为1。同时激活时存储器锁住不再变化，0 0 时对外界可做出相应 </p>
+<h3 id="D-flip-flop"><a href="#D-flip-flop" class="headerlink" title="D flip-flop"></a>D flip-flop</h3><p>​		如latch一样，将K输入为J的逆。</p>
+<h3 id="T-flip-flop"><a href="#T-flip-flop" class="headerlink" title="T flip-flop"></a>T flip-flop</h3><p>​		最后，当输入T&#x3D;1的时钟信号时，一个T触发器会切换状态，构造下面有</p>
+<h3 id="FF间的转换"><a href="#FF间的转换" class="headerlink" title="FF间的转换"></a>FF间的转换</h3><ul>
+<li>JKFF &#x3D;&gt; DFF：链接K为J的反向</li>
+<li>DFF  &#x3D;&gt; JKFF：如图</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048874.png" alt="image-20230213233538201" style="zoom:67%;" />
+
+<ul>
+<li>JKFF &amp; DFF &#x3D;&gt; TFF：</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048531.png" alt="image-20230213233839090" style="zoom:67%;" />
+
+<h3 id="特性表-Characteristic-table"><a href="#特性表-Characteristic-table" class="headerlink" title="特性表 Characteristic table"></a>特性表 Characteristic table</h3><ul>
+<li>特性表通过描述一个触发器的逻辑属性以表格的形式描述其操作。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048122.png" alt="image-20230213234035920" style="zoom: 50%;" />
+
+<h3 id="特性方程-Characteristic-equation"><a href="#特性方程-Characteristic-equation" class="headerlink" title="特性方程 Characteristic equation"></a>特性方程 Characteristic equation</h3><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048289.png" alt="image-20230213234110839" style="zoom:67%;" />
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 7</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/</url>
+    <content><![CDATA[<p> <strong>Chapter 7</strong> 同步时序逻辑 Synchronous Sequential Logic</p>
+<span id="more"></span>
+
+<h1 id="同步时序逻辑-Synchronous-Sequential-Logic"><a href="#同步时序逻辑-Synchronous-Sequential-Logic" class="headerlink" title="同步时序逻辑 Synchronous Sequential Logic"></a>同步时序逻辑 Synchronous Sequential Logic</h1><h2 id="分析时序电路"><a href="#分析时序电路" class="headerlink" title="分析时序电路"></a>分析时序电路</h2><ul>
+<li>$A(t + 1) &#x3D; A(t)x(t) + B(t)x(t)$</li>
+<li>$B(t+1)&#x3D;A’(t)x(t)$</li>
+</ul>
+<p>​		现在状态t，下一个状态是t+1。然后绘制真值表</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png" alt="截屏2023-02-14 18.20.57" style="zoom:50%;" />
+
+<p>这种真值表很长，可以把x换成两列，接着可以画状态图：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106205.png" alt="截屏2023-02-14 18.22.51" style="zoom:50%;" />
+
+<ul>
+<li>电路图→方程式→状态表→状态图<ul>
+<li>状态表更容易从电路图和状态方程中导出</li>
+<li>状态图给出了状态转换的图解</li>
+</ul>
+</li>
+<li>顺序电路的逻辑图由触发器和门组成</li>
+<li>门之间的互连构成了一个组合电路，可以用布尔表达式进行代数描述</li>
+<li>组合电路中产生外部输出的部分是由一组称为输出方程的布尔函数代数描述的</li>
+<li>产生触发器输入的电路部分由一组布尔函数代数描述，称为触发器输入方程（或有时称为激励方程）</li>
+</ul>
+<h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><ol>
+<li>写出FF输入端函数</li>
+<li>写出FF的函数</li>
+<li>代入，并将现有输入转化为FF输入卸载真值表中</li>
+<li>画出函数图</li>
+</ol>
+<p>e.g.：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106720.png" alt="截屏2023-02-14 18.34.27" style="zoom:50%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106085.png" alt="截屏2023-02-14 18.34.42" style="zoom:50%;" />
+
+<h3 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h3><p>两种模型</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106301.png" alt="截屏2023-02-14 18.38.08"></p>
+<h4 id="状态机化简"><a href="#状态机化简" class="headerlink" title="状态机化简"></a>状态机化简</h4><p>举例，输入$01010110100$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107655.png" alt="截屏2023-02-14 18.41.05" style="zoom:50%;" />
+
+<ol>
+<li>首先我们画出状态表</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107634.png" alt="截屏2023-02-14 19.12.44" style="zoom:50%;" />
+
+<ol start="2">
+<li>然后我们画出目标状态和输出相同组，在上图中e和g是等效的，其中一个可以被另一个替换</li>
+<li>重复上述过程，f可以被d替换</li>
+<li>最终我们的到化简后的状态机</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107782.png" alt="截屏2023-02-14 19.15.08" style="zoom:50%;" />
+
+<h3 id="设计状态机"><a href="#设计状态机" class="headerlink" title="设计状态机"></a>设计状态机</h3><h4 id="一些注意"><a href="#一些注意" class="headerlink" title="一些注意"></a>一些注意</h4><ul>
+<li>为了设计一个带有物理元件的顺序电路，有必要为各状态分配唯一的编码二进制值。</li>
+<li>对于一个有m个状态的电路，编码必须包含n位，其中2 n≥m。</li>
+<li>在状态还原之前，我们必须为七个状态分配二进制值；剩下的状态是未使用的。如果使用还原后的状态表，只有五个状态需要二进制赋值，而我们还剩下三个未使用的状态。</li>
+<li>在设计过程中，未使用的状态被当作不关心的条件。由于不关心的条件通常有助于获得更简单的电路，所以有五个状态的电路比有七个状态的电路需要更少的组合门，这是比较有可能的，但并不确定。</li>
+<li>可以用二进制，格雷码，独热码来设计状态。独热码有更简单的decode</li>
+</ul>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
+<li><p>从字的描述和所需操作的规格，推导出电路的状态图。</p>
+</li>
+<li><p>如有必要，减少状态的数量。</p>
+</li>
+<li><p>给状态分配二进制值。</p>
+</li>
+<li><p>获得二进制编码的状态表。</p>
+</li>
+<li><p>选择要使用的触发器的类型。</p>
+</li>
+<li><p>推导出简化的触发器输入方程和输出方程。</p>
+</li>
+<li><p>绘制逻辑图。</p>
+</li>
+</ol>
+<h3 id="合成FF"><a href="#合成FF" class="headerlink" title="合成FF"></a>合成FF</h3><h4 id="用D触发器合成-Synthesis-using-D-flip-flops"><a href="#用D触发器合成-Synthesis-using-D-flip-flops" class="headerlink" title="用D触发器合成 Synthesis using D flip-flops"></a>用D触发器合成 Synthesis using D flip-flops</h4><p>​		用D触发器很简单，目标状态是什么，输入D就是什么，画出真值表然后卡诺图化简即可</p>
+<h4 id="激励表"><a href="#激励表" class="headerlink" title="激励表"></a>激励表</h4><ul>
+<li>使用D型以外的触发器的顺序电路的设计很复杂，因为电路的输入方程必须间接地从状态表中得到。当采用D型触发器时，输入方程可以直接从下一个状态中获得。</li>
+<li>而JK和T型触发器则不然。为了确定这些触发器的输入方程，有必要推导出状态表和输入方程之间的函数关系。</li>
+<li>在设计过程中，我们通常知道从当前状态到下一个状态的转换，并希望找到能引起所需转换的触发器输入条件。</li>
+<li>出于这个原因，我们需要一个表格，列出特定状态变化所需的输入：激励表</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107085.png" alt="截屏2023-02-14 20.27.28" style="zoom:50%;" />
+
+<h4 id="用JK触发器合成-Synthesis-using-JK-flip-flops"><a href="#用JK触发器合成-Synthesis-using-JK-flip-flops" class="headerlink" title="用JK触发器合成 Synthesis using JK flip-flops"></a>用JK触发器合成 Synthesis using JK flip-flops</h4><p>这时候根据A，B的变化找到对应的输入J K</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142109518.png" alt="截屏2023-02-14 21.09.27" style="zoom: 50%;" />
+
+<p>再用真值表化简出$J_AK_AJ_BK_B$的函数，再绘制电路图即可</p>
+<h4 id="用T触发器合成-Synthesis-using-T-flip-flops"><a href="#用T触发器合成-Synthesis-using-T-flip-flops" class="headerlink" title="用T触发器合成 Synthesis using T flip-flops"></a>用T触发器合成 Synthesis using T flip-flops</h4><p>​		TFF的合成就简单很多，只要下一个状态有变化，T就是1，没有变化就是0，再用卡诺图化简即可</p>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 3</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
+    <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
+<span id="more"></span>
+
+<h1 id="门级化简-Gate-level-Minimization"><a href="#门级化简-Gate-level-Minimization" class="headerlink" title="门级化简 Gate-level Minimization"></a>门级化简 Gate-level Minimization</h1><ul>
+<li>实现布尔逻辑的数字门的复杂性与代数表达的复杂性直接相关，门级化简师寻找描述数字电路的布尔函数的最佳门级实现的设计任务</li>
+<li>对于超过几个输入来说，用手去算很难，所以这通常由计算机完成，需要了解基本原理</li>
+</ul>
+<h2 id="卡诺图法"><a href="#卡诺图法" class="headerlink" title="卡诺图法"></a>卡诺图法</h2><ul>
+<li><p>绘制卡诺图，标出为1的项，合并相邻2 4 8 16的矩形块</p>
+<p>​	优先四角，先找大的，越大越好，删掉多的</p>
+</li>
+<li><p>例如</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/main/NoteImages/202302142043995.png" alt="截屏2023-02-12 14.51.18" style="zoom: 25%;" />
+</li>
+<li><p>更多的变量，如5个，可以采用增加深度的诺图，两张卡诺图一起使用</p>
+</li>
+<li><p>其中的X代表不关心Dont Care Condition，可以按需当作0或1</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 8</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/</url>
+    <content><![CDATA[<p> <strong>Chapter 8</strong> 算术电路 Arithmetic Circuits</p>
+<span id="more"></span>
+
+<h1 id="算术电路-Arithmetic-Circuits"><a href="#算术电路-Arithmetic-Circuits" class="headerlink" title="算术电路 Arithmetic Circuits"></a>算术电路 Arithmetic Circuits</h1><p>​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。</p>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p> 两个二进制数字的加法是最基本的算术运算</p>
+<h3 id="半加器"><a href="#半加器" class="headerlink" title="半加器"></a>半加器</h3><p>​		仅计算两bit的加法，不含进位计算</p>
+<ul>
+<li>结果 $S &#x3D; A ⊕ B$ </li>
+<li>进位 $C &#x3D; AB$</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png" alt="image-20230215111938370" style="zoom:50%;" />
+
+<h3 id="全加器"><a href="#全加器" class="headerlink" title="全加器"></a>全加器</h3><p>​		全加器电路可以进行三个bit的加法，包括两个bit和一个进位，然后产生结果和进位</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151128533.png" alt="截屏2023-02-15 11.28.38" style="zoom:50%;" />
+
+<ul>
+<li><p>$S &#x3D; X’A’B + X’AB’ +XA’B’+ XAB$</p>
+</li>
+<li><p>$C &#x3D; AB + BX + AX$</p>
+</li>
+</ul>
+<p>​		可以通过AND，OR门来实现，同时也可以通过两个半加器和一个or来实现</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151136588.png" alt="截屏2023-02-15 11.33.05" style="zoom:50%;" />
+
+<p>$S &#x3D; B ⊕ (X ⊕ A) &#x3D; B’(XA’+ X’A) + B(XA’+ X’A)’$</p>
+<p>$&#x3D; B’(XA’+ X’A) + B(XA + X’A’) &#x3D; XA’B’+ X’AB’+ XAB + X’A’B$</p>
+<p>$C &#x3D; B(XA’+ X’A) + XA &#x3D; XA’B + X’AB + XA$</p>
+<h3 id="二进制加法器"><a href="#二进制加法器" class="headerlink" title="二进制加法器"></a>二进制加法器</h3><p>​		二进制加法器是一种产生两个二进制数字的算术和的数字电路，n位数的加法需要一个由n个全加器组成的链条，或者由一个半加器和n-1个全加器组成的链条。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151142308.png" alt="截屏2023-02-15 11.42.27" style="zoom:67%;" />
+
+<h2 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h2><p>​		减法是数字计算机信息处理任务中算术运算的另一个基本功能</p>
+<h3 id="半减器"><a href="#半减器" class="headerlink" title="半减器"></a>半减器</h3><p>​		一个执行两个bit的减法的组合电路被称为半减法器</p>
+<p>$D&#x3D;X⊕Y$</p>
+<p>$B &#x3D; X’Y$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151204446.png" alt="截屏2023-02-15 12.04.05" style="zoom:50%;" />
+
+<h3 id="全减器"><a href="#全减器" class="headerlink" title="全减器"></a>全减器</h3><p>​		全加器的组合电路执行三个比特的减法运算–由前一个有效数字的减法运算产生的减数、子数和借数Z，并产生输出差数和借数</p>
+<h3 id="二进制减法器"><a href="#二进制减法器" class="headerlink" title="二进制减法器"></a>二进制减法器</h3><p>​		无符号二进制数的减法可以通过补码的方式最方便地完成。</p>
+<ul>
+<li><p>A-B的减法可以通过取B的补码并将其加到A中来完成。</p>
+</li>
+<li><p>补码可以通过取反码并在最不重要的一对位上加1来获得。</p>
+</li>
+<li><p>反码可以用反相器实现，1可以通过输入进位加到总和上。</p>
+</li>
+</ul>
+<p>​		可以在加法器的Y输入位反相来获得补码，并且在初始位置加一，这样就可以获得减法结果（去掉进位&#x2F;取补码加负号）</p>
+<h3 id="二进制运算器"><a href="#二进制运算器" class="headerlink" title="二进制运算器"></a>二进制运算器</h3><p>​		在设置输入$M$，在$Y$输入变为$Y⊕M$，并且在最小位加法器位置输入$M$。这样就将加减法运算合并为共同一个运算器</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151254111.png" alt="截屏2023-02-15 12.54.27" style="zoom:67%;" />
+
+<h2 id="溢出"><a href="#溢出" class="headerlink" title="溢出"></a>溢出</h2><p>​		对两个二进制数字相加后的溢出的检测取决于这些数字被认为是有符号还是无符号</p>
+<ul>
+<li><p>当两个无符号的数字相加时，溢出的检测是从最重要的位置的末端进行的</p>
+</li>
+<li><p>当两个有符号的数字相加时，符号位被视为数字的一部分，末尾进位不表示溢出</p>
+</li>
+</ul>
+<p>如果两个数字都是正数或负数，可能会发生溢出。</p>
+<ul>
+<li>如果把符号位位置的进位作为结果的符号位，那么这样得到的9位答案将是正确的。但是由于答案不能被容纳在8位之内，我们说发生了溢出。</li>
+</ul>
+<p>​		溢出情况可以通过观察进入符号位的进位和从符号位的出位来检测。如果这两个进位不相等，则发生了溢出。</p>
+<p>​		如果这两个进位被应用于XOR门，当该门的输出等于1时，就可以检测到溢出。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151440010.png" alt="截屏2023-02-15 14.40.24" style="zoom:50%;" />
+
+<h3 id="十进制加法器"><a href="#十进制加法器" class="headerlink" title="十进制加法器"></a>十进制加法器</h3><p>​		我们使用BCD来代表十进制，四个bit的二进制加法器能计算BCD码的加法，但是BCD在9之后要加上0110来使其继续合法，需要注意，如下为BCD码合法转化</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151447962.png" alt="截屏2023-02-15 14.47.16" style="zoom:50%;" />
+
+<p>$K$为进位</p>
+<p>合法位$C &#x3D;K +Z_8Z_4+Z_8Z_2$，不合法的时候可以多一个加法器来加上$0110$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151502990.png" alt="截屏2023-02-15 15.02.53" style="zoom:50%;" />
+
+<h3 id="二进制乘法器"><a href="#二进制乘法器" class="headerlink" title="二进制乘法器"></a>二进制乘法器</h3><p>略</p>
 ]]></content>
       <categories>
         <category>CS207</category>
@@ -427,304 +934,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Airmouse 空气鼠标</title>
-    <url>/2022/08/01/Projects/AirMouse%20%E7%A9%BA%E6%B0%94%E9%BC%A0%E6%A0%87/</url>
-    <content><![CDATA[<p>一个可以通过摄像头操作鼠标的项目</p>
-<span id="more"></span>
-
-<h1 id="Airmouse-空气鼠标"><a href="#Airmouse-空气鼠标" class="headerlink" title="Airmouse 空气鼠标"></a>Airmouse 空气鼠标</h1>]]></content>
-      <categories>
-        <category>一些项目</category>
-      </categories>
-      <tags>
-        <tag>Mediapipe</tag>
-        <tag>Python</tag>
-        <tag>Airmouse</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 3</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
-    <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
-<span id="more"></span>
-
-<h1 id="门级化简-Gate-level-Minimization"><a href="#门级化简-Gate-level-Minimization" class="headerlink" title="门级化简 Gate-level Minimization"></a>门级化简 Gate-level Minimization</h1><ul>
-<li>实现布尔逻辑的数字门的复杂性与代数表达的复杂性直接相关，门级化简师寻找描述数字电路的布尔函数的最佳门级实现的设计任务</li>
-<li>对于超过几个输入来说，用手去算很难，所以这通常由计算机完成，需要了解基本原理</li>
-</ul>
-<h2 id="卡诺图法"><a href="#卡诺图法" class="headerlink" title="卡诺图法"></a>卡诺图法</h2><ul>
-<li><p>绘制卡诺图，标出为1的项，合并相邻2 4 8 16的矩形块</p>
-<p>​	优先四角，先找大的，越大越好，删掉多的</p>
-</li>
-<li><p>例如</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/main/NoteImages/202302142043995.png" alt="截屏2023-02-12 14.51.18" style="zoom: 25%;" />
-</li>
-<li><p>更多的变量，如5个，可以采用增加深度的诺图，两张卡诺图一起使用</p>
-</li>
-<li><p>其中的X代表不关心Dont Care Condition，可以按需当作0或1</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 4</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/</url>
-    <content><![CDATA[<p> <strong>Chapter 4</strong> 两级实现 Two Level Implementation</p>
-<span id="more"></span>
-
-<h1 id="两级实现-Two-Level-Implementation"><a href="#两级实现-Two-Level-Implementation" class="headerlink" title="两级实现 Two Level Implementation"></a>两级实现 Two Level Implementation</h1><h2 id="NAND-和-NOR-实现"><a href="#NAND-和-NOR-实现" class="headerlink" title="NAND 和 NOR 实现"></a>NAND 和 NOR 实现</h2><p>​		现在的逻辑电路经常由NAND和NOR门来实现功能，因为他们简单易用，并且使用同样的门来制造电路成本低廉</p>
-<h2 id="多级NAND电路"><a href="#多级NAND电路" class="headerlink" title="多级NAND电路"></a>多级NAND电路</h2><ul>
-<li><p>简单确定如何使用NAND门 或 把方程转化为NAND门形式，例如：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142046462.png" style="zoom:50%;" />
-</li>
-<li><p>布尔函数用两级NAND门实现，具体步骤：</p>
-</li>
-</ul>
-<ol>
-<li>简化该函数并以乘积之和SOP的形式表达。</li>
-<li>为表达式中至少有两个字的每个乘积项画一个NAND门。每个NAND门的输入都是该组乘积的变量树。这个过程会产生一组第一级门。</li>
-<li>在第二层中使用AND-反转或反转-OR图形符号画一个单一的门，其输入来自第一层门的输出。</li>
-<li>一个只有一个字词的术语需要在第一层中使用反相器。然而，如果单字是补足的，它可以直接连接到第二层NAND门的一个输入</li>
-</ol>
-<ul>
-<li>使用混合符号将多级AND-OR图转换为全NAND图的一般程序如下:</li>
-</ul>
-<ol>
-<li>将所有的AND门转换为NAND门，并使用AND-反转图形符号。</li>
-<li>将所有的OR门转换为NAND门，并使用反转-OR图形符号。</li>
-<li>检查图中的所有气泡。对于每一个没有被补偿的气泡都要插入一个反相器(一个单输入的NAND门)或补充输入的文字。</li>
-</ol>
-<h2 id="多级NOR电路"><a href="#多级NOR电路" class="headerlink" title="多级NOR电路"></a>多级NOR电路</h2><ul>
-<li>NOR操作是NAND操作的对偶。</li>
-</ul>
-<ul>
-<li>所有NOR逻辑的程序和规则都是为NAND逻辑制定的相应程序和规则的对偶。</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047124.png" style="zoom:50%;" />
-
-<ul>
-<li>一般步骤：</li>
-</ul>
-<ol>
-<li>用NOR门的两级实现需要将函数简化为和的乘积形式。</li>
-<li>将OR门改为带有OR-反转图形符号的NOR门，将AND门改为带有反转-AND图形符号的NOR门。</li>
-</ol>
-<h2 id="XOR函数-Exclusive-OR-function"><a href="#XOR函数-Exclusive-OR-function" class="headerlink" title="XOR函数 Exclusive-OR function"></a>XOR函数 Exclusive-OR function</h2><ul>
-<li>异或XOR：$x ⊕ y &#x3D; xy ′ + x ′ y$ ，	同或XNOR $(x ⊕ y) ′ &#x3D; x ⊙ y &#x3D; xy + x ′y ′$</li>
-</ul>
-<h3 id="XOR"><a href="#XOR" class="headerlink" title="XOR"></a>XOR</h3><p>XOR 很难直接实现，因此都是由其它门构造的，如下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047211.png" style="zoom: 50%;" /><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047463.png" style="zoom:50%;" /></p>
-<p>只有少数的电路使用XOR来实现操作，特别是一些算数和查错纠错电路</p>
-<h3 id="奇函数-Odd-function"><a href="#奇函数-Odd-function" class="headerlink" title="奇函数 Odd function"></a>奇函数 Odd function</h3><p>​		有三个或更多变量的XOR操作可以通过用其等价的布尔表达式替换⊕来转换为普通的布尔函数。</p>
-<p>​	$A ⊕ B ⊕ C &#x3D; (AB’+ A’B)C’+ (AB + A’B’)C&#x3D; AB’C’+ A’BC’+ ABC + A’B’C&#x3D; ∑ (1, 2, 4, 7)$</p>
-<p>​		当且仅当输入变量有奇数个1时输出1，加反运算输出是否为偶数个1，在用作奇偶校验Checksum时很好用。<strong>Parity Checking</strong></p>
-<p>​	奇偶校验位p，奇数个1输出1，偶数个输出0，与Chapter 3中相同</p>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 6</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%206/</url>
-    <content><![CDATA[<p> <strong>Chapter 6</strong> 锁存器和触发器 Latches and Flip-flops</p>
-<span id="more"></span>
-
-<h1 id="锁存器和触发器-Latches-and-Flip-flops"><a href="#锁存器和触发器-Latches-and-Flip-flops" class="headerlink" title="锁存器和触发器 Latches and Flip-flops"></a>锁存器和触发器 Latches and Flip-flops</h1><p>​	其在任何瞬间的输出都取决于现在的输入和过去的输出的逻辑电路被称为顺序电路。</p>
-<ul>
-<li>一个组合电路，但有<ul>
-<li>记忆元素连接在反馈路径中。</li>
-<li>输出不仅是输入的二进制函数，也是电路的当前状态。</li>
-<li>记忆元件是一种媒介，其中的一位信息（0或1）可以被存储或保留到必要时，此后其内容可以被一个新的值所取代。</li>
-</ul>
-</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048923.png" alt="截屏2023-02-12 19.50.29" style="zoom:50%;" />
-
-<p>​		顺序电路大致分为两大类，称为同步或有时钟的顺序电路，以及异步或无时钟的顺序电路，取决于其信号的时间。一个序列电路的行为可以通过对其信号在离散时间段的了解来定义，被称为<strong>同步序列电路</strong>，一个序列电路的行为取决于输入信号的变化顺序，被称为<strong>异步序列电路</strong>。</p>
-<h2 id="触发器Flip-Flop"><a href="#触发器Flip-Flop" class="headerlink" title="触发器Flip-Flop"></a>触发器Flip-Flop</h2><p>​		Flip-Flop是一种记忆原件，仅存储1bit的数据，只在一个时钟脉冲内有电位变化，时钟不激活不变化</p>
-<p>它只能有两个状态，要么是1状态，要么是0状态。</p>
-<ul>
-<li>触发器的一般框图表示如下，它有一个或多个输入和两个输出，这两个输出是相互补充的。</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048207.png" alt="截屏2023-02-12 19.57.21" style="zoom:50%;" />
-
-<ul>
-<li>通常，Q的状态被称为触发器的状态，而Q′的状态被称为触发器的互补状态。</li>
-</ul>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>对于锁存器和触发器这两个术语的使用，一直存在着相当大的混淆。</p>
-<ul>
-<li>触发器是一种在时钟信号发生变化时改变其状态的设备。</li>
-<li>异步锁存器持续监测输入信号，在输入信号发生变化时改变其状态。</li>
-<li>同步锁存器持续监测输入信号，但只有在控制信号激活时才能改变其状态。</li>
-</ul>
-<h2 id="锁存器-Latches"><a href="#锁存器-Latches" class="headerlink" title="锁存器 Latches"></a>锁存器 Latches</h2><h3 id="SR-Latches"><a href="#SR-Latches" class="headerlink" title="SR Latches"></a>SR Latches</h3><ul>
-<li><p>通过交叉耦合一对NOR门，我们有了第一个锁存器。SR锁存器</p>
-<ul>
-<li>设置和复位的输入端分别被标为S和R，SR锁存器的状态表如下所示</li>
-</ul>
-</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048167.png" alt="截屏2023-02-12 20.00.43" style="zoom:50%;"/>
-
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048823.png" style="zoom:50%;" />
-
-<ul>
-<li>在k-map中$Q_{t+1}&#x3D;S+R’Q$</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048293.png" alt="截屏2023-02-12 20.04.00" style="zoom:67%;" />
-
-<h3 id="Controlled-SR-Latches"><a href="#Controlled-SR-Latches" class="headerlink" title="Controlled SR Latches"></a>Controlled SR Latches</h3><ul>
-<li>SR锁存器的可控性可以由一个额外的信号G控制。<ul>
-<li><p>如果G&#x3D;0，第一级NAND门的输出总是1，禁用第二级门的任何变化。</p>
-</li>
-<li><p>如果G从0过渡到1，第一级NAND门被启用，使锁存器处于激活状态。</p>
-</li>
-</ul>
-</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048517.png" alt="截屏2023-02-12 20.08.22" style="zoom:50%;" />
-
-<ul>
-<li>但是SR锁存器若S和R都是1时输出不可预知</li>
-</ul>
-<h3 id="Controlled-D-Latch"><a href="#Controlled-D-Latch" class="headerlink" title="Controlled D Latch"></a>Controlled D Latch</h3><ul>
-<li>D锁存器被设计用来处理这个问题，D锁存器也叫透明锁存器，D代表数据，确保前面的S和R永远不会同时等于1</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048086.png" alt="截屏2023-02-12 20.14.18" style="zoom:50%;" />
-
-<ul>
-<li>受控D型锁存器的优点是只需要一个数据输入，没有必须要避免的输入条件<ul>
-<li>当enable被断言时，数据输入被转移到Q输出。输出跟随输入</li>
-<li>当使能被解除时，信息被储存</li>
-</ul>
-</li>
-</ul>
-<h3 id="JK-触发器-JK-flip-flop"><a href="#JK-触发器-JK-flip-flop" class="headerlink" title="JK 触发器 JK flip-flop"></a>JK 触发器 JK flip-flop</h3><p>​		锁存器电路由于其透明性而不适合在同步顺序电路中运行。触发器被用作基本的存储元件，它只对clk输入激活时的变化作出反应，一个典型的例子被称为JK触发器（JKFF）1 0 置1， 0 1置0， 1 1 反转， 00不变 </p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105951.png" alt="test" style="zoom: 67%;" />
-
-<h3 id="主-从JK-FF"><a href="#主-从JK-FF" class="headerlink" title="主-从JK FF"></a>主-从JK FF</h3><p>​		主控器的时钟是正常的，而从属器的时钟是反转的。当时钟变为0时，从机被激活以反映来自主机的数据。主站的数据到输出。但是，主锁存器被禁用：输入的进一步变化将不会被反映出来。可以继续添加控制Clear和Preset来覆盖JK输入，Cl Pr 1 0时 清除主从的Q为0，0 1 时 Q预设为1。同时激活时存储器锁住不再变化，0 0 时对外界可做出相应 </p>
-<h3 id="D-flip-flop"><a href="#D-flip-flop" class="headerlink" title="D flip-flop"></a>D flip-flop</h3><p>​		如latch一样，将K输入为J的逆。</p>
-<h3 id="T-flip-flop"><a href="#T-flip-flop" class="headerlink" title="T flip-flop"></a>T flip-flop</h3><p>​		最后，当输入T&#x3D;1的时钟信号时，一个T触发器会切换状态，构造下面有</p>
-<h3 id="FF间的转换"><a href="#FF间的转换" class="headerlink" title="FF间的转换"></a>FF间的转换</h3><ul>
-<li>JKFF &#x3D;&gt; DFF：链接K为J的反向</li>
-<li>DFF  &#x3D;&gt; JKFF：如图</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048874.png" alt="image-20230213233538201" style="zoom:67%;" />
-
-<ul>
-<li>JKFF &amp; DFF &#x3D;&gt; TFF：</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048531.png" alt="image-20230213233839090" style="zoom:67%;" />
-
-<h3 id="特性表-Characteristic-table"><a href="#特性表-Characteristic-table" class="headerlink" title="特性表 Characteristic table"></a>特性表 Characteristic table</h3><ul>
-<li>特性表通过描述一个触发器的逻辑属性以表格的形式描述其操作。</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048122.png" alt="image-20230213234035920" style="zoom: 50%;" />
-
-<h3 id="特性方程-Characteristic-equation"><a href="#特性方程-Characteristic-equation" class="headerlink" title="特性方程 Characteristic equation"></a>特性方程 Characteristic equation</h3><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048289.png" alt="image-20230213234110839" style="zoom:67%;" />
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 8</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%208/</url>
-    <content><![CDATA[<p> <strong>Chapter 8</strong> 算术电路 Arithmetic Circuits</p>
-<span id="more"></span>
-
-<h1 id="算术电路-Arithmetic-Circuits"><a href="#算术电路-Arithmetic-Circuits" class="headerlink" title="算术电路 Arithmetic Circuits"></a>算术电路 Arithmetic Circuits</h1><p>​		数字设计的一个重要方面是算术电路的设计和实现，这在前面的讲座中没有涉及到。各种信息处理工作是由数字计算机完成的，算术运算是数字计算机的基本功能之一。</p>
-<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p> 两个二进制数字的加法是最基本的算术运算</p>
-<h3 id="半加器"><a href="#半加器" class="headerlink" title="半加器"></a>半加器</h3><p>​		仅计算两bit的加法，不含进位计算</p>
-<ul>
-<li>结果 $S &#x3D; A ⊕ B$ </li>
-<li>进位 $C &#x3D; AB$</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151119408.png" alt="image-20230215111938370" style="zoom:50%;" />
-
-<h3 id="全加器"><a href="#全加器" class="headerlink" title="全加器"></a>全加器</h3><p>​		全加器电路可以进行三个bit的加法，包括两个bit和一个进位，然后产生结果和进位</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151128533.png" alt="截屏2023-02-15 11.28.38" style="zoom:50%;" />
-
-<ul>
-<li><p>$S &#x3D; X’A’B + X’AB’ +XA’B’+ XAB$</p>
-</li>
-<li><p>$C &#x3D; AB + BX + AX$</p>
-</li>
-</ul>
-<p>​		可以通过AND，OR门来实现，同时也可以通过两个半加器和一个or来实现</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151136588.png" alt="截屏2023-02-15 11.33.05" style="zoom:50%;" />
-
-<p>$S &#x3D; B ⊕ (X ⊕ A) &#x3D; B’(XA’+ X’A) + B(XA’+ X’A)’$</p>
-<p>$&#x3D; B’(XA’+ X’A) + B(XA + X’A’) &#x3D; XA’B’+ X’AB’+ XAB + X’A’B$</p>
-<p>$C &#x3D; B(XA’+ X’A) + XA &#x3D; XA’B + X’AB + XA$</p>
-<h3 id="二进制加法器"><a href="#二进制加法器" class="headerlink" title="二进制加法器"></a>二进制加法器</h3><p>​		二进制加法器是一种产生两个二进制数字的算术和的数字电路，n位数的加法需要一个由n个全加器组成的链条，或者由一个半加器和n-1个全加器组成的链条。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151142308.png" alt="截屏2023-02-15 11.42.27" style="zoom:67%;" />
-
-<h2 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h2><p>​		减法是数字计算机信息处理任务中算术运算的另一个基本功能</p>
-<h3 id="半减器"><a href="#半减器" class="headerlink" title="半减器"></a>半减器</h3><p>​		一个执行两个bit的减法的组合电路被称为半减法器</p>
-<p>$D&#x3D;X⊕Y$</p>
-<p>$B &#x3D; X’Y$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151204446.png" alt="截屏2023-02-15 12.04.05" style="zoom:50%;" />
-
-<h3 id="全减器"><a href="#全减器" class="headerlink" title="全减器"></a>全减器</h3><p>​		全加器的组合电路执行三个比特的减法运算–由前一个有效数字的减法运算产生的减数、子数和借数Z，并产生输出差数和借数</p>
-<h3 id="二进制减法器"><a href="#二进制减法器" class="headerlink" title="二进制减法器"></a>二进制减法器</h3><p>​		无符号二进制数的减法可以通过补码的方式最方便地完成。</p>
-<ul>
-<li><p>A-B的减法可以通过取B的补码并将其加到A中来完成。</p>
-</li>
-<li><p>补码可以通过取反码并在最不重要的一对位上加1来获得。</p>
-</li>
-<li><p>反码可以用反相器实现，1可以通过输入进位加到总和上。</p>
-</li>
-</ul>
-<p>​		可以在加法器的Y输入位反相来获得补码，并且在初始位置加一，这样就可以获得减法结果（去掉进位&#x2F;取补码加负号）</p>
-<h3 id="二进制运算器"><a href="#二进制运算器" class="headerlink" title="二进制运算器"></a>二进制运算器</h3><p>​		在设置输入$M$，在$Y$输入变为$Y⊕M$，并且在最小位加法器位置输入$M$。这样就将加减法运算合并为共同一个运算器</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151254111.png" alt="截屏2023-02-15 12.54.27" style="zoom:67%;" />
-
-<h2 id="溢出"><a href="#溢出" class="headerlink" title="溢出"></a>溢出</h2><p>​		对两个二进制数字相加后的溢出的检测取决于这些数字被认为是有符号还是无符号</p>
-<ul>
-<li><p>当两个无符号的数字相加时，溢出的检测是从最重要的位置的末端进行的</p>
-</li>
-<li><p>当两个有符号的数字相加时，符号位被视为数字的一部分，末尾进位不表示溢出</p>
-</li>
-</ul>
-<p>如果两个数字都是正数或负数，可能会发生溢出。</p>
-<ul>
-<li>如果把符号位位置的进位作为结果的符号位，那么这样得到的9位答案将是正确的。但是由于答案不能被容纳在8位之内，我们说发生了溢出。</li>
-</ul>
-<p>​		溢出情况可以通过观察进入符号位的进位和从符号位的出位来检测。如果这两个进位不相等，则发生了溢出。</p>
-<p>​		如果这两个进位被应用于XOR门，当该门的输出等于1时，就可以检测到溢出。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151440010.png" alt="截屏2023-02-15 14.40.24" style="zoom:50%;" />
-
-<h3 id="十进制加法器"><a href="#十进制加法器" class="headerlink" title="十进制加法器"></a>十进制加法器</h3><p>​		我们使用BCD来代表十进制，四个bit的二进制加法器能计算BCD码的加法，但是BCD在9之后要加上0110来使其继续合法，需要注意，如下为BCD码合法转化</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151447962.png" alt="截屏2023-02-15 14.47.16" style="zoom:50%;" />
-
-<p>$K$为进位</p>
-<p>合法位$C &#x3D;K +Z_8Z_4+Z_8Z_2$，不合法的时候可以多一个加法器来加上$0110$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302151502990.png" alt="截屏2023-02-15 15.02.53" style="zoom:50%;" />
-
-<h3 id="二进制乘法器"><a href="#二进制乘法器" class="headerlink" title="二进制乘法器"></a>二进制乘法器</h3><p>略</p>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CS207 Chapter 9</title>
     <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%209/</url>
     <content><![CDATA[<p> <strong>Chapter 9</strong>寄存器 Register</p>
@@ -875,217 +1084,8 @@
       </tags>
   </entry>
   <entry>
-    <title>CS207 Chapter 5</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/</url>
-    <content><![CDATA[<p> <strong>Chapter 5</strong> 组合逻辑电路 Combinational logic</p>
-<span id="more"></span>
-
-<h1 id="组合逻辑电路-Combinational-logic"><a href="#组合逻辑电路-Combinational-logic" class="headerlink" title="组合逻辑电路 Combinational logic"></a>组合逻辑电路 Combinational logic</h1><p>​		逻辑电路分为<strong>组合逻辑</strong>和<strong>时序逻辑</strong>，组合逻辑电路的输出取决于输入的组合，可以实现一个布尔函数的运算，对输入变量的值和组合敏感并且输出一组值。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png" style="zoom:50%;" />
-
-<p>​		输入共有$2^n$个组合，可以用真值表表示，m个输出根据输入来决定</p>
-<h2 id="Multiplexer多路复用器"><a href="#Multiplexer多路复用器" class="headerlink" title="Multiplexer	多路复用器"></a>Multiplexer	多路复用器</h2><p>​			多路复用器通过n个输入（通常为2,4,8,16）以及一个开关E以及选择输入来决定输出哪一个输入。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105256.png" alt="截屏2023-02-12 16.48.19" style="zoom:50%;" />
-
-<ul>
-<li><p>数字系统内的数据通常以并行形式处理，以提高运行速度。</p>
-</li>
-<li><p>如果系统的输出必须在一个相对较长的距离内传输，那么将进行并行到串行的转换。</p>
-</li>
-<li><p>例如一个8位字在数据输入端以并行方式呈现</p>
-</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047977.png" alt="截屏2023-02-12 16.51.10" style="zoom:50%;" />
-
-<h3 id="用作生成布尔函数"><a href="#用作生成布尔函数" class="headerlink" title="用作生成布尔函数"></a>用作生成布尔函数</h3><p>对于一个4对1的MUX，其特征方程为 $f &#x3D; A’B’d_0 + A’Bd_1 + AB’d_2 + ABd_3 $</p>
-<ul>
-<li>A和B是布尔变量，应用在选择输入端，可以从任何n个变量的布尔函数中分解出来。</li>
-<li>剩下的n-2个变量，被称为残差变量，可以形成残差函数，然后可以应用于数据输入。</li>
-<li>例如：$f(A，B，C)&#x3D;∑(0，1，3，4，7)$</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105770.png" alt="截屏2023-02-12 17.02.12" style="zoom:67%;" />
-
-<h2 id="Decoder-解码器"><a href="#Decoder-解码器" class="headerlink" title="Decoder 解码器"></a>Decoder 解码器</h2><ul>
-<li>可以看出，解码器的逻辑图与解复用器的逻辑图是相同的，只要数据线被用来启用解码器。</li>
-<li>解码器也可以被看作是一个SOP发生器。每个输出都产生一个minterm。</li>
-</ul>
-<p>​		如下为$f(A, B, C, D) &#x3D; ∑ (0, 1, 5, 8, 10, 12, 13, 15)$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047475.png" alt="截屏2023-02-12 17.03.17" style="zoom:50%;" />
-
-<h3 id="解码器网络"><a href="#解码器网络" class="headerlink" title="解码器网络"></a>解码器网络</h3><ul>
-<li>当需要一个大型的解码网络时，它不能在一个MSI封装中实现。</li>
-<li>主要是由于需要大量的引脚。</li>
-<li>解码范围可以通过解码器芯片的互连来扩展。两种方案。</li>
-</ul>
-<p>​			树状解码 Tree decoding</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047292.png" alt="截屏2023-02-12 18.27.15" style="zoom:50%;" />
-
-<p>​			巧合解码 Coincident decoding</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047317.png" alt="截屏2023-02-12 18.27.36" style="zoom:50%;" />
-
-<h2 id="Encoder-编码器"><a href="#Encoder-编码器" class="headerlink" title="Encoder 编码器"></a>Encoder 编码器</h2><p>​		编码器就是解码器的反向操作，一般用于CPU master flag，将输入的独热玛转换为二进制数字</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047329.png" alt="截屏2023-02-12 18.45.24" style="zoom:50%;" />
-
-<ul>
-<li>编码器被设计为在任何给定的瞬间识别一个，而且只有一个外围设备。</li>
-<li>在实践中，没有什么可以阻止两个或更多的外设同时请求服务。</li>
-<li>为了处理这种情况，可以给外设标志附加一个优先级系统。</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047573.png" style="zoom: 50%;" />
-
-<h2 id="Digital-Comparator-比较器"><a href="#Digital-Comparator-比较器" class="headerlink" title="Digital Comparator 比较器"></a>Digital Comparator 比较器</h2><p>• 比较器的通常问题是两个多位数字的比较</p>
-<p>​	such as $A &#x3D; A_2A_1A_0 $and $B &#x3D; B_2 B_1 B_0$</p>
-<p>• 从最有意义的位（最大）开始到最小的位</p>
-<p>​		A &#x3D; B 如果所有的位数都相等: $A_i &#x3D; B_i$</p>
-<p>​		$x_i &#x3D;A_i B_i +A_i’B_i’$</p>
-<p>​		A &#x3D; B if $x_2 x_1 x_0 &#x3D; 1$</p>
-<p>​		A &gt; B if $A_2 B_2’+ x_2 A_1 B_1’+ x_2 x_1 A_0 B_0’&#x3D; 1$</p>
-<p>​		A &lt; B if $A_2’B_2 + x_2 A_1’B_1 + x_2 x_1 A_0’B_0 &#x3D; 1$</p>
-<p>单bit比较器:</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048891.png" style="zoom:50%;" />
-
-<p>3 bit比较器：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048326.png" alt="comp" style="zoom:50%;" />
-
-<h2 id="迭代组合电路"><a href="#迭代组合电路" class="headerlink" title="迭代组合电路"></a>迭代组合电路</h2><ul>
-<li>一般结构：相同功能的n个相同的模块，对于可以通过迭代算法解决的问题。</li>
-<li>将$C_0$设为其初始值，并将i设为0。</li>
-<li>当i&lt;n时，重复。<ul>
-<li>用$C_i$和$D_i$来确定$O_i$和$C_{i+1}$的值。</li>
-<li>增加i</li>
-</ul>
-</li>
-<li>初级输入&#x2F;输出和级联输入&#x2F;输出。</li>
-</ul>
-<p>​	例如，使用迭代组合电路比大小，模块为1bit比较器:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048593.png" alt="截屏2023-02-12 19.19.29"></p>
-<h2 id="门延迟"><a href="#门延迟" class="headerlink" title="门延迟"></a>门延迟</h2><p>​	在电位变化过程中有延迟，中间部分不会被定义为高&#x2F;低电位</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048828.png" alt="门延迟" style="zoom:50%;" />
-
-<ul>
-<li>忽略延迟的组合电路的分析只能预测其<strong>稳态行为</strong>。<ul>
-<li>假设相对于电路中的电子元件的延迟而言，输入已经稳定了很长时间，则预测电路的输出为其输入的函数。</li>
-</ul>
-</li>
-<li>由于电路的延迟，组合逻辑电路的<strong>瞬态行为</strong>可能与稳态分析的预测不同。</li>
-<li><strong>时序危险</strong>：当稳态分析预测输出不应改变时，电路的输出可能产生一个短脉冲（<strong>突波glitch</strong>）</li>
-<li>一个门有可测量的响应时间$t_{pLH}$和$t_{pHL}$。每个门大约10ns。</li>
-<li>通过传输门的延迟可以累加起来，并引入时间危险。</li>
-<li>$t_{pLH}$&#x3D; 低到高，$t_{pHL}$&#x3D; 高到低的传播时间</li>
-<li>static-1危险是一个短暂的0突变，当输入改变时，我们期望（根据逻辑定理）输出保持恒定的1</li>
-<li>static-0危险是一个短暂的1突变，当我们期望输出保持恒定的0</li>
-</ul>
-<h2 id="消除时序危险"><a href="#消除时序危险" class="headerlink" title="消除时序危险"></a>消除时序危险</h2>]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/2023/02/12/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%20A/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 7</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%207/</url>
-    <content><![CDATA[<p> <strong>Chapter 7</strong> 同步时序逻辑 Synchronous Sequential Logic</p>
-<span id="more"></span>
-
-<h1 id="同步时序逻辑-Synchronous-Sequential-Logic"><a href="#同步时序逻辑-Synchronous-Sequential-Logic" class="headerlink" title="同步时序逻辑 Synchronous Sequential Logic"></a>同步时序逻辑 Synchronous Sequential Logic</h1><h2 id="分析时序电路"><a href="#分析时序电路" class="headerlink" title="分析时序电路"></a>分析时序电路</h2><ul>
-<li>$A(t + 1) &#x3D; A(t)x(t) + B(t)x(t)$</li>
-<li>$B(t+1)&#x3D;A’(t)x(t)$</li>
-</ul>
-<p>​		现在状态t，下一个状态是t+1。然后绘制真值表</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106291.png" alt="截屏2023-02-14 18.20.57" style="zoom:50%;" />
-
-<p>这种真值表很长，可以把x换成两列，接着可以画状态图：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106205.png" alt="截屏2023-02-14 18.22.51" style="zoom:50%;" />
-
-<ul>
-<li>电路图→方程式→状态表→状态图<ul>
-<li>状态表更容易从电路图和状态方程中导出</li>
-<li>状态图给出了状态转换的图解</li>
-</ul>
-</li>
-<li>顺序电路的逻辑图由触发器和门组成</li>
-<li>门之间的互连构成了一个组合电路，可以用布尔表达式进行代数描述</li>
-<li>组合电路中产生外部输出的部分是由一组称为输出方程的布尔函数代数描述的</li>
-<li>产生触发器输入的电路部分由一组布尔函数代数描述，称为触发器输入方程（或有时称为激励方程）</li>
-</ul>
-<h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><ol>
-<li>写出FF输入端函数</li>
-<li>写出FF的函数</li>
-<li>代入，并将现有输入转化为FF输入卸载真值表中</li>
-<li>画出函数图</li>
-</ol>
-<p>e.g.：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106720.png" alt="截屏2023-02-14 18.34.27" style="zoom:50%;" />
-
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106085.png" alt="截屏2023-02-14 18.34.42" style="zoom:50%;" />
-
-<h3 id="有限状态机"><a href="#有限状态机" class="headerlink" title="有限状态机"></a>有限状态机</h3><p>两种模型</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142106301.png" alt="截屏2023-02-14 18.38.08"></p>
-<h4 id="状态机化简"><a href="#状态机化简" class="headerlink" title="状态机化简"></a>状态机化简</h4><p>举例，输入$01010110100$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107655.png" alt="截屏2023-02-14 18.41.05" style="zoom:50%;" />
-
-<ol>
-<li>首先我们画出状态表</li>
-</ol>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107634.png" alt="截屏2023-02-14 19.12.44" style="zoom:50%;" />
-
-<ol start="2">
-<li>然后我们画出目标状态和输出相同组，在上图中e和g是等效的，其中一个可以被另一个替换</li>
-<li>重复上述过程，f可以被d替换</li>
-<li>最终我们的到化简后的状态机</li>
-</ol>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107782.png" alt="截屏2023-02-14 19.15.08" style="zoom:50%;" />
-
-<h3 id="设计状态机"><a href="#设计状态机" class="headerlink" title="设计状态机"></a>设计状态机</h3><h4 id="一些注意"><a href="#一些注意" class="headerlink" title="一些注意"></a>一些注意</h4><ul>
-<li>为了设计一个带有物理元件的顺序电路，有必要为各状态分配唯一的编码二进制值。</li>
-<li>对于一个有m个状态的电路，编码必须包含n位，其中2 n≥m。</li>
-<li>在状态还原之前，我们必须为七个状态分配二进制值；剩下的状态是未使用的。如果使用还原后的状态表，只有五个状态需要二进制赋值，而我们还剩下三个未使用的状态。</li>
-<li>在设计过程中，未使用的状态被当作不关心的条件。由于不关心的条件通常有助于获得更简单的电路，所以有五个状态的电路比有七个状态的电路需要更少的组合门，这是比较有可能的，但并不确定。</li>
-<li>可以用二进制，格雷码，独热码来设计状态。独热码有更简单的decode</li>
-</ul>
-<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ol>
-<li><p>从字的描述和所需操作的规格，推导出电路的状态图。</p>
-</li>
-<li><p>如有必要，减少状态的数量。</p>
-</li>
-<li><p>给状态分配二进制值。</p>
-</li>
-<li><p>获得二进制编码的状态表。</p>
-</li>
-<li><p>选择要使用的触发器的类型。</p>
-</li>
-<li><p>推导出简化的触发器输入方程和输出方程。</p>
-</li>
-<li><p>绘制逻辑图。</p>
-</li>
-</ol>
-<h3 id="合成FF"><a href="#合成FF" class="headerlink" title="合成FF"></a>合成FF</h3><h4 id="用D触发器合成-Synthesis-using-D-flip-flops"><a href="#用D触发器合成-Synthesis-using-D-flip-flops" class="headerlink" title="用D触发器合成 Synthesis using D flip-flops"></a>用D触发器合成 Synthesis using D flip-flops</h4><p>​		用D触发器很简单，目标状态是什么，输入D就是什么，画出真值表然后卡诺图化简即可</p>
-<h4 id="激励表"><a href="#激励表" class="headerlink" title="激励表"></a>激励表</h4><ul>
-<li>使用D型以外的触发器的顺序电路的设计很复杂，因为电路的输入方程必须间接地从状态表中得到。当采用D型触发器时，输入方程可以直接从下一个状态中获得。</li>
-<li>而JK和T型触发器则不然。为了确定这些触发器的输入方程，有必要推导出状态表和输入方程之间的函数关系。</li>
-<li>在设计过程中，我们通常知道从当前状态到下一个状态的转换，并希望找到能引起所需转换的触发器输入条件。</li>
-<li>出于这个原因，我们需要一个表格，列出特定状态变化所需的输入：激励表</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142107085.png" alt="截屏2023-02-14 20.27.28" style="zoom:50%;" />
-
-<h4 id="用JK触发器合成-Synthesis-using-JK-flip-flops"><a href="#用JK触发器合成-Synthesis-using-JK-flip-flops" class="headerlink" title="用JK触发器合成 Synthesis using JK flip-flops"></a>用JK触发器合成 Synthesis using JK flip-flops</h4><p>这时候根据A，B的变化找到对应的输入J K</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142109518.png" alt="截屏2023-02-14 21.09.27" style="zoom: 50%;" />
-
-<p>再用真值表化简出$J_AK_AJ_BK_B$的函数，再绘制电路图即可</p>
-<h4 id="用T触发器合成-Synthesis-using-T-flip-flops"><a href="#用T触发器合成-Synthesis-using-T-flip-flops" class="headerlink" title="用T触发器合成 Synthesis using T flip-flops"></a>用T触发器合成 Synthesis using T flip-flops</h4><p>​		TFF的合成就简单很多，只要下一个状态有变化，T就是1，没有变化就是0，再用卡诺图化简即可</p>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
   </entry>
 </search>
