@@ -17,6 +17,28 @@
       </tags>
   </entry>
   <entry>
+    <title>引言</title>
+    <url>/2022/07/12/%E5%BC%95%E8%A8%80/</url>
+    <content><![CDATA[<p> 一些关于过去的事</p>
+<span id="more"></span>
+
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>作为经典理工直男的通病，九年的课程，但凡跟考试无关的课程是一点都没听进去，我行我素一套自己的生活逻辑（什么路边的美景？生活中的浪漫？知识技能和山顶的风光才是人生的真谛！）除了学习就是打游戏，甚至放弃了很多个人爱好。这样的方式在中学确实很有效，毕竟高考是那个阶段唯一的目标。但这真的好吗？</p>
+<p>渐渐的，发觉自己仿佛丢失掉了做人的一些特点，没有同理心，不理解浪漫，不重视感情，甚至不会悲伤，绝对的极端的思想以及行为准则etc. 好在没有造成什么恶劣的影响，这归功于小到几乎没有的表达欲。最明显的，是发现开始不了解自己了，这是痛苦且致命的。经历的事件遇到的人，他们多少在影响并改变我。我已经向前走了，但“我”并没有动，还是站在原地。当别人问起我喜欢什么，要去做什么时，面对这个问题“我”犹豫了，不知道该说什么。一句Follow your heart也不知道该怎么做，我心向何处呢？也正是从那起，“我”也觉得该做出改变了。</p>
+<p>这一切始于2018的冬天，在Wisconsin的小镇上那个抱着一堆光碟的高一少年。初到美国，为了能和人正常交谈看了成吨成吨的无字幕电影，虽然最初的目的不是欣赏，但也是打开了一扇大门，世界如此美好！陆陆续续看了很多很多电影，对文学艺术也开始有了兴趣，但终究还是静不下心坐下来欣赏文字，</p>
+<p>2019年的疫情，因为无聊创建了这个网站，总共发了两篇博文（现在已经删掉了），一度不知道这个Blog是用来干什么的，只是觉得作为一个人拥有一个自己的博客是件很Cool的事情，更没有心情慢下来写东西。也正是在这年我认识了一个女孩，她教会了我如何生活，算是比较重要的人，虽然结局并不美好，但还是很感谢。</p>
+<p>2021-2022是复杂的两年，到了大学也可算有了点自己的思考，也到开始Who you are, What you want to be的时候了。终日而思，无果；与人交流，收获甚多，但那终不是自己走出的路；多看书吧，多看电影吧，多出去走走吧，认识这个世界才能更好的认识自己。</p>
+<p>书读了，路走了，思考的事情不记录下来，在脑海中闪过又消逝了。这是不利于认识“我”的，于是便决定写下来。qq变成了工作用途，朋友圈也不是每个人都想了解“我”，认识“我”，不是很好的平台。想了想还是重新开始维护这个Blog，有心的人会看，无心的人也找不到，更多是写给自己了。</p>
+<p>感悟感想以外还有学习CS的笔记，评论区暂时不开放了，想找我交流微信戳我就好。</p>
+<p>共勉！</p>
+]]></content>
+      <categories>
+        <category>引言</category>
+      </categories>
+      <tags>
+        <tag>引言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CS207 Chapter 1</title>
     <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%201/</url>
     <content><![CDATA[<p> <strong>Chapter 1</strong>二进制数 Binary Numbers</p>
@@ -123,28 +145,6 @@
       </categories>
       <tags>
         <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>引言</title>
-    <url>/2022/07/12/%E5%BC%95%E8%A8%80/</url>
-    <content><![CDATA[<p> 一些关于过去的事</p>
-<span id="more"></span>
-
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h3 id="过去"><a href="#过去" class="headerlink" title="过去"></a>过去</h3><p>作为经典理工直男的通病，九年的课程，但凡跟考试无关的课程是一点都没听进去，我行我素一套自己的生活逻辑（什么路边的美景？生活中的浪漫？知识技能和山顶的风光才是人生的真谛！）除了学习就是打游戏，甚至放弃了很多个人爱好。这样的方式在中学确实很有效，毕竟高考是那个阶段唯一的目标。但这真的好吗？</p>
-<p>渐渐的，发觉自己仿佛丢失掉了做人的一些特点，没有同理心，不理解浪漫，不重视感情，甚至不会悲伤，绝对的极端的思想以及行为准则etc. 好在没有造成什么恶劣的影响，这归功于小到几乎没有的表达欲。最明显的，是发现开始不了解自己了，这是痛苦且致命的。经历的事件遇到的人，他们多少在影响并改变我。我已经向前走了，但“我”并没有动，还是站在原地。当别人问起我喜欢什么，要去做什么时，面对这个问题“我”犹豫了，不知道该说什么。一句Follow your heart也不知道该怎么做，我心向何处呢？也正是从那起，“我”也觉得该做出改变了。</p>
-<p>这一切始于2018的冬天，在Wisconsin的小镇上那个抱着一堆光碟的高一少年。初到美国，为了能和人正常交谈看了成吨成吨的无字幕电影，虽然最初的目的不是欣赏，但也是打开了一扇大门，世界如此美好！陆陆续续看了很多很多电影，对文学艺术也开始有了兴趣，但终究还是静不下心坐下来欣赏文字，</p>
-<p>2019年的疫情，因为无聊创建了这个网站，总共发了两篇博文（现在已经删掉了），一度不知道这个Blog是用来干什么的，只是觉得作为一个人拥有一个自己的博客是件很Cool的事情，更没有心情慢下来写东西。也正是在这年我认识了一个女孩，她教会了我如何生活，算是比较重要的人，虽然结局并不美好，但还是很感谢。</p>
-<p>2021-2022是复杂的两年，到了大学也可算有了点自己的思考，也到开始Who you are, What you want to be的时候了。终日而思，无果；与人交流，收获甚多，但那终不是自己走出的路；多看书吧，多看电影吧，多出去走走吧，认识这个世界才能更好的认识自己。</p>
-<p>书读了，路走了，思考的事情不记录下来，在脑海中闪过又消逝了。这是不利于认识“我”的，于是便决定写下来。qq变成了工作用途，朋友圈也不是每个人都想了解“我”，认识“我”，不是很好的平台。想了想还是重新开始维护这个Blog，有心的人会看，无心的人也找不到，更多是写给自己了。</p>
-<p>感悟感想以外还有学习CS的笔记，评论区暂时不开放了，想找我交流微信戳我就好。</p>
-<p>共勉！</p>
-]]></content>
-      <categories>
-        <category>引言</category>
-      </categories>
-      <tags>
-        <tag>引言</tag>
       </tags>
   </entry>
   <entry>
@@ -443,6 +443,36 @@
       </tags>
   </entry>
   <entry>
+    <title>CS207 Chapter 3</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
+    <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
+<span id="more"></span>
+
+<h1 id="门级化简-Gate-level-Minimization"><a href="#门级化简-Gate-level-Minimization" class="headerlink" title="门级化简 Gate-level Minimization"></a>门级化简 Gate-level Minimization</h1><ul>
+<li>实现布尔逻辑的数字门的复杂性与代数表达的复杂性直接相关，门级化简师寻找描述数字电路的布尔函数的最佳门级实现的设计任务</li>
+<li>对于超过几个输入来说，用手去算很难，所以这通常由计算机完成，需要了解基本原理</li>
+</ul>
+<h2 id="卡诺图法"><a href="#卡诺图法" class="headerlink" title="卡诺图法"></a>卡诺图法</h2><ul>
+<li><p>绘制卡诺图，标出为1的项，合并相邻2 4 8 16的矩形块</p>
+<p>​	优先四角，先找大的，越大越好，删掉多的</p>
+</li>
+<li><p>例如</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/main/NoteImages/202302142043995.png" alt="截屏2023-02-12 14.51.18" style="zoom: 25%;" />
+</li>
+<li><p>更多的变量，如5个，可以采用增加深度的诺图，两张卡诺图一起使用</p>
+</li>
+<li><p>其中的X代表不关心Dont Care Condition，可以按需当作0或1</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CS207 Chapter 4</title>
     <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%204/</url>
     <content><![CDATA[<p> <strong>Chapter 4</strong> 两级实现 Two Level Implementation</p>
@@ -496,145 +526,6 @@
 <p>​		当且仅当输入变量有奇数个1时输出1，加反运算输出是否为偶数个1，在用作奇偶校验Checksum时很好用。<strong>Parity Checking</strong></p>
 <p>​	奇偶校验位p，奇数个1输出1，偶数个输出0，与Chapter 3中相同</p>
 ]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 3</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%203/</url>
-    <content><![CDATA[<p> <strong>Chapter 3</strong> 门级化简 Gate-level Minimization</p>
-<span id="more"></span>
-
-<h1 id="门级化简-Gate-level-Minimization"><a href="#门级化简-Gate-level-Minimization" class="headerlink" title="门级化简 Gate-level Minimization"></a>门级化简 Gate-level Minimization</h1><ul>
-<li>实现布尔逻辑的数字门的复杂性与代数表达的复杂性直接相关，门级化简师寻找描述数字电路的布尔函数的最佳门级实现的设计任务</li>
-<li>对于超过几个输入来说，用手去算很难，所以这通常由计算机完成，需要了解基本原理</li>
-</ul>
-<h2 id="卡诺图法"><a href="#卡诺图法" class="headerlink" title="卡诺图法"></a>卡诺图法</h2><ul>
-<li><p>绘制卡诺图，标出为1的项，合并相邻2 4 8 16的矩形块</p>
-<p>​	优先四角，先找大的，越大越好，删掉多的</p>
-</li>
-<li><p>例如</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/main/NoteImages/202302142043995.png" alt="截屏2023-02-12 14.51.18" style="zoom: 25%;" />
-</li>
-<li><p>更多的变量，如5个，可以采用增加深度的诺图，两张卡诺图一起使用</p>
-</li>
-<li><p>其中的X代表不关心Dont Care Condition，可以按需当作0或1</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS207</category>
-      </categories>
-      <tags>
-        <tag>数字逻辑 - CS207 - 笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS207 Chapter 5</title>
-    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/</url>
-    <content><![CDATA[<p> <strong>Chapter 5</strong> 组合逻辑电路 Combinational logic</p>
-<span id="more"></span>
-
-<h1 id="组合逻辑电路-Combinational-logic"><a href="#组合逻辑电路-Combinational-logic" class="headerlink" title="组合逻辑电路 Combinational logic"></a>组合逻辑电路 Combinational logic</h1><p>​		逻辑电路分为<strong>组合逻辑</strong>和<strong>时序逻辑</strong>，组合逻辑电路的输出取决于输入的组合，可以实现一个布尔函数的运算，对输入变量的值和组合敏感并且输出一组值。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png" style="zoom:50%;" />
-
-<p>​		输入共有$2^n$个组合，可以用真值表表示，m个输出根据输入来决定</p>
-<h2 id="Multiplexer多路复用器"><a href="#Multiplexer多路复用器" class="headerlink" title="Multiplexer	多路复用器"></a>Multiplexer	多路复用器</h2><p>​			多路复用器通过n个输入（通常为2,4,8,16）以及一个开关E以及选择输入来决定输出哪一个输入。</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105256.png" alt="截屏2023-02-12 16.48.19" style="zoom:50%;" />
-
-<ul>
-<li><p>数字系统内的数据通常以并行形式处理，以提高运行速度。</p>
-</li>
-<li><p>如果系统的输出必须在一个相对较长的距离内传输，那么将进行并行到串行的转换。</p>
-</li>
-<li><p>例如一个8位字在数据输入端以并行方式呈现</p>
-</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047977.png" alt="截屏2023-02-12 16.51.10" style="zoom:50%;" />
-
-<h3 id="用作生成布尔函数"><a href="#用作生成布尔函数" class="headerlink" title="用作生成布尔函数"></a>用作生成布尔函数</h3><p>对于一个4对1的MUX，其特征方程为 $f &#x3D; A’B’d_0 + A’Bd_1 + AB’d_2 + ABd_3 $</p>
-<ul>
-<li>A和B是布尔变量，应用在选择输入端，可以从任何n个变量的布尔函数中分解出来。</li>
-<li>剩下的n-2个变量，被称为残差变量，可以形成残差函数，然后可以应用于数据输入。</li>
-<li>例如：$f(A，B，C)&#x3D;∑(0，1，3，4，7)$</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105770.png" alt="截屏2023-02-12 17.02.12" style="zoom:67%;" />
-
-<h2 id="Decoder-解码器"><a href="#Decoder-解码器" class="headerlink" title="Decoder 解码器"></a>Decoder 解码器</h2><ul>
-<li>可以看出，解码器的逻辑图与解复用器的逻辑图是相同的，只要数据线被用来启用解码器。</li>
-<li>解码器也可以被看作是一个SOP发生器。每个输出都产生一个minterm。</li>
-</ul>
-<p>​		如下为$f(A, B, C, D) &#x3D; ∑ (0, 1, 5, 8, 10, 12, 13, 15)$</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047475.png" alt="截屏2023-02-12 17.03.17" style="zoom:50%;" />
-
-<h3 id="解码器网络"><a href="#解码器网络" class="headerlink" title="解码器网络"></a>解码器网络</h3><ul>
-<li>当需要一个大型的解码网络时，它不能在一个MSI封装中实现。</li>
-<li>主要是由于需要大量的引脚。</li>
-<li>解码范围可以通过解码器芯片的互连来扩展。两种方案。</li>
-</ul>
-<p>​			树状解码 Tree decoding</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047292.png" alt="截屏2023-02-12 18.27.15" style="zoom:50%;" />
-
-<p>​			巧合解码 Coincident decoding</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047317.png" alt="截屏2023-02-12 18.27.36" style="zoom:50%;" />
-
-<h2 id="Encoder-编码器"><a href="#Encoder-编码器" class="headerlink" title="Encoder 编码器"></a>Encoder 编码器</h2><p>​		编码器就是解码器的反向操作，一般用于CPU master flag，将输入的独热玛转换为二进制数字</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047329.png" alt="截屏2023-02-12 18.45.24" style="zoom:50%;" />
-
-<ul>
-<li>编码器被设计为在任何给定的瞬间识别一个，而且只有一个外围设备。</li>
-<li>在实践中，没有什么可以阻止两个或更多的外设同时请求服务。</li>
-<li>为了处理这种情况，可以给外设标志附加一个优先级系统。</li>
-</ul>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047573.png" style="zoom: 50%;" />
-
-<h2 id="Digital-Comparator-比较器"><a href="#Digital-Comparator-比较器" class="headerlink" title="Digital Comparator 比较器"></a>Digital Comparator 比较器</h2><p>• 比较器的通常问题是两个多位数字的比较</p>
-<p>​	such as $A &#x3D; A_2A_1A_0 $and $B &#x3D; B_2 B_1 B_0$</p>
-<p>• 从最有意义的位（最大）开始到最小的位</p>
-<p>​		A &#x3D; B 如果所有的位数都相等: $A_i &#x3D; B_i$</p>
-<p>​		$x_i &#x3D;A_i B_i +A_i’B_i’$</p>
-<p>​		A &#x3D; B if $x_2 x_1 x_0 &#x3D; 1$</p>
-<p>​		A &gt; B if $A_2 B_2’+ x_2 A_1 B_1’+ x_2 x_1 A_0 B_0’&#x3D; 1$</p>
-<p>​		A &lt; B if $A_2’B_2 + x_2 A_1’B_1 + x_2 x_1 A_0’B_0 &#x3D; 1$</p>
-<p>单bit比较器:</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048891.png" style="zoom:50%;" />
-
-<p>3 bit比较器：</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048326.png" alt="comp" style="zoom:50%;" />
-
-<h2 id="迭代组合电路"><a href="#迭代组合电路" class="headerlink" title="迭代组合电路"></a>迭代组合电路</h2><ul>
-<li>一般结构：相同功能的n个相同的模块，对于可以通过迭代算法解决的问题。</li>
-<li>将$C_0$设为其初始值，并将i设为0。</li>
-<li>当i&lt;n时，重复。<ul>
-<li>用$C_i$和$D_i$来确定$O_i$和$C_{i+1}$的值。</li>
-<li>增加i</li>
-</ul>
-</li>
-<li>初级输入&#x2F;输出和级联输入&#x2F;输出。</li>
-</ul>
-<p>​	例如，使用迭代组合电路比大小，模块为1bit比较器:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048593.png" alt="截屏2023-02-12 19.19.29"></p>
-<h2 id="门延迟"><a href="#门延迟" class="headerlink" title="门延迟"></a>门延迟</h2><p>​	在电位变化过程中有延迟，中间部分不会被定义为高&#x2F;低电位</p>
-<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048828.png" alt="门延迟" style="zoom:50%;" />
-
-<ul>
-<li>忽略延迟的组合电路的分析只能预测其<strong>稳态行为</strong>。<ul>
-<li>假设相对于电路中的电子元件的延迟而言，输入已经稳定了很长时间，则预测电路的输出为其输入的函数。</li>
-</ul>
-</li>
-<li>由于电路的延迟，组合逻辑电路的<strong>瞬态行为</strong>可能与稳态分析的预测不同。</li>
-<li><strong>时序危险</strong>：当稳态分析预测输出不应改变时，电路的输出可能产生一个短脉冲（<strong>突波glitch</strong>）</li>
-<li>一个门有可测量的响应时间$t_{pLH}$和$t_{pHL}$。每个门大约10ns。</li>
-<li>通过传输门的延迟可以累加起来，并引入时间危险。</li>
-<li>$t_{pLH}$&#x3D; 低到高，$t_{pHL}$&#x3D; 高到低的传播时间</li>
-<li>static-1危险是一个短暂的0突变，当输入改变时，我们期望（根据逻辑定理）输出保持恒定的1</li>
-<li>static-0危险是一个短暂的1突变，当我们期望输出保持恒定的0</li>
-</ul>
-<h2 id="消除时序危险"><a href="#消除时序危险" class="headerlink" title="消除时序危险"></a>消除时序危险</h2>]]></content>
       <categories>
         <category>CS207</category>
       </categories>
@@ -1076,6 +967,115 @@
 
 <p>​		这时候使用D触发器替换JK触发器，电路就会和上面的加法器一样</p>
 ]]></content>
+      <categories>
+        <category>CS207</category>
+      </categories>
+      <tags>
+        <tag>数字逻辑 - CS207 - 笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS207 Chapter 5</title>
+    <url>/2023/02/15/%E7%AC%94%E8%AE%B0/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%20CS207/Chapter%205/</url>
+    <content><![CDATA[<p> <strong>Chapter 5</strong> 组合逻辑电路 Combinational logic</p>
+<span id="more"></span>
+
+<h1 id="组合逻辑电路-Combinational-logic"><a href="#组合逻辑电路-Combinational-logic" class="headerlink" title="组合逻辑电路 Combinational logic"></a>组合逻辑电路 Combinational logic</h1><p>​		逻辑电路分为<strong>组合逻辑</strong>和<strong>时序逻辑</strong>，组合逻辑电路的输出取决于输入的组合，可以实现一个布尔函数的运算，对输入变量的值和组合敏感并且输出一组值。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047473.png" style="zoom:50%;" />
+
+<p>​		输入共有$2^n$个组合，可以用真值表表示，m个输出根据输入来决定</p>
+<h2 id="Multiplexer多路复用器"><a href="#Multiplexer多路复用器" class="headerlink" title="Multiplexer	多路复用器"></a>Multiplexer	多路复用器</h2><p>​			多路复用器通过n个输入（通常为2,4,8,16）以及一个开关E以及选择输入来决定输出哪一个输入。</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105256.png" alt="截屏2023-02-12 16.48.19" style="zoom:50%;" />
+
+<ul>
+<li><p>数字系统内的数据通常以并行形式处理，以提高运行速度。</p>
+</li>
+<li><p>如果系统的输出必须在一个相对较长的距离内传输，那么将进行并行到串行的转换。</p>
+</li>
+<li><p>例如一个8位字在数据输入端以并行方式呈现</p>
+</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047977.png" alt="截屏2023-02-12 16.51.10" style="zoom:50%;" />
+
+<h3 id="用作生成布尔函数"><a href="#用作生成布尔函数" class="headerlink" title="用作生成布尔函数"></a>用作生成布尔函数</h3><p>对于一个4对1的MUX，其特征方程为 $f &#x3D; A’B’d_0 + A’Bd_1 + AB’d_2 + ABd_3 $</p>
+<ul>
+<li>A和B是布尔变量，应用在选择输入端，可以从任何n个变量的布尔函数中分解出来。</li>
+<li>剩下的n-2个变量，被称为残差变量，可以形成残差函数，然后可以应用于数据输入。</li>
+<li>例如：$f(A，B，C)&#x3D;∑(0，1，3，4，7)$</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142105770.png" alt="截屏2023-02-12 17.02.12" style="zoom:67%;" />
+
+<h2 id="Decoder-解码器"><a href="#Decoder-解码器" class="headerlink" title="Decoder 解码器"></a>Decoder 解码器</h2><ul>
+<li>可以看出，解码器的逻辑图与解复用器的逻辑图是相同的，只要数据线被用来启用解码器。</li>
+<li>解码器也可以被看作是一个SOP发生器。每个输出都产生一个minterm。</li>
+</ul>
+<p>​		如下为$f(A, B, C, D) &#x3D; ∑ (0, 1, 5, 8, 10, 12, 13, 15)$</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047475.png" alt="截屏2023-02-12 17.03.17" style="zoom:50%;" />
+
+<h3 id="解码器网络"><a href="#解码器网络" class="headerlink" title="解码器网络"></a>解码器网络</h3><ul>
+<li>当需要一个大型的解码网络时，它不能在一个MSI封装中实现。</li>
+<li>主要是由于需要大量的引脚。</li>
+<li>解码范围可以通过解码器芯片的互连来扩展。两种方案。</li>
+</ul>
+<p>​			树状解码 Tree decoding</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047292.png" alt="截屏2023-02-12 18.27.15" style="zoom:50%;" />
+
+<p>​			巧合解码 Coincident decoding</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047317.png" alt="截屏2023-02-12 18.27.36" style="zoom:50%;" />
+
+<h2 id="Encoder-编码器"><a href="#Encoder-编码器" class="headerlink" title="Encoder 编码器"></a>Encoder 编码器</h2><p>​		编码器就是解码器的反向操作，一般用于CPU master flag，将输入的独热玛转换为二进制数字</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047329.png" alt="截屏2023-02-12 18.45.24" style="zoom:50%;" />
+
+<ul>
+<li>编码器被设计为在任何给定的瞬间识别一个，而且只有一个外围设备。</li>
+<li>在实践中，没有什么可以阻止两个或更多的外设同时请求服务。</li>
+<li>为了处理这种情况，可以给外设标志附加一个优先级系统。</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142047573.png" style="zoom: 50%;" />
+
+<h2 id="Digital-Comparator-比较器"><a href="#Digital-Comparator-比较器" class="headerlink" title="Digital Comparator 比较器"></a>Digital Comparator 比较器</h2><p>• 比较器的通常问题是两个多位数字的比较</p>
+<p>​	such as $A &#x3D; A_2A_1A_0 $and $B &#x3D; B_2 B_1 B_0$</p>
+<p>• 从最有意义的位（最大）开始到最小的位</p>
+<p>​		A &#x3D; B 如果所有的位数都相等: $A_i &#x3D; B_i$</p>
+<p>​		$x_i &#x3D;A_i B_i +A_i’B_i’$</p>
+<p>​		A &#x3D; B if $x_2 x_1 x_0 &#x3D; 1$</p>
+<p>​		A &gt; B if $A_2 B_2’+ x_2 A_1 B_1’+ x_2 x_1 A_0 B_0’&#x3D; 1$</p>
+<p>​		A &lt; B if $A_2’B_2 + x_2 A_1’B_1 + x_2 x_1 A_0’B_0 &#x3D; 1$</p>
+<p>单bit比较器:</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048891.png" style="zoom:50%;" />
+
+<p>3 bit比较器：</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048326.png" alt="comp" style="zoom:50%;" />
+
+<h2 id="迭代组合电路"><a href="#迭代组合电路" class="headerlink" title="迭代组合电路"></a>迭代组合电路</h2><ul>
+<li>一般结构：相同功能的n个相同的模块，对于可以通过迭代算法解决的问题。</li>
+<li>将$C_0$设为其初始值，并将i设为0。</li>
+<li>当i&lt;n时，重复。<ul>
+<li>用$C_i$和$D_i$来确定$O_i$和$C_{i+1}$的值。</li>
+<li>增加i</li>
+</ul>
+</li>
+<li>初级输入&#x2F;输出和级联输入&#x2F;输出。</li>
+</ul>
+<p>​	例如，使用迭代组合电路比大小，模块为1bit比较器:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048593.png" alt="截屏2023-02-12 19.19.29"></p>
+<h2 id="门延迟"><a href="#门延迟" class="headerlink" title="门延迟"></a>门延迟</h2><p>​	在电位变化过程中有延迟，中间部分不会被定义为高&#x2F;低电位</p>
+<img src="https://cdn.jsdelivr.net/gh/Mark4551124015/Images_Bed/NoteImages/202302142048828.png" alt="门延迟" style="zoom:50%;" />
+
+<ul>
+<li>忽略延迟的组合电路的分析只能预测其<strong>稳态行为</strong>。<ul>
+<li>假设相对于电路中的电子元件的延迟而言，输入已经稳定了很长时间，则预测电路的输出为其输入的函数。</li>
+</ul>
+</li>
+<li>由于电路的延迟，组合逻辑电路的<strong>瞬态行为</strong>可能与稳态分析的预测不同。</li>
+<li><strong>时序危险</strong>：当稳态分析预测输出不应改变时，电路的输出可能产生一个短脉冲（<strong>突波glitch</strong>）</li>
+<li>一个门有可测量的响应时间$t_{pLH}$和$t_{pHL}$。每个门大约10ns。</li>
+<li>通过传输门的延迟可以累加起来，并引入时间危险。</li>
+<li>$t_{pLH}$&#x3D; 低到高，$t_{pHL}$&#x3D; 高到低的传播时间</li>
+<li>static-1危险是一个短暂的0突变，当输入改变时，我们期望（根据逻辑定理）输出保持恒定的1</li>
+<li>static-0危险是一个短暂的1突变，当我们期望输出保持恒定的0</li>
+</ul>
+<h2 id="消除时序危险"><a href="#消除时序危险" class="headerlink" title="消除时序危险"></a>消除时序危险</h2>]]></content>
       <categories>
         <category>CS207</category>
       </categories>
